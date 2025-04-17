@@ -1,0 +1,596 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{dubey2021study}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=c2e11b81758b5f089e7b6587e6b7a340}{%
+           family={Dubey},
+           familyi={D\bibinitperiod},
+           given={A.K.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=40faa1bc69980517511d12eb5ab3c8bb}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=7080b6bc25c123c3ffd4aa7295486c93}{%
+           family={García-Díaz},
+           familyi={G\bibinithyphendelim D\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=2a44e35eb8b065df5fcccadd31a7c582}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={A.K.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3057a61c7d2e642b9ed1fff1d02679bf}
+      \strng{fullhash}{85308f5bcb79592ffae503b98eb744f2}
+      \strng{fullhashraw}{85308f5bcb79592ffae503b98eb744f2}
+      \strng{bibnamehash}{3057a61c7d2e642b9ed1fff1d02679bf}
+      \strng{authorbibnamehash}{3057a61c7d2e642b9ed1fff1d02679bf}
+      \strng{authornamehash}{3057a61c7d2e642b9ed1fff1d02679bf}
+      \strng{authorfullhash}{85308f5bcb79592ffae503b98eb744f2}
+      \strng{authorfullhashraw}{85308f5bcb79592ffae503b98eb744f2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Materials Today: Proceedings}
+      \field{title}{Study and analysis of SARIMA and LSTM in forecasting time series data}
+      \field{volume}{45}
+      \field{year}{2021}
+      \field{pages}{7308\bibrangedash 7312}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1016/j.matpr.2021.07.101
+      \endverb
+    \endentry
+    \entry{chen2021beyond}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=42990f77d0dad790e7a9f0d77aa2d3b0}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Jin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6932094295fd06318116417318d842af}{%
+           family={Yin},
+           familyi={Y\bibinitperiod},
+           given={Ximing},
+           giveni={X\bibinitperiod}}}%
+        {{hash=cc8d275fbcbe6f7a79a32729c7868e29}{%
+           family={Fu},
+           familyi={F\bibinitperiod},
+           given={Xiaolan},
+           giveni={X\bibinitperiod}}}%
+        {{hash=514e7773c4c858e90950074b52dcd5c8}{%
+           family={McKern},
+           familyi={M\bibinitperiod},
+           given={Bruce},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{719abe194d9e13d02df2091438d3f37a}
+      \strng{fullhash}{76901ec07b127c741c7085e1b21770e2}
+      \strng{fullhashraw}{76901ec07b127c741c7085e1b21770e2}
+      \strng{bibnamehash}{719abe194d9e13d02df2091438d3f37a}
+      \strng{authorbibnamehash}{719abe194d9e13d02df2091438d3f37a}
+      \strng{authornamehash}{719abe194d9e13d02df2091438d3f37a}
+      \strng{authorfullhash}{76901ec07b127c741c7085e1b21770e2}
+      \strng{authorfullhashraw}{76901ec07b127c741c7085e1b21770e2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Industrial and Corporate Change}
+      \field{number}{4}
+      \field{title}{Beyond catch-up: could China become the global innovation powerhouse? China’s innovation progress and challenges from a holistic innovation perspective}
+      \field{volume}{30}
+      \field{year}{2021}
+      \field{pages}{1037\bibrangedash 1064}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1093/icc/dtab032
+      \endverb
+    \endentry
+    \entry{huang2021education}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=de7cb6dc3c605db4d24fa29bab1e749d}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Hongbin},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{de7cb6dc3c605db4d24fa29bab1e749d}
+      \strng{fullhash}{de7cb6dc3c605db4d24fa29bab1e749d}
+      \strng{fullhashraw}{de7cb6dc3c605db4d24fa29bab1e749d}
+      \strng{bibnamehash}{de7cb6dc3c605db4d24fa29bab1e749d}
+      \strng{authorbibnamehash}{de7cb6dc3c605db4d24fa29bab1e749d}
+      \strng{authornamehash}{de7cb6dc3c605db4d24fa29bab1e749d}
+      \strng{authorfullhash}{de7cb6dc3c605db4d24fa29bab1e749d}
+      \strng{authorfullhashraw}{de7cb6dc3c605db4d24fa29bab1e749d}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Applied Economics}
+      \field{number}{1}
+      \field{title}{Education expenditure and economic growth: Evidence from CHINA}
+      \field{volume}{24}
+      \field{year}{2021}
+      \field{pages}{530\bibrangedash 545}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1080/15140326.2021.1975157
+      \endverb
+    \endentry
+    \entry{Zhou2024}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=5a0b1de47b6f723832af2996d1f6db57}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Yixiao},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=26f0ac0c0cd87677ed8bba67435e1587}{%
+           family={Dahal},
+           familyi={D\bibinitperiod},
+           given={Sudyumna},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{32845fe52046d059977ca5a7684a9540}
+      \strng{fullhash}{32845fe52046d059977ca5a7684a9540}
+      \strng{fullhashraw}{32845fe52046d059977ca5a7684a9540}
+      \strng{bibnamehash}{32845fe52046d059977ca5a7684a9540}
+      \strng{authorbibnamehash}{32845fe52046d059977ca5a7684a9540}
+      \strng{authornamehash}{32845fe52046d059977ca5a7684a9540}
+      \strng{authorfullhash}{32845fe52046d059977ca5a7684a9540}
+      \strng{authorfullhashraw}{32845fe52046d059977ca5a7684a9540}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{China Economic Review}
+      \field{title}{Has R\&D contributed to productivity growth in China? The role of basic, applied and experimental R\&D}
+      \field{volume}{88}
+      \field{year}{2024}
+      \field{pages}{102281}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.chieco.2024.102281
+      \endverb
+    \endentry
+    \entry{Chen2022}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=af06704764d8034ca33edc1493e66b7b}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Jun},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{af06704764d8034ca33edc1493e66b7b}
+      \strng{fullhash}{af06704764d8034ca33edc1493e66b7b}
+      \strng{fullhashraw}{af06704764d8034ca33edc1493e66b7b}
+      \strng{bibnamehash}{af06704764d8034ca33edc1493e66b7b}
+      \strng{authorbibnamehash}{af06704764d8034ca33edc1493e66b7b}
+      \strng{authornamehash}{af06704764d8034ca33edc1493e66b7b}
+      \strng{authorfullhash}{af06704764d8034ca33edc1493e66b7b}
+      \strng{authorfullhashraw}{af06704764d8034ca33edc1493e66b7b}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Corporate Finance}
+      \field{month}{7}
+      \field{title}{Venture Capital Research in China: Data and Institutional Details}
+      \field{year}{2022}
+    \endentry
+    \entry{Xu2024}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=86acdbbb888fb1622ad5366d9d67dc8f}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Yan},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{86acdbbb888fb1622ad5366d9d67dc8f}
+      \strng{fullhash}{86acdbbb888fb1622ad5366d9d67dc8f}
+      \strng{fullhashraw}{86acdbbb888fb1622ad5366d9d67dc8f}
+      \strng{bibnamehash}{86acdbbb888fb1622ad5366d9d67dc8f}
+      \strng{authorbibnamehash}{86acdbbb888fb1622ad5366d9d67dc8f}
+      \strng{authornamehash}{86acdbbb888fb1622ad5366d9d67dc8f}
+      \strng{authorfullhash}{86acdbbb888fb1622ad5366d9d67dc8f}
+      \strng{authorfullhashraw}{86acdbbb888fb1622ad5366d9d67dc8f}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Socio-Economic Review}
+      \field{number}{1}
+      \field{title}{Harnessing venture capital in China}
+      \field{volume}{22}
+      \field{year}{2024}
+      \field{pages}{349\bibrangedash 371}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1093/ser/mwad037
+      \endverb
+    \endentry
+    \entry{WenZhao2021}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=d53d0ba6ae6593f7ca4974f47d18ca43}{%
+           family={Wen},
+           familyi={W\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=b34c3c1161c484ebb0bd152b415359db}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{7b490f460b3fcf65e507392fa9fea1cb}
+      \strng{fullhash}{7b490f460b3fcf65e507392fa9fea1cb}
+      \strng{fullhashraw}{7b490f460b3fcf65e507392fa9fea1cb}
+      \strng{bibnamehash}{7b490f460b3fcf65e507392fa9fea1cb}
+      \strng{authorbibnamehash}{7b490f460b3fcf65e507392fa9fea1cb}
+      \strng{authornamehash}{7b490f460b3fcf65e507392fa9fea1cb}
+      \strng{authorfullhash}{7b490f460b3fcf65e507392fa9fea1cb}
+      \strng{authorfullhashraw}{7b490f460b3fcf65e507392fa9fea1cb}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Applied Economics}
+      \field{number}{55}
+      \field{title}{How does China’s industrial policy affect firms’ R\&D investment? Evidence from ‘Made in China 2025’}
+      \field{volume}{53}
+      \field{year}{2021}
+      \field{pages}{6333\bibrangedash 6347}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1080/00036846.2020.1717429
+      \endverb
+    \endentry
+    \entry{Zuiderwijk2021}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=ec4a88635a7b6e7881fcdb9d2b1fd773}{%
+           family={Zuiderwijk},
+           familyi={Z\bibinitperiod},
+           given={Anneke},
+           giveni={A\bibinitperiod}}}%
+        {{hash=73419a6322b905e2f13d34dc30fce6fb}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Yu-Che},
+           giveni={Y\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=698e9ac37701693497c0da4ffd815471}{%
+           family={Salem},
+           familyi={S\bibinitperiod},
+           given={Fadi},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{25f20fb0a495636a47c2289611357a9f}
+      \strng{fullhash}{25f20fb0a495636a47c2289611357a9f}
+      \strng{fullhashraw}{25f20fb0a495636a47c2289611357a9f}
+      \strng{bibnamehash}{25f20fb0a495636a47c2289611357a9f}
+      \strng{authorbibnamehash}{25f20fb0a495636a47c2289611357a9f}
+      \strng{authornamehash}{25f20fb0a495636a47c2289611357a9f}
+      \strng{authorfullhash}{25f20fb0a495636a47c2289611357a9f}
+      \strng{authorfullhashraw}{25f20fb0a495636a47c2289611357a9f}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Government Information Quarterly}
+      \field{number}{2}
+      \field{title}{Implications of the use of artificial intelligence in public governance: A systematic literature review and a research agenda}
+      \field{volume}{38}
+      \field{year}{2021}
+      \field{pages}{101577}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.giq.2021.101577
+      \endverb
+    \endentry
+    \entry{zhang2022digital}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=4fa328e9fe84fad65134eca8385a591b}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Xiaoming},
+           giveni={X\bibinitperiod}}}%
+        {{hash=dc9a0089743604dfc3e4e9dfe24198d5}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Tingting},
+           giveni={T\bibinitperiod}}}%
+        {{hash=1f647bb6da8304b7be380ec58eb6373a}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Lei},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{8180a9440d83f3305ec8d6b4696ac926}
+      \strng{fullhash}{8180a9440d83f3305ec8d6b4696ac926}
+      \strng{fullhashraw}{8180a9440d83f3305ec8d6b4696ac926}
+      \strng{bibnamehash}{8180a9440d83f3305ec8d6b4696ac926}
+      \strng{authorbibnamehash}{8180a9440d83f3305ec8d6b4696ac926}
+      \strng{authornamehash}{8180a9440d83f3305ec8d6b4696ac926}
+      \strng{authorfullhash}{8180a9440d83f3305ec8d6b4696ac926}
+      \strng{authorfullhashraw}{8180a9440d83f3305ec8d6b4696ac926}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Economic Behavior \& Organization}
+      \field{title}{Digital Transformation, Labor Market Polarization, and Employment Dynamics in China}
+      \field{volume}{197}
+      \field{year}{2022}
+      \field{pages}{522\bibrangedash 540}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1016/j.jebo.2022.03.015
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.jebo.2022.03.015
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.jebo.2022.03.015
+      \endverb
+    \endentry
+    \entry{wang2024impact}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=49a19e08791a3dc09c932ff975949361}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Jing},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5ff578c8b209e98ed8730855079f4d59}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Ying},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=35a6fba53011de167edc77e9f861896e}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Zhiming},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{8a34716559c28961f0843ed96a7444ae}
+      \strng{fullhash}{8a34716559c28961f0843ed96a7444ae}
+      \strng{fullhashraw}{8a34716559c28961f0843ed96a7444ae}
+      \strng{bibnamehash}{8a34716559c28961f0843ed96a7444ae}
+      \strng{authorbibnamehash}{8a34716559c28961f0843ed96a7444ae}
+      \strng{authornamehash}{8a34716559c28961f0843ed96a7444ae}
+      \strng{authorfullhash}{8a34716559c28961f0843ed96a7444ae}
+      \strng{authorfullhashraw}{8a34716559c28961f0843ed96a7444ae}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Humanities and Social Sciences Communications}
+      \field{number}{1}
+      \field{title}{The impact of artificial intelligence on employment: the role of virtual agglomeration}
+      \field{volume}{11}
+      \field{year}{2024}
+      \field{pages}{1\bibrangedash 14}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1057/s41599-023-02471-5
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1057/s41599-023-02471-5
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1057/s41599-023-02471-5
+      \endverb
+    \endentry
+    \entry{li2023rd}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=04058c4e91e541253e7dafb06a5fbee6}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Xiaoming},
+           giveni={X\bibinitperiod}}}%
+        {{hash=72af1a460a6fb4aa57b04db4a4e99244}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Ying},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=2f3ea981fa5a715a69118b48e576a9f5}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Jun},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{b996c9d535153e571c0a7e0b3ad0144c}
+      \strng{fullhash}{b996c9d535153e571c0a7e0b3ad0144c}
+      \strng{fullhashraw}{b996c9d535153e571c0a7e0b3ad0144c}
+      \strng{bibnamehash}{b996c9d535153e571c0a7e0b3ad0144c}
+      \strng{authorbibnamehash}{b996c9d535153e571c0a7e0b3ad0144c}
+      \strng{authornamehash}{b996c9d535153e571c0a7e0b3ad0144c}
+      \strng{authorfullhash}{b996c9d535153e571c0a7e0b3ad0144c}
+      \strng{authorfullhashraw}{b996c9d535153e571c0a7e0b3ad0144c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Research Policy}
+      \field{number}{1}
+      \field{title}{R\&D innovation, industrial evolution and the labor skill structure in China manufacturing}
+      \field{volume}{52}
+      \field{year}{2023}
+      \field{pages}{104672}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.respol.2022.104672
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.respol.2022.104672
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.respol.2022.104672
+      \endverb
+    \endentry
+    \entry{butcher2023global}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=b3707d4a7712d39c85a7179f730b52b4}{%
+           family={Butcher},
+           familyi={B\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=649542e9bd11fb3306f094ea71896ab5}{%
+           family={Beridze},
+           familyi={B\bibinitperiod},
+           given={Irakli},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{aea33fe759cbf9ab968db3e32bb0465f}
+      \strng{fullhash}{aea33fe759cbf9ab968db3e32bb0465f}
+      \strng{fullhashraw}{aea33fe759cbf9ab968db3e32bb0465f}
+      \strng{bibnamehash}{aea33fe759cbf9ab968db3e32bb0465f}
+      \strng{authorbibnamehash}{aea33fe759cbf9ab968db3e32bb0465f}
+      \strng{authornamehash}{aea33fe759cbf9ab968db3e32bb0465f}
+      \strng{authorfullhash}{aea33fe759cbf9ab968db3e32bb0465f}
+      \strng{authorfullhashraw}{aea33fe759cbf9ab968db3e32bb0465f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Law and Information Technology}
+      \field{number}{1}
+      \field{title}{Global artificial intelligence governance: A regional policy comparison and coordination challenges}
+      \field{volume}{31}
+      \field{year}{2023}
+      \field{pages}{1\bibrangedash 22}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1093/ijlit/eaac026
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/ijlit/eaac026
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/ijlit/eaac026
+      \endverb
+    \endentry
+    \entry{li2021china}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=86d8cd66cb62928ca1ec636d8cd2e11c}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Xin},
+           giveni={X\bibinitperiod}}}%
+        {{hash=5c786d9afb3cf178271120f1fd926d21}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yan},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{1a9712d5e18ab3396895110ca46d580f}
+      \strng{fullhash}{1a9712d5e18ab3396895110ca46d580f}
+      \strng{fullhashraw}{1a9712d5e18ab3396895110ca46d580f}
+      \strng{bibnamehash}{1a9712d5e18ab3396895110ca46d580f}
+      \strng{authorbibnamehash}{1a9712d5e18ab3396895110ca46d580f}
+      \strng{authornamehash}{1a9712d5e18ab3396895110ca46d580f}
+      \strng{authorfullhash}{1a9712d5e18ab3396895110ca46d580f}
+      \strng{authorfullhashraw}{1a9712d5e18ab3396895110ca46d580f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Technological Forecasting and Social Change}
+      \field{title}{China’s High-Technology Exports in the Global Market: Trends, Challenges, and Policy Implications}
+      \field{volume}{169}
+      \field{year}{2021}
+      \field{pages}{120845}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.techfore.2021.120845
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.techfore.2021.120845
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.techfore.2021.120845
+      \endverb
+    \endentry
+    \entry{zhou2021technological}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=5ab5b1ea0dca7258a686513fc2f3e31c}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Xiao-Xiao},
+           giveni={X\bibinithyphendelim X\bibinitperiod}}}%
+        {{hash=ec91a89214656907c57916c34c631f05}{%
+           family={Cai},
+           familyi={C\bibinitperiod},
+           given={Zi-Ming},
+           giveni={Z\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=59666dc83a33e8961d961571c34cfadd}{%
+           family={Tan},
+           familyi={T\bibinitperiod},
+           given={Kim-Hua},
+           giveni={K\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=db8a7f338dfb553db0a1685bcc2fcd9b}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Lin-ling},
+           giveni={L\bibinithyphendelim l\bibinitperiod}}}%
+        {{hash=f6d832eb3bec42e5c17aca08845d7627}{%
+           family={Du},
+           familyi={D\bibinitperiod},
+           given={Jun-Tao},
+           giveni={J\bibinithyphendelim T\bibinitperiod}}}%
+        {{hash=19d3a745d01f62ef8922be06c2ce8f6f}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Ma-Lin},
+           giveni={M\bibinithyphendelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{8e156c41e10aacc80edff014c182dc3e}
+      \strng{fullhash}{892aa19d4ec5bdc152434b686b812025}
+      \strng{fullhashraw}{892aa19d4ec5bdc152434b686b812025}
+      \strng{bibnamehash}{8e156c41e10aacc80edff014c182dc3e}
+      \strng{authorbibnamehash}{8e156c41e10aacc80edff014c182dc3e}
+      \strng{authornamehash}{8e156c41e10aacc80edff014c182dc3e}
+      \strng{authorfullhash}{892aa19d4ec5bdc152434b686b812025}
+      \strng{authorfullhashraw}{892aa19d4ec5bdc152434b686b812025}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Technological Forecasting and Social Change}
+      \field{title}{Technological innovation and structural change for economic development in China as an emerging market}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.1016/j.techfore.2021.120671
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

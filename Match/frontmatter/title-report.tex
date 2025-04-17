@@ -1,0 +1,56 @@
+\begin{titlepage}
+
+% 添加背景图片
+\AddToShipoutPicture*{%
+    \put(0,0){%
+        \includegraphics[width=\paperwidth,height=\paperheight]{figure/cover.png}%
+    }%
+}
+
+\centering % 居中对齐
+
+% 在顶部添加图标和文字
+\begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north west, inner sep=0pt] at ([xshift=10mm,yshift=-3mm]current page.north west) {%
+        \includegraphics[width=2cm]{figure/logo-black.png} % 调整logo的宽度
+    };
+    \node[anchor=north west, inner sep=0pt] at ([xshift=35mm,yshift=-16mm]current page.north west) {%
+        {\fontsize{16}{20} \selectfont 中国大学生计算机设计大赛大数据主题赛}
+    };
+\end{tikzpicture}
+
+\vspace*{2cm} % 在顶部添加垂直空间
+\hspace*{0cm}
+% 设置并打印标题
+% {\fontsize{50}{60} \textbf{智潮云涌，变革云起} \par}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\linewidth]{figure/title.png}
+    \label{fig:title}
+\end{figure}
+\vspace{1cm} % 在标题和副标题之间添加垂直空间
+% 向上移动文本
+\vspace*{-1.2cm}
+% 设置并打印副标题
+% \noindent
+% \hspace*{4.2cm}
+% \begin{minipage}{15cm}
+% {\fontsize{25}{36} \selectfont \textbf{基于}{\textcolor{deepgreen}{\textbf{DLF-LSTM}}}\textbf{的乡村发展报告}}
+% \end{minipage}
+
+
+\vfill % 推送后续内容到页面底部
+
+% 在底部横向居中放置图标
+\begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=south, inner sep=0pt] at ([yshift=90mm]current page.south) {%
+        \includegraphics[width=4cm]{figure/logo2.png} % 调整logo的宽度
+    };
+\end{tikzpicture}
+
+% 使用 raisebox 移动作者信息
+\raisebox{9cm}{
+    {\fontsize{20}{30}王雨欣 \hspace{0.3cm} 唐胡煜 \hspace{0.3cm} 许子祺 \hspace{0.3cm} 张倩 \hspace{0.3cm} 夏子城\par}
+}
+
+\end{titlepage}
