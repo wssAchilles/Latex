@@ -1,0 +1,56 @@
+\documentclass[12pt]{tudelft-report}
+\usepackage{indentfirst}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{lmodern}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\setlength{\parindent}{2em}
+\usepackage{caption}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+\definecolor{deepgreen}{rgb}{0.0, 0.5, 0.0} % 定义深绿色
+% \newfontfamily\kaitifont{KaiTi} % 定义新的字体族为楷体
+\captionsetup[figure]{labelsep=space}
+\captionsetup[table]{labelsep=space} 
+\usepackage[UTF8]{ctex}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\fancypagestyle{plain}{%
+  \fancyhf{} 
+  \lhead{\includegraphics[height=1cm]{figures/logo-black.png}}
+  \rhead\large\hspace{1.5cm}{\vspace{0.3cm}\small2024年中国大学生计算机设计大赛大数据主题赛 ——“数据解读乡村发展”赛题} 
+  \cfoot{\thepage} 
+}
+\setlength{\headheight}{1.5cm}
+\usepackage[backend=biber, style=numeric, sorting=none]{biblatex}
+\addbibresource{report.bib}
+\usepackage{indentfirst}
+\setlength{\parindent}{2em}
+\usepackage{fontspec}
+\renewcommand{\deg}{\si{\degree}\xspace} 
+\begin{document}
+\input{frontmatter/title-report}
+\input{frontmatter/summary}
+\tableofcontents
+
+\mainmatter
+\input{mainmatter/database}
+\input{mainmatter/lstm&else}
+\input{mainmatter/introduction}
+\input{mainmatter/Food security problem}
+\input{mainmatter/technology}
+\input{mainmatter/basic}
+\input{mainmatter/famer}
+\input{mainmatter/people}
+\input{mainmatter/conclusion}
+
+\setcounter{biburlnumpenalty}{7000}
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{7000}
+\printbibliography[heading=bibintoc,title=参考文献]
+
+%\input{mainmatter/appendix}
+
+\end{document}

@@ -1,0 +1,35 @@
+\contentsline {chapter}{\numberline {1}数据集使用情况}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}模型介绍}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}指数平滑模型(Holt)}{2}{section.2.1}%
+\contentsline {section}{\numberline {2.2}LSTM}{2}{section.2.2}%
+\contentsline {section}{\numberline {2.3}DLF}{4}{section.2.3}%
+\contentsline {section}{\numberline {2.4}DLF-LSTM}{4}{section.2.4}%
+\contentsline {section}{\numberline {2.5}模型对比}{6}{section.2.5}%
+\contentsline {chapter}{\numberline {3}背景}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}两会中的乡村发展}{7}{section.3.1}%
+\contentsline {section}{\numberline {3.2}角度分析}{8}{section.3.2}%
+\contentsline {chapter}{\numberline {4}粮食安全问题}{9}{chapter.4}%
+\contentsline {section}{\numberline {4.1}农作物播种面积}{9}{section.4.1}%
+\contentsline {section}{\numberline {4.2}主要粮食产量}{10}{section.4.2}%
+\contentsline {chapter}{\numberline {5}科技进步}{11}{chapter.5}%
+\contentsline {section}{\numberline {5.1}科技对乡村农业的发展的影响}{11}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}科技主要贡献}{11}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}数字农业渗透率}{12}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}农业机械总动力}{14}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}科技对乡村居民生活的影响}{15}{section.5.2}%
+\contentsline {chapter}{\numberline {6}乡村建设}{17}{chapter.6}%
+\contentsline {section}{\numberline {6.1}基础设施建设}{17}{section.6.1}%
+\contentsline {section}{\numberline {6.2}基础环境建设}{18}{section.6.2}%
+\contentsline {section}{\numberline {6.3}生态旅游建设}{18}{section.6.3}%
+\contentsline {chapter}{\numberline {7}农民生活水平}{20}{chapter.7}%
+\contentsline {section}{\numberline {7.1}农村就业}{20}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}就业结构改善}{20}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}就业人员预测}{21}{subsection.7.1.2}%
+\contentsline {section}{\numberline {7.2}可支配收入}{23}{section.7.2}%
+\contentsline {section}{\numberline {7.3}基本生活}{25}{section.7.3}%
+\contentsline {section}{\numberline {7.4}幸福指数}{26}{section.7.4}%
+\contentsline {chapter}{\numberline {8}城乡人口结构}{28}{chapter.8}%
+\contentsline {section}{\numberline {8.1}城乡人口预测}{29}{section.8.1}%
+\contentsline {chapter}{\numberline {9}结论和展望}{32}{chapter.9}%
+\contentsline {chapter}{参考文献}{33}{chapter*.46}%
+\contentsfinish 

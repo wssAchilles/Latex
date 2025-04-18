@@ -1,0 +1,2072 @@
+\newpage
+\section{Appendix}
+\begin{lstlisting}[language=python,caption={两会数据爬虫}]
+# 两会是现在的热门话题，从两会讨论的话题中，来看乡村发展的必要性
+import requests
+from bs4 import BeautifulSoup
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0"
+}
+texts = [] # 提取两会文本
+for i in range(0,9):
+    if(i!=0) :
+        url = f"https://www.gov.cn/zhuanti/2024qglh/2024nzfgzbg/home_{i}.htm"
+    else:
+        url = "https://www.gov.cn/zhuanti/2024qglh/2024nzfgzbg/home.htm"
+    response = requests.get(url,headers=headers)
+    response.encoding="utf-8"
+    content = response.text
+    soup = BeautifulSoup(content,"html.parser")
+    # 定位到特定的<div>容器
+    container = soup.find('div', class_="list list_1 list_2")
+    # 在这个容器内查找所有的<a>标签
+    links = container.find_all('a')
+    # 提取并打印所有<a>标签的文本内容
+    for link in links:
+        texts.append(link.get_text())
+print(texts)
+# 筛选出包含 '乡' 字的文本项
+texts_containing_char = [text for text in texts if '农' in text or '乡' in text  or '村' in text or '城' in text or '绿' in text]
+
+# 打印结果
+for text in texts_containing_char:
+    print(text)
+    ## 输出高清图像
+%config InlineBackend.figure_format = 'retina'
+%matplotlib inline
+import numpy as np
+import matplotlib.pyplot as plt
+from wordcloud import WordCloud
+ 
+text = "Love"
+ 
+x, y = np.ogrid[:300, :300]
+ 
+mask = (x - 150) ** 2 + (y - 150) ** 2 > 130 ** 2
+mask = 255 * mask.astype(int)
+wc = WordCloud(background_color="white", repeat=True, mask=mask)
+wc.generate(text)
+ 
+plt.axis("off")
+plt.imshow(wc, interpolation="bilinear")
+plt.show()
+import numpy as np
+import matplotlib.pyplot as plt
+from wordcloud import WordCloud
+ 
+# 合并文本数据
+text = """
+从两会看中国经济：打好乡村全面振兴漂亮仗
+推动城乡融合和区域协调发展 大力优化经济布局
+扎实推进乡村全面振兴
+推动城乡融合和区域协调发展
+推动传统产业高端化、智能化、绿色化转型！
+政府工作报告中的绿色低碳发展
+今年要把促进农业转移人口市民化放在突出位置来抓
+加强生态文明建设，推进绿色低碳发展
+推动城乡融合和区域协调发展，大力优化经济布局
+坚持不懈抓好“三农”工作，扎实推进乡村全面振兴
+"""
+ 
+x, y = np.ogrid[:300, :300]
+ 
+mask = (x - 150) ** 2 + (y - 150) ** 2 > 130 ** 2
+mask = 255 * mask.astype(int)
+ 
+ 
+wc = WordCloud(background_color="white", repeat=True, mask=mask)
+wc.generate(text)
+ 
+plt.axis("off")
+plt.imshow(wc, interpolation="bilinear")
+plt.show()
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+
+# Your text data
+text = """
+从两会看中国经济：打好乡村全面振兴漂亮仗
+推动城乡融合和区域协调发展 大力优化经济布局
+扎实推进乡村全面振兴
+推动城乡融合和区域协调发展
+推动传统产业高端化、智能化、绿色化转型！
+政府工作报告中的绿色低碳发展
+今年要把促进农业转移人口市民化放在突出位置来抓
+加强生态文明建设，推进绿色低碳发展
+推动城乡融合和区域协调发展，大力优化经济布局
+坚持不懈抓好“三农”工作，扎实推进乡村全面振兴
+"""
+
+# Generating the word cloud
+wordcloud = WordCloud(
+    font_path='/home/mw/project/SourceHanSansSC-Regular.ttf',
+    background_color='white',
+    collocations=False,
+    max_words=50,
+    max_font_size=100,
+    min_font_size=10,
+    scale=10
+).generate(text)
+
+# Displaying the word cloud image
+plt.figure(figsize=(10, 5))
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis('off')
+plt.show()
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+
+# 合并文本数据
+text = """
+从两会看中国经济：打好乡村全面振兴漂亮仗
+推动城乡融合和区域协调发展 大力优化经济布局
+扎实推进乡村全面振兴
+推动城乡融合和区域协调发展
+今年要把促进农业转移人口市民化放在突出位置来抓
+推动城乡融合和区域协调发展，大力优化经济布局
+坚持不懈抓好“三农”工作，扎实推进乡村全面振兴
+"""
+
+# 生成词云，增加scale参数
+wordcloud = WordCloud(
+    font_path='/home/mw/project/SourceHanSansSC-Regular.ttf',
+    width=800,
+    height=400,
+    background_color='white',
+    collocations=False,
+    max_words=50,
+    max_font_size=100,
+    min_font_size=10,
+    scale=2  # 增加输出图像的分辨率
+).generate(text)
+
+# 显示词云图像
+plt.figure(figsize=(10, 5))
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis('off')
+plt.show()
+import jieba.posseg as pseg
+\end{lstlisting}
+\begin{lstlisting}[language=python,caption={全国乡村产业发展规划}]
+file_path = '/home/mw/input/planning5088/《全国乡村产业发展规划（2020-2025年）》全文.txt'
+
+with open(file_path, 'r', encoding='utf-8') as file:
+    article_content = file.read()
+    ## 输出高清图像
+%config InlineBackend.figure_format = 'retina'
+%matplotlib inline
+import re
+cleaned_content = re.sub(r'[^\w\s]', '', article_content) 
+cleaned_content = re.sub(r'\d', '', cleaned_content)     
+cleaned_content = cleaned_content.replace('\n', '')
+import jieba as jb
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+words_to_remove = ['乡村', '农村', '农业', '产业', '发展', '振兴','的','等','和']
+for word in words_to_remove:
+    cleaned_content = cleaned_content.replace(word, '')
+    cleaned_content = jb.lcut(cleaned_content)
+cleaned_content  =  '/'.join(cleaned_content)
+wordcloud = WordCloud(collocations=False,font_path='/home/mw/project/SourceHanSansSC-Regular.ttf', width=3000, height=2000, margin=2,background_color='white').generate(cleaned_content)
+# 显示图片 
+plt.imshow(wordcloud) 
+plt.axis('off')
+plt.show()
+
+\end{lstlisting}
+\begin{lstlisting}[language=python,caption={主要农作物播种面积和产品产量数据
+}]
+import pandas as pd
+file_path = '/home/mw/input/develop6699/主要农作物播种面积和产品产量数据.csv'
+data = pd.read_csv(file_path,encoding='GBK')
+# 按照时间为列做整理
+data = data.set_index('指标').T
+data.reset_index(inplace=True)
+data.rename(columns={'index': '年份'}, inplace=True)
+data.head()
+# 改为数值方便统计
+data['年份'] = data['年份'].str.replace('年', '')
+data = data.sort_values(by='年份')
+data.head()
+## 输出高清图像
+%config InlineBackend.figure_format = 'retina'
+%matplotlib inline
+import seaborn as sns
+import matplotlib.pyplot as plt
+selected_columns = ['年份', '小麦产量(万吨)', '稻谷产量(万吨)', '大豆产量(万吨)', '玉米产量(万吨)']
+heatmap_data = data[selected_columns].set_index('年份')
+heatmap_data = heatmap_data.astype('float').transpose()
+step = len(filtered_heatmap_data.columns) // 5  
+years_to_display = filtered_heatmap_data.columns[::step]
+plt.figure(figsize=(10, 6))
+for crop in filtered_heatmap_data.index:
+    plt.plot(filtered_heatmap_data.columns, filtered_heatmap_data.loc[crop], marker='o', label=crop)
+
+plt.xticks(years_to_display, [int(year) for year in years_to_display])
+
+plt.title('主要粮食产量变化')
+plt.xlabel('年份')
+plt.ylabel('产量')
+plt.legend()
+plt.grid(True)
+plt.show()
+# 输出每种农作物随时间的变化
+# 每条折线为不同类型农作物的播种面积
+import matplotlib.pyplot as plt
+
+indicators = data.columns[1:] 
+indicator_groups = [indicators[i:i + 10] for i in range(0, len(indicators), 10)]
+for i, group in enumerate(indicator_groups):
+    plt.figure(figsize=(15, 8))
+    for indicator in group:
+        plt.plot(data['年份'], data[indicator], label=indicator)
+
+    plt.title(f'农作物播种面积和产量指标：图 {i+1}')
+    plt.xlabel('年份')
+    plt.ylabel('数值')
+    plt.xticks(rotation=45)
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
+    import matplotlib.pyplot as plt
+
+
+selected_indicators = transposed_data.columns[1:10] 
+
+plt.figure(figsize=(15, 8))
+
+for year in transposed_data['年份']:
+    plt.plot(selected_indicators, transposed_data[transposed_data['年份'] == year].iloc[0, 1:10], label=year)
+
+plt.xlabel('指标')
+plt.ylabel('面积/产量')
+plt.title('1990-2022年各指标的年度变化')
+plt.xticks(rotation=45)
+plt.legend(loc='upper left', ncol=2, title='年份')
+plt.grid(True)
+plt.show()
+
+# 输出每种农作物随时间的变化
+# 每条折线为时间线
+
+import matplotlib.pyplot as plt
+
+
+indicator_groups = [data.columns[1:][i:i + 10] for i in range(0, len(data.columns[1:]), 10)]
+
+
+for i, group in enumerate(indicator_groups):
+    plt.figure(figsize=(15, 8))
+
+
+    for year in data['年份']:
+        plt.plot(group, data[data['年份'] == year].iloc[0][group], label=year)
+
+    plt.xlabel('指标')
+    plt.ylabel('面积/产量')
+    plt.title(f'1990-2022年各指标的年度变化 - 图 {i+1}')
+    plt.xticks(rotation=45, ha='right')
+    plt.legend(loc='upper left', ncol=2, title='年份')
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
+    import numpy as np
+
+# 准备玫瑰图的数据
+categories = data['年份']
+values = data['农作物总播种面积(千公顷)']
+N = len(categories)
+
+# 计算每个类别的角度
+angles = [n / float(N) * 2 * np.pi for n in range(N)]
+values = np.concatenate((values, [values[0]]))  # 闭合图形
+angles += angles[:1]
+
+# 计算平均值以标准化数据
+mean_value = data['农作物总播种面积(千公顷)'].mean()
+
+# 标准化值（与平均值的差异）
+normalized_values = data['农作物总播种面积(千公顷)'] - mean_value
+
+plt.figure(figsize=(12, 8))
+ax = plt.subplot(111, polar=True)
+
+# 绘制标准化的值
+ax.plot(angles, list(normalized_values) + [normalized_values[0]])
+ax.fill(angles, list(normalized_values) + [normalized_values[0]], 'b', alpha=0.1)
+
+plt.xticks(angles[:-1], categories, color='black', size=10)
+plt.title('1990-2022年农作物总播种面积的变化（相对于平均值） - 玫瑰图')
+plt.show()
+
+
+\end{lstlisting}\begin{lstlisting}[language=python,caption={十四五规划可视化}]
+import pandas as pd
+# 读取数据时使用GBK
+file_path = '/home/mw/input/1458039/十四五计划.csv'
+data = pd.read_csv(file_path,encoding='GBK')
+data.head()
+## 输出高清图像
+%config InlineBackend.figure_format = 'retina'
+%matplotlib inline
+import pandas as pd
+import matplotlib.pyplot as plt
+# 为了排版美观，将数据进行翻转
+# 转置数据框，使得各个指标成为行，年份成为列
+data_transposed = data.set_index('年份').T
+data_transposed.columns = data_transposed.columns.map(str)  # 将年份的列名转换为字符串
+
+# 对每个指标的数据进行归一化处理，确保其和为1（或100%）
+data_normalized = data_transposed.div(data_transposed.sum(axis=1), axis=0)
+
+# 绘制堆叠条形图，纵坐标为各种指标，每个条形图内部展示2020年和2025年数据的百分比
+ax = data_normalized.plot(kind='barh', stacked=True, figsize=(10, 8))
+
+# 设置图例
+ax.legend(title='年份', loc='center left', bbox_to_anchor=(1, 0.5))
+
+# 添加标签和标题
+ax.set_xlabel('百分比')
+ax.set_ylabel('指标')
+ax.set_title('各指标在2020年与2025年的百分比堆叠条形图')
+
+# 显示图表
+plt.tight_layout()
+plt.show()
+\end{lstlisting}
+\begin{lstlisting}[language=python,caption={主要贡献}]
+import pandas as pd
+file_path = '/home/mw/input/develop6699/全国农业主要科技贡献相关指标.csv'
+data = pd.read_csv(file_path)
+print(data)
+## 图像显示中文的问题
+import matplotlib
+
+import seaborn as sns
+
+## 输出高清图像
+%config InlineBackend.figure_format = 'retina'
+%matplotlib inline
+import matplotlib.pyplot as plt
+# Creating the time series plot without using sns.set
+plt.figure(figsize=(15, 8))
+sns.lineplot(x='时间', y='数值', hue='品类', data=filtered_data, marker='o')
+
+# Adding title and labels
+plt.title('全国农业主要科技贡献相关指标的时间序列图')
+plt.xlabel('年份')
+plt.ylabel('数值 (%)')
+plt.xticks(rotation=45)
+# plt.legend(title='品类')
+
+# Show the plot
+plt.show()
+import numpy as np
+
+# Preparing data for the heatmap
+# Pivot the data to get years as columns and categories as rows
+heatmap_data = data.pivot_table(values='数值', index='品类', columns='时间', aggfunc=np.mean)
+
+# Creating the heatmap
+plt.figure(figsize=(12, 8))
+sns.heatmap(heatmap_data, annot=True, cmap='YlGnBu', linewidths=.5)
+
+# Adding title and labels
+plt.title('全国农业主要科技贡献相关指标的热力图')
+plt.xlabel('年份')
+plt.ylabel('品类')
+
+# Show the plot
+plt.show()
+\end{lstlisting}
+\begin{lstlisting}[language=python,caption={数字农业渗透}]
+## 输出高清图像
+%config InlineBackend.figure_format = 'retina'
+%matplotlib inline
+import pandas as pd
+
+# 读取数据时使用GBK
+file_path = '/home/mw/input/shentou8131/数字农业渗透率.csv'
+data = pd.read_csv(file_path,encoding='GBK')
+
+print(data)
+## 输出高清图像
+%config InlineBackend.figure_format = 'retina'
+%matplotlib inline
+import matplotlib.pyplot as plt
+import numpy as np
+# 将百分数改为浮点数值
+data['渗透率'] = data['年份'].str.rstrip('%').astype('float')
+
+# 计算同比变化率
+data['变化率'] = data['渗透率'].pct_change() * 100
+
+# 计算每年的渗透率差异
+data['年度差值'] = data['渗透率'].diff()
+
+# 创建一个包含渗透率的条形图
+fig, ax1 = plt.subplots()
+
+color = 'tab:blue'
+ax1.set_xlabel('年份')
+ax1.set_ylabel('数字化渗透率 (%)', color=color)
+ax1.bar(data['农业数字化渗透率'], data['渗透率'], color=color, alpha=0.6)
+ax1.tick_params(axis='y', labelcolor=color)
+
+# 创建带有年度差异的折线图
+ax2 = ax1.twinx()  
+color = 'tab:red'
+ax2.set_ylabel('年度差值 (%)', color=color)  
+ax2.plot(data['农业数字化渗透率'], data['年度差值'], color=color, marker='o', linestyle='-', linewidth=2)
+ax2.tick_params(axis='y', labelcolor=color)
+
+fig.tight_layout()  
+plt.title('农业数字化渗透率及其年度差值')
+plt.show()
+# 更正列标头及其值
+data.columns = ['年份', '农业数字化渗透率']
+data['农业数字化渗透率'] = data['农业数字化渗透率'].str.rstrip('%').astype(float) / 100
+data
+import torch
+import torch.nn as nn
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import MinMaxScaler
+## 封装成一个函数，便于调用（用于处理字典）
+
+def predict(data, train_window, future_pred, label, epochs,lr):
+
+    # 转换为 numpy 数组
+    data_np = np.array(data[label]).reshape(-1, 1)
+
+    # 数据归一化
+    scaler = MinMaxScaler(feature_range=(-1, 1))
+    data_normalized = scaler.fit_transform(data_np)
+
+    # 转换为 PyTorch tensors
+    data_normalized = torch.FloatTensor(data_normalized).view(-1)
+
+    # 创建数据集
+    def create_inout_sequences(input_data, tw):
+        inout_seq = []
+        L = len(input_data)
+        for i in range(L-tw):
+            train_seq = input_data[i:i+tw]
+            train_label = input_data[i+tw:i+tw+1]
+            inout_seq.append((train_seq, train_label))
+        return inout_seq
+
+    train_inout_seq = create_inout_sequences(data_normalized, train_window)
+
+    # 定义 LSTM 模型
+    class LSTM(nn.Module):
+        def __init__(self, input_size=1, hidden_layer_size=100, output_size=1):
+            super().__init__()
+            self.hidden_layer_size = hidden_layer_size
+
+            self.lstm = nn.LSTM(input_size, hidden_layer_size)
+
+            self.linear = nn.Linear(hidden_layer_size, output_size)
+
+            self.hidden_cell = (torch.zeros(1, 1, self.hidden_layer_size),
+                                torch.zeros(1, 1, self.hidden_layer_size))
+
+        def forward(self, input_seq):
+            lstm_out, self.hidden_cell = self.lstm(input_seq.view(len(input_seq), 1, -1), self.hidden_cell)
+            predictions = self.linear(lstm_out.view(len(input_seq), -1))
+            return predictions[-1]
+
+    # 实例化模型
+    model = LSTM()
+    loss_function = nn.MSELoss()
+    optimizer = torch.optim.Adam(model.parameters(), lr)
+
+    # 训练模型
+    # epochs = 25
+
+    loss_values = [] 
+
+    for epoch in range(epochs):
+        for seq, labels in train_inout_seq:
+            optimizer.zero_grad()
+            model.hidden_cell = (torch.zeros(1, 1, model.hidden_layer_size),
+                                torch.zeros(1, 1, model.hidden_layer_size))
+
+            y_pred = model(seq)
+
+            single_loss = loss_function(y_pred, labels)
+            single_loss.backward()
+            optimizer.step()
+
+        if epoch % 5 == 1:
+            loss_values.append(single_loss.item())  # Store the loss value
+            print(f'epoch: {epoch:3} loss: {single_loss.item():10.8f}')
+
+    print(f'epoch: {epoch:3} loss: {single_loss.item():10.10f}')
+
+
+
+
+
+    # 使用matplotlib绘制图形
+    plt.figure(figsize=(10, 6))
+    plt.plot(loss_values, marker='o', linestyle='-', color='b')
+    plt.title('Loss Reduction Over Epochs')
+    plt.xlabel('Epoch')
+    plt.ylabel('Loss')
+    plt.grid(True)
+    plt.show()
+
+
+    # 使用模型对整个数据集进行预测以创建拟合与真实数据对比图
+    # 为预测做准备
+    test_inputs = data_normalized[-train_window:].tolist()
+
+    # 预测未来
+    model.eval()
+    for i in range(future_pred):
+        seq = torch.FloatTensor(test_inputs[-train_window:])
+        with torch.no_grad():
+            model.hidden_cell = (torch.zeros(1, 1, model.hidden_layer_size),
+                                torch.zeros(1, 1, model.hidden_layer_size))
+            test_inputs.append(model(seq).item())
+    # 将预测数据转换回原始规模
+    actual_predictions = scaler.inverse_transform(np.array(test_inputs[train_window:]).reshape(-1, 1))
+    predicted_years = np.arange(data["年份"].iloc[-1] + 1 - train_window, data["年份"].iloc[-1] + 1 + future_pred)
+
+
+    # # 输出预测的未来私营企业乡村就业人员数值
+    # predicted_years = np.arange(data["年份"][-1] + 1 - train_window, data["年份"][-1] + 1 + future_pred)
+    for year, population in zip(predicted_years, actual_predictions):
+        print(f"年份: {year}, 预测{label}(万人): {population[0]:.2f}")
+
+    # 绘制图表
+    plt.figure(figsize=(10, 6))
+    plt.title(f'未来{label}变化预测')
+    plt.xlabel('年份')
+    plt.ylabel(f'{label}')
+    plt.grid(True)
+    plt.autoscale(axis='x', tight=True)
+    
+    # 绘制实际数据
+    plt.plot(data["年份"], data[label], label='Real Data')
+    
+    # 绘制预测数据
+    plt.plot(predicted_years, np.concatenate([data[label][-train_window:], actual_predictions.ravel()]), label='Predictions', linestyle='--')
+    
+    plt.legend()
+    plt.show()
+    # # 将预测数据转换回原始规模
+    # actual_predictions = scaler.inverse_transform(np.array(test_inputs[train_window:]).reshape(-1, 1))
+
+    # # 输出预测的未来私营企业乡村就业人员数值
+    # predicted_years = np.arange(data["年份"][-1] + 1, data["年份"][-1] + 1 + future_pred)
+    # for year, population in zip(predicted_years, actual_predictions):
+    #     print(f"年份: {year}, 预测{label}(万人): {population[0]:.2f}")
+
+    # # 绘制图表
+    # plt.figure(figsize=(10, 6))
+    # plt.title(f'未来{label}变化预测')
+    # plt.xlabel('年份')
+    # plt.ylabel(f'{label}')
+    # plt.grid(True)
+    # plt.autoscale(axis='x', tight=True)
+    # plt.plot(data["年份"], data[label], label='Real Data')
+    # plt.plot(predicted_years, actual_predictions, label='Predictions', linestyle='--')
+    # plt.legend()
+    # plt.show()
+    ## 封装成一个函数，便于调用（用于处理字典）
+
+def predict(data, train_window, future_pred, label, epochs,lr):
+
+  
+    # 转换为 numpy 数组
+    data_np = np.array(data[label]).reshape(-1, 1)
+
+    # 数据归一化
+    scaler = MinMaxScaler(feature_range=(-1, 1))
+    data_normalized = scaler.fit_transform(data_np)
+
+    # 转换为 PyTorch tensors
+    data_normalized = torch.FloatTensor(data_normalized).view(-1)
+
+    # 创建数据集
+    def create_inout_sequences(input_data, tw):
+        inout_seq = []
+        L = len(input_data)
+        for i in range(L-tw):
+            train_seq = input_data[i:i+tw]
+            train_label = input_data[i+tw:i+tw+1]
+            inout_seq.append((train_seq, train_label))
+        return inout_seq
+
+    train_inout_seq = create_inout_sequences(data_normalized, train_window)
+
+    # 定义 LSTM 模型
+    class LSTM(nn.Module):
+        def __init__(self, input_size=1, hidden_layer_size=100, output_size=1):
+            super().__init__()
+            self.hidden_layer_size = hidden_layer_size
+
+            self.lstm = nn.LSTM(input_size, hidden_layer_size)
+
+            self.linear = nn.Linear(hidden_layer_size, output_size)
+
+            self.hidden_cell = (torch.zeros(1, 1, self.hidden_layer_size),
+                                torch.zeros(1, 1, self.hidden_layer_size))
+
+        def forward(self, input_seq):
+            lstm_out, self.hidden_cell = self.lstm(input_seq.view(len(input_seq), 1, -1), self.hidden_cell)
+            predictions = self.linear(lstm_out.view(len(input_seq), -1))
+            return predictions[-1]
+
+    # 实例化模型
+    model = LSTM()
+    loss_function = nn.MSELoss()
+    optimizer = torch.optim.Adam(model.parameters(), lr)
+
+    # 训练模型
+    # epochs = 25
+
+    loss_values = [] 
+
+    for epoch in range(epochs):
+        for seq, labels in train_inout_seq:
+            optimizer.zero_grad()
+            model.hidden_cell = (torch.zeros(1, 1, model.hidden_layer_size),
+                                torch.zeros(1, 1, model.hidden_layer_size))
+
+            y_pred = model(seq)
+
+            single_loss = loss_function(y_pred, labels)
+            single_loss.backward()
+            optimizer.step()
+
+        if epoch % 5 == 1:
+            loss_values.append(single_loss.item())  # Store the loss value
+            print(f'epoch: {epoch:3} loss: {single_loss.item():10.8f}')
+
+    print(f'epoch: {epoch:3} loss: {single_loss.item():10.10f}')
+
+    # 使用matplotlib绘制图形
+    plt.figure(figsize=(10, 6))
+    plt.plot(loss_values, marker='o', linestyle='-', color='b')
+    plt.title('Loss 变化图')
+    plt.xlabel('Epoch')
+    plt.ylabel('Loss')
+    plt.grid(True)
+    plt.show()
+
+
+    # 使用模型对整个数据集进行预测以创建拟合与真实数据对比图
+    # 为预测做准备
+    test_inputs = data_normalized[-train_window:].tolist()
+
+    # 预测未来
+    model.eval()
+    for i in range(future_pred):
+        seq = torch.FloatTensor(test_inputs[-train_window:])
+        with torch.no_grad():
+            model.hidden_cell = (torch.zeros(1, 1, model.hidden_layer_size),
+                                torch.zeros(1, 1, model.hidden_layer_size))
+            test_inputs.append(model(seq).item())
+    # 将预测数据转换回原始规模
+    actual_predictions = scaler.inverse_transform(np.array(test_inputs[train_window:]).reshape(-1, 1))
+    predicted_years = np.arange(data["年份"].iloc[-1] + 1 - train_window, data["年份"].iloc[-1] + 1 + future_pred)
+
+
+    # # 输出预测的未来私营企业乡村就业人员数值
+    # predicted_years = np.arange(data["年份"][-1] + 1 - train_window, data["年份"][-1] + 1 + future_pred)
+    for year, population in zip(predicted_years, actual_predictions):
+        print(f"年份: {year}, 预测{label}(万人): {population[0]:.2f}")
+
+    # 绘制图表
+    plt.figure(figsize=(10, 6))
+    plt.title(f'未来{label}变化预测')
+    plt.xlabel('年份')
+    plt.ylabel(f'{label}')
+    plt.grid(True)
+    plt.autoscale(axis='x', tight=True)
+    
+    # 绘制实际数据
+    plt.plot(data["年份"], data[label], label='Real Data')
+    
+    # 绘制预测数据
+    plt.plot(predicted_years, np.concatenate([data[label][-train_window:], actual_predictions.ravel()]), label='Predictions', linestyle='--')
+    
+    plt.legend()
+    plt.show()
+    # # 将预测数据转换回原始规模
+    # actual_predictions = scaler.inverse_transform(np.array(test_inputs[train_window:]).reshape(-1, 1))
+
+    # # 输出预测的未来私营企业乡村就业人员数值
+    # predicted_years = np.arange(data["年份"][-1] + 1, data["年份"][-1] + 1 + future_pred)
+    # for year, population in zip(predicted_years, actual_predictions):
+    #     print(f"年份: {year}, 预测{label}(万人): {population[0]:.2f}")
+
+    # # 绘制图表
+    # plt.figure(figsize=(10, 6))
+    # plt.title(f'未来{label}变化预测')
+    # plt.xlabel('年份')
+    # plt.ylabel(f'{label}')
+    # plt.grid(True)
+    # plt.autoscale(axis='x', tight=True)
+    # plt.plot(data["年份"], data[label], label='Real Data')
+    # plt.plot(predicted_years, actual_predictions, label='Predictions', linestyle='--')
+    # plt.legend()
+    # plt.show()
+    predict(data, train_window=4, future_pred=8, label="农业数字化渗透率",epochs=100,lr=0.0004)
+
+\end{lstlisting}
+\begin{lstlisting}[language=python,caption={中国机械总量}]
+## 输出高清图像
+%config InlineBackend.figure_format = 'retina'
+%matplotlib inline
+import pandas as pd
+
+# 读取数据时使用GBK
+file_path = '/home/mw/input/energy6094/中国机械总动力.csv'
+data = pd.read_csv(file_path,encoding='utf-8')
+print(data)
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# 将总动力的数据转换为浮点数
+data['总动力'] = data['年份'].astype('float')
+
+# 计算年度差值
+data['年度差值'] = data['总动力'].diff()
+
+# 创建柱状图展示总动力
+fig, ax1 = plt.subplots()
+
+color = 'tab:blue'
+ax1.set_xlabel('年份')
+ax1.set_ylabel('农业机械总动力 (万千瓦)', color=color)
+ax1.bar(data['农业机械总动力(万千瓦)'], data['总动力'], color=color, alpha=0.6)
+ax1.tick_params(axis='y', labelcolor=color)
+
+# 创建折线图展示年度差值
+ax2 = ax1.twinx()  
+color = 'tab:red'
+ax2.set_ylabel('年度差值 (万千瓦)', color=color)  
+ax2.plot(data['农业机械总动力(万千瓦)'], data['年度差值'], color=color, marker='o', linestyle='-', linewidth=2)
+ax2.tick_params(axis='y', labelcolor=color)
+
+fig.tight_layout()  
+plt.title('农业机械总动力及其年度差值')
+plt.show()
+import torch
+import torch.nn as nn
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import MinMaxScaler
+# 预测城镇
+data2 = {
+    "年份": [2022, 2021, 2020, 2019, 2018, 2017, 2016],
+    "农业机械总动力(万千瓦)": [110597.19, 107764.32, 105622.15, 102758.26, 100371.74, 98783.35,97245.59],
+}
+# 作为时间序列，倒序排列列表数据
+for key in data2:
+    data2[key] = data2[key][::-1]
+# 将数据转换为 numpy 数组
+data_urban = np.array(data2["农业机械总动力(万千瓦)"]).reshape(-1, 1)
+
+# 数据归一化
+scaler = MinMaxScaler(feature_range=(-1, 1))
+data_normalized = scaler.fit_transform(data_urban)
+
+# 转换为 PyTorch tensors
+data_normalized = torch.FloatTensor(data_normalized).view(-1)
+
+# 创建数据集
+train_window = 3  # 使用 5 年的数据预测下一年
+
+def create_inout_sequences(input_data, tw):
+    inout_seq = []
+    L = len(input_data)
+    for i in range(L-tw):
+        train_seq = input_data[i:i+tw]
+        train_label = input_data[i+tw:i+tw+1]
+        inout_seq.append((train_seq, train_label))
+    return inout_seq
+
+train_inout_seq = create_inout_sequences(data_normalized, train_window)
+
+# 定义 LSTM 模型
+class LSTM(nn.Module):
+    def __init__(self, input_size=1, hidden_layer_size=100, output_size=1):
+        super().__init__()
+        self.hidden_layer_size = hidden_layer_size
+
+        self.lstm = nn.LSTM(input_size, hidden_layer_size)
+
+        self.linear = nn.Linear(hidden_layer_size, output_size)
+
+        self.hidden_cell = (torch.zeros(1, 1, self.hidden_layer_size),
+                            torch.zeros(1, 1, self.hidden_layer_size))
+
+    def forward(self, input_seq):
+        lstm_out, self.hidden_cell = self.lstm(input_seq.view(len(input_seq), 1, -1), self.hidden_cell)
+        predictions = self.linear(lstm_out.view(len(input_seq), -1))
+        return predictions[-1]
+
+# 实例化模型
+model = LSTM()
+loss_function = nn.MSELoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+
+# 训练模型
+epochs = 50
+
+for epoch in range(epochs):
+    for seq, labels in train_inout_seq:
+        optimizer.zero_grad()
+        model.hidden_cell = (torch.zeros(1, 1, model.hidden_layer_size),
+                             torch.zeros(1, 1, model.hidden_layer_size))
+
+        y_pred = model(seq)
+
+        single_loss = loss_function(y_pred, labels)
+        single_loss.backward()
+        optimizer.step()
+
+    if epoch%25 == 1:
+        print(f'epoch: {epoch:3} loss: {single_loss.item():10.8f}')
+
+print(f'epoch: {epoch:3} loss: {single_loss.item():10.10f}')
+
+# 使用模型对整个数据集进行预测以创建拟合与真实数据对比图
+# 为预测做准备
+future_pred = 3
+test_inputs = data_normalized[-train_window:].tolist()
+
+# 预测未来五年
+model.eval()
+for i in range(future_pred):
+    seq = torch.FloatTensor(test_inputs[-train_window:])
+    with torch.no_grad():
+        model.hidden_cell = (torch.zeros(1, 1, model.hidden_layer_size),
+                             torch.zeros(1, 1, model.hidden_layer_size))
+        test_inputs.append(model(seq).item())
+
+# 将预测数据转换回原始规模
+actual_predictions = scaler.inverse_transform(np.array(test_inputs[train_window:] ).reshape(-1, 1))
+
+# 准备绘制图表
+years = np.array(data2["年份"])[-train_window:]
+predicted_years = np.arange(years[-1] + 1, years[-1] + 1 + future_pred)
+real_data = scaler.inverse_transform(data_normalized.reshape(-1, 1)).reshape(-1)
+
+# 绘制图表
+plt.figure(figsize=(10, 6))
+plt.title('未来农业机械总动力(万千瓦)变化')
+plt.xlabel('年份')
+plt.ylabel('农业机械总动力(万千瓦)')
+plt.grid(True)
+plt.autoscale(axis='x', tight=True)
+plt.plot(data2["年份"], real_data, label='Real Data')
+plt.plot(predicted_years, actual_predictions, label='Predictions', linestyle='--')
+plt.legend()
+plt.show()
+# 重置测试输入
+test_inputs = data_normalized.tolist()
+
+# 对整个数据集进行预测
+model.eval()
+predictions = []
+
+for i in range(len(test_inputs) - train_window):
+    seq = torch.FloatTensor(test_inputs[i:i+train_window])
+    with torch.no_grad():
+        model.hidden_cell = (torch.zeros(1, 1, model.hidden_layer_size),
+                             torch.zeros(1, 1, model.hidden_layer_size))
+        predictions.append(model(seq).item())
+
+
+print("预测的未来农业机械总动力(万千瓦):")
+for i, prediction in enumerate(actual_predictions, 1):
+    print(f"年份 {predicted_years[i-1]}: {prediction[0]:.2f} 万千瓦")
+
+\end{lstlisting}
+\begin{lstlisting}[language=python,caption={城乡互联网}]
+import pandas as pd
+
+# 读取数据时使用GBK
+file_path = '/home/mw/input/internet1807/城乡互联网.csv'
+data = pd.read_csv(file_path,encoding='utf-8')
+
+print(data)
+## 输出高清图像
+%config InlineBackend.figure_format = 'retina'
+%matplotlib inline
+import matplotlib.pyplot as plt
+import numpy as np
+
+# 假设 data 是我们的 DataFrame
+
+categories = ['工作学习互联网使用量', '社交娱乐互联网使用量', '商业活动互联网使用量']
+category_titles = ['工作学习', '社交娱乐', '商业活动']
+
+# 设置图表布局为1行3列
+fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+
+for i, (ax, category) in enumerate(zip(axes, categories)):
+    index = np.arange(len(data['年份']))  # x轴的位置
+    bar_width = 0.35  # 柱状图的宽度
+
+    # 绘制城镇的柱状图
+    urban_values = data[f'城镇{category}']
+    ax.bar(index, urban_values, bar_width, label='城镇', color='red')
+
+    # 绘制农村的柱状图，叠加在城镇柱状图之上
+    rural_values = data[f'农村{category}']
+    ax.bar(index, rural_values, bar_width, label='农村', color='orange', bottom=urban_values)
+
+    # 设置图表标题和坐标轴标签
+    ax.set_xlabel('年份')
+    ax.set_ylabel('互联网使用量 (%)')
+    ax.set_title(f'{category_titles[i]}领域内城乡互联网使用量随时间的变化')
+    ax.set_xticks(index)
+    ax.set_xticklabels(data['年份'])
+    ax.legend()
+
+plt.tight_layout()
+plt.show()
+# 预测城镇
+data1 = {
+    "年份": [2014,2016,2018],
+    "农村整体互联网使用量": [20.31,40.15,48.09],
+    "城镇整体互联网使用量": [32.28,52.61,66.16],
+}
+import numpy as np
+import pandas as pd
+from statsmodels.tsa.holtwinters import ExponentialSmoothing
+
+# 创建数据框
+data1 = pd.DataFrame({
+    "年份": [2014, 2016, 2018],
+    "农村整体互联网使用量": [20.31, 40.15, 48.09],
+    "城镇整体互联网使用量": [32.28, 52.61, 66.16],
+})
+
+# 预测函数使用Holt线性趋势方法
+def exponential_smoothing_forecast(data, extra_periods):
+    model = ExponentialSmoothing(data, trend='additive')
+    model_fit = model.fit(optimized=True)
+    forecast = model_fit.forecast(extra_periods)
+    return forecast
+
+# 预测2020和2022年的值
+rural_forecast = exponential_smoothing_forecast(data1['农村整体互联网使用量'], 2)
+urban_forecast = exponential_smoothing_forecast(data1['城镇整体互联网使用量'], 2)
+
+print("农村整体2020和2022互联网使用量预测:", rural_forecast)
+print("城镇整体2020和2022互联网使用量预测:", urban_forecast)
+import pandas as pd
+from statsmodels.tsa.holtwinters import ExponentialSmoothing
+
+
+# Ensure the '年份' column is integer
+data['年份'] = data['年份'].astype(int)
+
+# Define the categories to forecast
+categories = ['工作学习互联网使用量', '社交娱乐互联网使用量', '商业活动互联网使用量']
+
+# Create a new DataFrame to store the forecasted data
+predicted_data = data.copy()
+
+# Forecasting for each internet usage category
+for category in categories:
+    for area in ['城镇', '农村']:
+        col_name = f'{area}{category}'
+
+        # Applying the Exponential Smoothing model for forecasting
+        model = ExponentialSmoothing(data[col_name], trend='add', seasonal=None)
+        model_fit = model.fit()
+
+        # Forecasting the data for 2020 and 2022
+        forecast = model_fit.forecast(steps=4)  # Including one extra step to avoid indexing issues
+        forecast_years = [2020, 2022]
+
+        for year, value in zip(forecast_years, forecast[-2:]):  # Selecting the last two forecasted values
+            if year not in predicted_data['年份'].astype(int).values:
+                new_row = {'年份': year}
+                predicted_data = predicted_data.append(new_row, ignore_index=True)
+            predicted_data.loc[predicted_data['年份'] == year, col_name] = value
+
+# Ensure the '年份' column is integer after adding new years
+predicted_data['年份'] = predicted_data['年份'].astype(int)
+
+# Sorting the predicted data by year
+predicted_data = predicted_data.sort_values('年份').reset_index(drop=True)
+
+# Display the predicted data
+print(predicted_data)
+import matplotlib.pyplot as plt
+import numpy as np
+
+# 假设 predicted_data 是我们的 predicted_dataFrame
+
+categories = ['工作学习互联网使用量', '社交娱乐互联网使用量', '商业活动互联网使用量']
+category_titles = ['工作学习', '社交娱乐', '商业活动']
+
+# 设置图表布局为1行3列
+fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+
+for i, (ax, category) in enumerate(zip(axes, categories)):
+    index = np.arange(len(predicted_data['年份']))  # x轴的位置
+    bar_width = 0.35  # 柱状图的宽度
+
+    # 绘制城镇的柱状图
+    urban_values = predicted_data[f'城镇{category}']
+    ax.bar(index, urban_values, bar_width, label='城镇', color='red')
+
+    # 绘制农村的柱状图，叠加在城镇柱状图之上
+    rural_values = predicted_data[f'农村{category}']
+    ax.bar(index, rural_values, bar_width, label='农村', color='orange', bottom=urban_values)
+
+    # 设置图表标题和坐标轴标签
+    ax.set_xlabel('年份')
+    ax.set_ylabel('互联网使用量 (%)')
+    ax.set_title(f'{category_titles[i]}领域内城乡互联网使用量随时间的变化')
+    ax.set_xticks(index)
+    ax.set_xticklabels(predicted_data['年份'])
+    ax.legend()
+
+plt.tight_layout()
+plt.show()
+\end{lstlisting}
+
+\begin{lstlisting}[language=python,caption={基础设施}]
+## 输出高清图像
+%config InlineBackend.figure_format = 'retina'
+%matplotlib inline
+import pandas as pd
+
+data_path = '/home/mw/input/basic4904/乡村基础设施.csv'
+data = pd.read_csv(data_path)
+data.head()
+print(data)
+## 计算各个城市的CARS
+def calculate_cagr(final_value, initial_value, years):
+    return (final_value / initial_value) ** (1 / years) - 1
+
+cagr_results = {}
+
+for province in data['地区'].unique():
+    province_data = data[data['地区'] == province]
+    cagr_results[province] = {}
+    years = province_data['年份'].max() - province_data['年份'].min()
+    
+    for column in ['乡镇每万人卫生床位数', '每十万亩耕地化肥施用量', '人均养老服务机构数量']:
+        initial_value = province_data[province_data['年份'] == province_data['年份'].min()][column].values[0]
+        final_value = province_data[province_data['年份'] == province_data['年份'].max()][column].values[0]
+        cagr_results[province][column] = calculate_cagr(final_value, initial_value, years)
+
+cagr_results_df = pd.DataFrame(cagr_results).T.reset_index().rename(columns={'index': '地区'})
+cagr_results_df
+cagr_results_df.to_csv('cagrData.csv', index=False)
+data_path = '/home/mw/project/cagrData.csv'
+data = pd.read_csv(data_path)
+data.head()
+# 计算出CARG
+province_distribution = dict(zip(data['地区'], data['乡镇每万人卫生床位数']))
+print(province_distribution)
+# 绘制全国的乡镇每万人卫生床位数的热力图
+
+from pyecharts.charts import Map
+from pyecharts import options as opts
+
+province_distribution = {
+    '河北省': 0.01218799046016783, '山西省': -0.0004124565449850071, '内蒙古自治区': 0.008205003274858623, 
+    '辽宁省': -0.007606881608198224, '吉林省': -0.020917808257593373, '黑龙江省': 0.007278157355442572, 
+    '上海市': 0.023344552180765588, '江苏省': 0.01937075432967417, '浙江省': 0.050720686277746514, 
+    '安徽省': 0.05532403770367211, '福建省': 0.00793746475229029, '江西省': 0.031851940133497125, 
+    '山东省': -0.032708805111584034, '河南省': 0.02352871187474404, '湖北省': 0.04473898056377945, 
+    '湖南省': 0.030643488523278695, '广东省': 0.01773656492178044, '广西壮族自治区': 0.06262170689609192, 
+    '海南省': 0.02300778670809689, '重庆市': 0.04636730189502525, '四川省': 0.03806346202918354, 
+    '贵州省': 0.027457553151980733, '云南省': 0.033234807795472936, '陕西省': 0.034586670171331324, 
+    '甘肃省': 0.03131720166894647, '青海省': 0.002597054520401043, '宁夏回族自治区': 0.05882382172352507,
+    '北京市': 0.023345, '天津市': 0.277755, '江苏省': 0.019371, '西藏自治区': 0.059866, 
+    '新疆维吾尔自治区': -0.018059,   
+}
+
+provinces = list(province_distribution.keys())
+values = list(province_distribution.values())
+
+max_value = max(values)
+min_value = min(values)
+
+map = Map()
+map.add("", [list(z) for z in zip(provinces, values)], "china")
+map.set_global_opts(
+    title_opts=opts.TitleOpts(title="中国地图-乡镇每万人卫生床位数"),
+    visualmap_opts=opts.VisualMapOpts(max_=max_value, min_=min_value, is_piecewise=True,
+                                      pieces=[
+                                          # 正增长的颜色范围
+                                          {"min": 0.2*max_value, "max": max_value, "label": "高正增长", "color": "#8B0000"},
+                                          {"min": 0.02*max_value, "max": 0.2*max_value, "label": "中正增长", "color": "#FF6347"},
+                                          {"min": 0, "max": 0.02*max_value, "label": "低正增长", "color": "#FFA07A"},
+                                          # 负增长的颜色范围，改为蓝色系
+                                          {"min": 0.2*min_value, "max": 0, "label": "低负增长", "color": "#ADD8E6"},
+                                          {"min": 0.02*min_value, "max": 0.2*min_value, "label": "中负增长", "color": "#4169E1"},
+                                          {"min": min_value, "max": 0.02*min_value, "label": "高负增长", "color": "#00008B"},
+                                      ]),
+)
+map.render(path="中国地图_乡镇每万人卫生床位数.html")
+# 计算出CARG
+province_distribution = dict(zip(data['地区'], data['人均养老服务机构数量']))
+print(province_distribution)
+{'北京': 0.22662477930999006, '天津': -0.11066715065008036, '河北': -0.03297699943370547, '山西': -0.020665246305667902, '内蒙古': 0.006117405887125
+# 绘制全国的人均养老服务机构数量的热力图
+
+from pyecharts.charts import Map
+from pyecharts import options as opts
+
+province_distribution = {
+    '北京市': 0.22662477930999006, '天津市': -0.11066715065008036, '河北省': -0.03297699943370547, 
+    '山西省': -0.020665246305667902, '内蒙古自治区': 0.0061174058871256145, '辽宁省': 0.0, 
+    '吉林省': 0.08618853376625335, '黑龙江省': 0.04559318758735875, '上海市': -0.02750752753392693, 
+    '江苏省': 0.02110131007575577, '浙江省': 0.006781292198554167, '安徽省': 0.06593591105070629, 
+    '福建省': -0.062334842491441174, '江西省': 0.11661149392718118, '山东省': 0.07456993182354199, 
+    '河南省': 0.08472168847183115, '湖北省': 0.024566403181330854, '湖南省': 0.01610752112792979, 
+    '广东省': -0.004988184307996746, '广西壮族自治区': 0.002214896404551414, '海南省': -0.17034110136755032, 
+    '重庆市': -0.047517072327395986, '四川省': 0.028285594297889682, '贵州省': -0.07083907670928691, 
+    '云南省': 0.07336592395997821, '西藏自治区': -0.21867191041100772, '陕西省': -0.07083907670928691, 
+    '甘肃省': -0.07642068317917018, '青海省': -0.008892595393171887, '宁夏回族自治区': 0.0157684228081092, 
+    '新疆维吾尔自治区': -0.04942017504585927,
+}
+
+
+provinces = list(province_distribution.keys())
+values = list(province_distribution.values())
+
+max_value = max(values)
+min_value = min(values)
+
+map = Map()
+map.add("", [list(z) for z in zip(provinces, values)], "china")
+map.set_global_opts(
+    title_opts=opts.TitleOpts(title="中国地图-人均养老服务机构数量"),
+    visualmap_opts=opts.VisualMapOpts(max_=max_value, min_=min_value, is_piecewise=True,
+                                      pieces=[
+                                          # 正增长的颜色范围
+                                          {"min": 0.2*max_value, "max": max_value, "label": "高正增长", "color": "#8B0000"},
+                                          {"min": 0.02*max_value, "max": 0.2*max_value, "label": "中正增长", "color": "#FF6347"},
+                                          {"min": 0, "max": 0.02*max_value, "label": "低正增长", "color": "#FFA07A"},
+                                          # 负增长的颜色范围，改为蓝色系
+                                          {"min": 0.2*min_value, "max": 0, "label": "低负增长", "color": "#ADD8E6"},
+                                          {"min": 0.02*min_value, "max": 0.2*min_value, "label": "中负增长", "color": "#4169E1"},
+                                          {"min": min_value, "max": 0.02*min_value, "label": "高负增长", "color": "#00008B"},
+                                      ]),
+)
+map.render(path="中国地图_人均养老服务机构数量.html")
+province_distribution = dict(zip(data['地区'], data['每十万亩耕地化肥施用量']))
+print(province_distribution)
+# 绘制全国的化肥使用量的热力图
+from pyecharts.charts import Map
+from pyecharts import options as opts
+
+province_distribution = {
+    '北京市': -0.08960628654718139, '天津市': -0.05629965310485774, '河北省': -0.01812032791303242, 
+    '山西省': -0.012097994137587498, '内蒙古自治区': 0.005150930121553099, '辽宁省': -0.012146153771878663, 
+    '吉林省': 0.005971263463225629, '黑龙江省': -0.01490583065148854, '上海市': -0.05301926866498563, 
+    '江苏省': -0.0192983038506388, '浙江省': -0.03583765587377119, '安徽省': -0.017480241278073683, 
+    '福建省': -0.02241093709653852, '江西省': -0.03403081794865581, '山东省': -0.0266357242406009, 
+    '河南省': -0.0070545165993416425, '湖北省': -0.03646451891149583, '湖南省': -0.015563959623519754, 
+    '广东省': -0.009686964816512766, '广西壮族自治区': -0.00033019665593569947, '海南省': -0.007382193005619597, 
+    '重庆市': -0.005775797731546684, '四川省': -0.025036650614180256, '贵州省': -0.02562098695734893, 
+    '云南省': -0.008547865690601841, '西藏自治区': -0.020665246305667902, '陕西省': -0.0201640935040992, 
+    '甘肃省': -0.019434142756372563, '青海省': -0.06593738760726198, '宁夏回族自治区': -0.008545082053690091, 
+    '新疆维吾尔自治区': 0.023954294255524426,
+}
+
+provinces = list(province_distribution.keys())
+values = list(province_distribution.values())
+
+max_value = max(values)
+min_value = min(values)
+
+map = Map()
+map.add("", [list(z) for z in zip(provinces, values)], "china")
+map.set_global_opts(
+    title_opts=opts.TitleOpts(title="中国地图-每十万亩耕地化肥施用量"),
+    visualmap_opts=opts.VisualMapOpts(max_=max_value, min_=min_value, is_piecewise=True,
+                                      pieces=[
+                                          # 正增长的颜色范围
+                                          {"min": 0.2*max_value, "max": max_value, "label": "高正增长", "color": "#8B0000"},
+                                          {"min": 0.02*max_value, "max": 0.2*max_value, "label": "中正增长", "color": "#FF6347"},
+                                          {"min": 0, "max": 0.02*max_value, "label": "低正增长", "color": "#FFA07A"},
+                                          # 负增长的颜色范围，改为蓝色系
+                                          {"min": 0.2*min_value, "max": 0, "label": "低负增长", "color": "#ADD8E6"},
+                                          {"min": 0.02*min_value, "max": 0.2*min_value, "label": "中负增长", "color": "#4169E1"},
+                                          {"min": min_value, "max": 0.02*min_value, "label": "高负增长", "color": "#00008B"},
+                                      ]),
+)
+map.render(path="中国地图_每十万亩耕地化肥施用量.html")
+\end{lstlisting}
+
+\begin{lstlisting}[language=python,caption={城乡互联网}]
+\end{lstlisting}
+
+\begin{lstlisting}[language=python,caption={就业前景}]
+import pandas as pd
+file_path = '/home/mw/input/develop6699/城乡就业人员数据.csv'
+data = pd.read_csv(file_path,encoding='GBK')
+data.head()
+
+import torch
+import torch.nn as nn
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import MinMaxScaler
+
+## 输出高清图像
+%config InlineBackend.figure_format = 'retina'
+%matplotlib inline
+
+# 下面两块代码是对缺失值的补充
+# 预测城镇
+data1 = {
+    "年份": [2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1999, 1998, 1997, 1996, 1995, 1994, 1993, 1992, 1991, 1990],
+    "私营企业乡村就业人员(万人)": [8267,7424,6554,5914,5215,4533,4279,3739,3442,3347,3063,2780,2672,2632,2366,2024,1754,1411,1187,1139,969,737,600,551,471,316,187,134,116,113],
+}
+# 作为时间序列，倒序排列列表数据
+for key in data1:
+    data1[key] = data1[key][::-1]
+# 将数据转换为 numpy 数组
+data_urban = np.array(data1["私营企业乡村就业人员(万人)"]).reshape(-1, 1)
+# 数据归一化
+scaler = MinMaxScaler(feature_range=(-1, 1))
+data_normalized = scaler.fit_transform(data_urban)
+# 转换为 PyTorch tensors
+data_normalized = torch.FloatTensor(data_normalized).view(-1)
+# 创建数据集
+train_window = 3  # 使用 3 年的数据预测下一年
+def create_inout_sequences(input_data, tw):
+    inout_seq = []
+    L = len(input_data)
+    for i in range(L-tw):
+        train_seq = input_data[i:i+tw]
+        train_label = input_data[i+tw:i+tw+1]
+        inout_seq.append((train_seq, train_label))
+    return inout_seq
+train_inout_seq = create_inout_sequences(data_normalized, train_window)
+# 定义 LSTM 模型
+class LSTM(nn.Module):
+    def __init__(self, input_size=1, hidden_layer_size=100, output_size=1):
+        super().__init__()
+        self.hidden_layer_size = hidden_layer_size
+
+        self.lstm = nn.LSTM(input_size, hidden_layer_size)
+
+        self.linear = nn.Linear(hidden_layer_size, output_size)
+
+        self.hidden_cell = (torch.zeros(1, 1, self.hidden_layer_size),
+                            torch.zeros(1, 1, self.hidden_layer_size))
+    def forward(self, input_seq):
+        lstm_out, self.hidden_cell = self.lstm(input_seq.view(len(input_seq), 1, -1), self.hidden_cell)
+        predictions = self.linear(lstm_out.view(len(input_seq), -1))
+        return predictions[-1]
+# 实例化模型
+model = LSTM()
+loss_function = nn.MSELoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+# 训练模型
+epochs = 25
+for epoch in range(epochs):
+    for seq, labels in train_inout_seq:
+        optimizer.zero_grad()
+        model.hidden_cell = (torch.zeros(1, 1, model.hidden_layer_size),
+                             torch.zeros(1, 1, model.hidden_layer_size))
+        y_pred = model(seq)
+        single_loss = loss_function(y_pred, labels)
+        single_loss.backward()
+        optimizer.step()
+    if epoch%25 == 1:
+        print(f'epoch: {epoch:3} loss: {single_loss.item():10.8f}')
+print(f'epoch: {epoch:3} loss: {single_loss.item():10.10f}')
+# 使用模型对整个数据集进行预测以创建拟合与真实数据对比图
+# 为预测做准备
+future_pred = 6
+test_inputs = data_normalized[-train_window:].tolist()
+# 预测未来五年
+model.eval()
+for i in range(future_pred):
+    seq = torch.FloatTensor(test_inputs[-train_window:])
+    with torch.no_grad():
+        model.hidden_cell = (torch.zeros(1, 1, model.hidden_layer_size),
+                             torch.zeros(1, 1, model.hidden_layer_size))
+        test_inputs.append(model(seq).item())
+# 将预测数据转换回原始规模
+actual_predictions = scaler.inverse_transform(np.array(test_inputs[train_window:] ).reshape(-1, 1))
+# 准备绘制图表
+years = np.array(data1["年份"])[-train_window:]
+predicted_years = np.arange(years[-1] + 1, years[-1] + 1 + future_pred)
+real_data = scaler.inverse_transform(data_normalized.reshape(-1, 1)).reshape(-1)
+# 绘制图表
+plt.figure(figsize=(10, 6))
+plt.title('未来三年私营企业乡村就业人员变化')
+plt.xlabel('年份')
+plt.ylabel('私营企业乡村就业人员')
+plt.grid(True)
+plt.autoscale(axis='x', tight=True)
+plt.plot(data1["年份"], real_data, label='Real Data')
+plt.plot(predicted_years, actual_predictions, label='Predictions', linestyle='--')
+plt.legend()
+plt.show()
+# 重置测试输入
+test_inputs = data_normalized.tolist()
+# 对整个数据集进行预测
+model.eval()
+predictions = []
+for i in range(len(test_inputs) - train_window):
+    seq = torch.FloatTensor(test_inputs[i:i+train_window])
+    with torch.no_grad():
+        model.hidden_cell = (torch.zeros(1, 1, model.hidden_layer_size),
+                             torch.zeros(1, 1, model.hidden_layer_size))
+        predictions.append(model(seq).item())
+# 将预测数据转换回原始规模
+predictions_scaled = scaler.inverse_transform(np.array(predictions).reshape(-1, 1))
+# 准备绘制图表
+plt.figure(figsize=(10, 6))
+plt.title('拟合私营企业乡村就业人员与真实的对比图')
+plt.xlabel('年份')
+plt.ylabel('私营企业乡村就业人员')
+plt.grid(True)
+plt.autoscale(axis='x', tight=True)
+plt.plot(data1["年份"][train_window:], real_data[train_window:], label='Real Data')
+plt.plot(data1["年份"][train_window:], predictions_scaled, label='Model Fit', linestyle='--')
+plt.legend()
+plt.show()
+# 输出预测的未来五年私营企业乡村就业人员数值
+predicted_population = actual_predictions.flatten()
+predicted_years = np.arange(years[-1] + 1, years[-1] + 1 + future_pred)
+# 输出预测的未来三年私营企业乡村就业人员数值
+for year, population in zip(predicted_years, actual_predictions):
+    print(f"年份: {year}, 预测私营企业乡村就业人员(万人): {population[0]:.2f}")
+# 预测城镇
+data2 = {
+    "年份": [2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1999, 1998, 1997, 1996, 1995, 1994, 1993, 1992, 1991, 1990],
+    "个体乡村就业人员(万人)": [6000,5597,4878,4235,3882,3575,3193,2986,2718,2540,2341,2167,2187,2147,2123,2066,2260,2474,2629,2934,3827,3855,3522,3308,3054,2551,2010,1728,1616,1491],
+}
+# 作为时间序列，倒序排列列表数据
+for key in data2:
+    data2[key] = data2[key][::-1]
+# 将数据转换为 numpy 数组
+data_urban = np.array(data2["个体乡村就业人员(万人)"]).reshape(-1, 1)
+# 数据归一化
+scaler = MinMaxScaler(feature_range=(-1, 1))
+data_normalized = scaler.fit_transform(data_urban)
+# 转换为 PyTorch tensors
+data_normalized = torch.FloatTensor(data_normalized).view(-1)
+# 创建数据集
+train_window = 3  # 使用 3 年的数据预测下一年
+def create_inout_sequences(input_data, tw):
+    inout_seq = []
+    L = len(input_data)
+    for i in range(L-tw):
+        train_seq = input_data[i:i+tw]
+        train_label = input_data[i+tw:i+tw+1]
+        inout_seq.append((train_seq, train_label))
+    return inout_seq
+train_inout_seq = create_inout_sequences(data_normalized, train_window)
+# 定义 LSTM 模型
+class LSTM(nn.Module):
+    def __init__(self, input_size=1, hidden_layer_size=100, output_size=1):
+        super().__init__()
+        self.hidden_layer_size = hidden_layer_size
+        self.lstm = nn.LSTM(input_size, hidden_layer_size)
+        self.linear = nn.Linear(hidden_layer_size, output_size)
+        self.hidden_cell = (torch.zeros(1, 1, self.hidden_layer_size),
+                            torch.zeros(1, 1, self.hidden_layer_size))
+    def forward(self, input_seq):
+        lstm_out, self.hidden_cell = self.lstm(input_seq.view(len(input_seq), 1, -1), self.hidden_cell)
+        predictions = self.linear(lstm_out.view(len(input_seq), -1))
+        return predictions[-1]
+# 实例化模型
+model = LSTM()
+loss_function = nn.MSELoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+# 训练模型
+epochs = 25
+for epoch in range(epochs):
+    for seq, labels in train_inout_seq:
+        optimizer.zero_grad()
+        model.hidden_cell = (torch.zeros(1, 1, model.hidden_layer_size),
+                             torch.zeros(1, 1, model.hidden_layer_size))
+        y_pred = model(seq)
+        single_loss = loss_function(y_pred, labels)
+        single_loss.backward()
+        optimizer.step()
+    if epoch%25 == 1:
+        print(f'epoch: {epoch:3} loss: {single_loss.item():10.8f}')
+print(f'epoch: {epoch:3} loss: {single_loss.item():10.10f}')
+# 使用模型对整个数据集进行预测以创建拟合与真实数据对比图
+# 为预测做准备
+future_pred = 6
+test_inputs = data_normalized[-train_window:].tolist()
+# 预测未来五年
+model.eval()
+for i in range(future_pred):
+    seq = torch.FloatTensor(test_inputs[-train_window:])
+    with torch.no_grad():
+        model.hidden_cell = (torch.zeros(1, 1, model.hidden_layer_size),
+                             torch.zeros(1, 1, model.hidden_layer_size))
+        test_inputs.append(model(seq).item())
+
+# 将预测数据转换回原始规模
+actual_predictions = scaler.inverse_transform(np.array(test_inputs[train_window:] ).reshape(-1, 1))
+# 准备绘制图表
+years = np.array(data2["年份"])[-train_window:]
+predicted_years = np.arange(years[-1] + 1, years[-1] + 1 + future_pred)
+real_data = scaler.inverse_transform(data_normalized.reshape(-1, 1)).reshape(-1)
+# 绘制图表
+plt.figure(figsize=(10, 6))
+plt.title('未来三年个体乡村就业人员变化')
+plt.xlabel('年份')
+plt.ylabel('个体乡村就业人员')
+plt.grid(True)
+plt.autoscale(axis='x', tight=True)
+plt.plot(data2["年份"], real_data, label='Real Data')
+plt.plot(predicted_years, actual_predictions, label='Predictions', linestyle='--')
+plt.legend()
+plt.show()
+# 重置测试输入
+test_inputs = data_normalized.tolist()
+# 对整个数据集进行预测
+model.eval()
+predictions = []
+for i in range(len(test_inputs) - train_window):
+    seq = torch.FloatTensor(test_inputs[i:i+train_window])
+    with torch.no_grad():
+        model.hidden_cell = (torch.zeros(1, 1, model.hidden_layer_size),
+                             torch.zeros(1, 1, model.hidden_layer_size))
+        predictions.append(model(seq).item())
+# 将预测数据转换回原始规模
+predictions_scaled = scaler.inverse_transform(np.array(predictions).reshape(-1, 1))
+# 准备绘制图表
+plt.figure(figsize=(10, 6))
+plt.title('拟合个体乡村就业人员与真实的对比图')
+plt.xlabel('年份')
+plt.ylabel('个体乡村就业人员')
+plt.grid(True)
+plt.autoscale(axis='x', tight=True)
+plt.plot(data2["年份"][train_window:], real_data[train_window:], label='Real Data')
+plt.plot(data2["年份"][train_window:], predictions_scaled, label='Model Fit', linestyle='--')
+plt.legend()
+plt.show()
+# 输出预测的未来三年个体乡村就业人员数值
+predicted_population = actual_predictions.flatten()
+predicted_years = np.arange(years[-1] + 1, years[-1] + 1 + future_pred)
+# 输出预测的未来三年个体乡村就业人员数值
+for year, population in zip(predicted_years, actual_predictions):
+    print(f"年份: {year}, 预测个体乡村就业人员(万人): {population[0]:.2f}")
+predicted_private_rural_employment = {
+    2020: 9368.61,
+    2021: 10530.60,
+    2022: 11694.96
+}
+predicted_individual_rural_employment = {
+    2020: 7165.81,
+    2021: 8837.95,
+    2022: 11435.92
+}
+for year, value in predicted_private_rural_employment.items():
+    data.loc[data['指标'] == '私营企业乡村就业人员(万人)', f'{year}年'] = value
+for year, value in predicted_individual_rural_employment.items():
+    data.loc[data['指标'] == '个体乡村就业人员(万人)', f'{year}年'] = value
+data.columns = [col.replace('年', '') if '年' in col else col for col in data.columns]
+year_columns = [col for col in data.columns if col.isdigit()]
+data[year_columns] = data[year_columns].astype(int)
+
+## 封装成一个函数，便于调用（用于处理字典）
+def predict(data, train_window, future_pred, label, epochs,lr):
+    # 转换为 numpy 数组
+    data_np = np.array(data[label]).reshape(-1, 1)
+    # 数据归一化
+    scaler = MinMaxScaler(feature_range=(-1, 1))
+    data_normalized = scaler.fit_transform(data_np)
+    # 转换为 PyTorch tensors
+    data_normalized = torch.FloatTensor(data_normalized).view(-1)
+    # 创建数据集
+    def create_inout_sequences(input_data, tw):
+        inout_seq = []
+        L = len(input_data)
+        for i in range(L-tw):
+            train_seq = input_data[i:i+tw]
+            train_label = input_data[i+tw:i+tw+1]
+            inout_seq.append((train_seq, train_label))
+        return inout_seq
+    train_inout_seq = create_inout_sequences(data_normalized, train_window)
+    # 定义 LSTM 模型
+    class LSTM(nn.Module):
+        def __init__(self, input_size=1, hidden_layer_size=100, output_size=1):
+            super().__init__()
+            self.hidden_layer_size = hidden_layer_size
+            self.lstm = nn.LSTM(input_size, hidden_layer_size)
+            self.linear = nn.Linear(hidden_layer_size, output_size)
+            self.hidden_cell = (torch.zeros(1, 1, self.hidden_layer_size),
+                                torch.zeros(1, 1, self.hidden_layer_size))
+        def forward(self, input_seq):
+            lstm_out, self.hidden_cell = self.lstm(input_seq.view(len(input_seq), 1, -1), self.hidden_cell)
+            predictions = self.linear(lstm_out.view(len(input_seq), -1))
+            return predictions[-1]
+    # 实例化模型
+    model = LSTM()
+    loss_function = nn.MSELoss()
+    optimizer = torch.optim.Adam(model.parameters(), lr)
+    # 训练模型
+    # epochs = 25
+    for epoch in range(epochs):
+        for seq, labels in train_inout_seq:
+            optimizer.zero_grad()
+            model.hidden_cell = (torch.zeros(1, 1, model.hidden_layer_size),
+                                torch.zeros(1, 1, model.hidden_layer_size))
+            y_pred = model(seq)
+            single_loss = loss_function(y_pred, labels)
+            single_loss.backward()
+            optimizer.step()
+        if epoch % 25 == 1:
+            print(f'epoch: {epoch:3} loss: {single_loss.item():10.8f}')
+    print(f'epoch: {epoch:3} loss: {single_loss.item():10.10f}')
+    # 使用模型对整个数据集进行预测以创建拟合与真实数据对比图
+    # 为预测做准备
+    test_inputs = data_normalized[-train_window:].tolist()
+    # 预测未来
+    model.eval()
+    for i in range(future_pred):
+        seq = torch.FloatTensor(test_inputs[-train_window:])
+        with torch.no_grad():
+            model.hidden_cell = (torch.zeros(1, 1, model.hidden_layer_size),
+                                torch.zeros(1, 1, model.hidden_layer_size))
+            test_inputs.append(model(seq).item())
+    # 将预测数据转换回原始规模
+    actual_predictions = scaler.inverse_transform(np.array(test_inputs[train_window:]).reshape(-1, 1))
+    # 输出预测的未来私营企业乡村就业人员数值
+    predicted_years = np.arange(data["年份"][-1] + 1 - train_window, data["年份"][-1] + 1 + future_pred)
+    for year, population in zip(predicted_years, actual_predictions):
+        print(f"年份: {year}, 预测{label}(万人): {population[0]:.2f}")
+    # 绘制图表
+    plt.figure(figsize=(10, 6))
+    plt.title(f'未来{label}变化预测')
+    plt.xlabel('年份')
+    plt.ylabel(f'{label}')
+    plt.grid(True)
+    plt.autoscale(axis='x', tight=True)
+    # 绘制实际数据
+    plt.plot(data["年份"], data[label], label='Real Data')
+    # 绘制预测数据
+    plt.plot(predicted_years, np.concatenate([data[label][-train_window:], actual_predictions.ravel()]), label='Predictions', linestyle='--')
+    plt.legend()
+    plt.show()
+
+import pandas as pd
+file_path = '/home/mw/input/develop66999104/城乡就业人员数据 - 补充并转置.csv'
+data = pd.read_csv(file_path,encoding='GBK')
+data.head()
+import matplotlib.pyplot as plt
+plt.figure(figsize=(10, 6))
+for column in data.columns[1:]:
+    plt.plot(data['年份'], data[column], label=column)
+plt.xlabel('年份')
+plt.ylabel('就业人员数 (万人)')
+plt.title('各类就业人员随年份的变化')
+plt.legend()
+plt.grid(True)
+plt.xticks(rotation=45) 
+plt.tight_layout()
+plt.show()
+data = data.sort_values(by='年份')
+# 将DataFrame转换为字典
+data1 = data.to_dict(orient='list')
+predict(data1, train_window=3, future_pred=10, label="私营企业乡村就业人员(万人)",epochs=100,lr=0.005)
+predict(data1, train_window=3, future_pred=10, label="个体乡村就业人员(万人)",epochs=50,lr=0.005)
+predict(data1, train_window=3, future_pred=10, label="就业人员(万人)",epochs=100,lr=0.005)
+
+predict(data1, train_window=3, future_pred=10, label="城镇就业人员(万人)",epochs=50,lr=0.005)
+predict(data1, train_window=5, future_pred=10, label="乡村就业人员(万人)",epochs=50,lr=0.005)
+# 计算比例
+data['私营企业乡村就业人员占比'] = data['私营企业乡村就业人员(万人)'] / data['乡村就业人员(万人)']
+data['个体乡村就业人员占比'] = data['个体乡村就业人员(万人)'] / data['乡村就业人员(万人)']
+data['其他乡村就业人员占比'] = 1 - (data['私营企业乡村就业人员占比'] + data['个体乡村就业人员占比'])
+# 绘制堆面积图
+plt.figure(figsize=(10, 6))
+plt.stackplot(data['年份'], data['私营企业乡村就业人员占比'], data['个体乡村就业人员占比'], data['其他乡村就业人员占比'], labels=['私营企业乡村就业人员', '个体乡村就业人员', '其他乡村就业人员'])
+plt.legend(loc='upper left')
+plt.title('乡村就业人员结构变化（堆积面积图）')
+plt.xlabel('年份')
+plt.ylabel('占比')
+plt.gca().invert_xaxis()  # 反转x轴，使年份由早到晚排列
+plt.show()
+\end{lstlisting}
+
+\begin{lstlisting}[language=python,caption={城乡人口}]
+import pandas as pd
+# 读取数据时使用GBK
+file_path = '/home/mw/input/develop6699/乡村和城镇人口数据.csv'
+data = pd.read_csv(file_path,encoding='GBK')
+data.head()
+print(data)
+# 将年份的列名从字符串转换为整数
+data.columns = [int(col.replace('年', '')) if '年' in col else col for col in data.columns]
+import matplotlib.pyplot as plt
+## 输出高清图像
+%config InlineBackend.figure_format = 'retina'
+%matplotlib inline
+import matplotlib.pyplot as plt
+# 选择每隔七年的数据进行分析
+yearJump = range(1990, 2023, 6)
+# 创建饼图
+fig, axes = plt.subplots(2, 3, figsize=(20, 12))
+for i, year in enumerate(yearJump):
+    # 提取城镇和乡村人口数据
+    urban_population = data.loc[data['指标'] == '城镇人口(万人)', year].values[0]
+    rural_population = data.loc[data['指标'] == '乡村人口(万人)', year].values[0]
+    # 绘制饼图
+    row = i // 3
+    col = i % 3
+    axes[row, col].pie([urban_population, rural_population], labels=['城镇人口', '乡村人口'], autopct='%1.1f%%')
+    axes[row, col].set_title(f'{year}年人口分布')
+plt.tight_layout()
+plt.show()
+# 选择每隔七年的数据进行分析
+yearJump = range(1990, 2023, 8)
+# 创建饼图
+fig, axes = plt.subplots(1, len(yearJump), figsize=(20, 6))
+for i, year in enumerate(yearJump):
+    # 提取城镇和乡村人口数据
+    urban_population = data.loc[data['指标'] == '城镇人口(万人)', year].values[0]
+    rural_population = data.loc[data['指标'] == '乡村人口(万人)', year].values[0]
+    # 绘制饼图
+    axes[i].pie([urban_population, rural_population], labels=['城镇人口', '乡村人口'], autopct='%1.1f%%')
+    axes[i].set_title(f'{year}年人口分布')
+plt.tight_layout()
+plt.show()
+# 提取年份和对应的城镇人口和乡村人口数据
+years = data.columns[1:]  # 第一列是指标名称，从第二列开始是年份
+urban_population = data.loc[data['指标'] == '城镇人口(万人)', years].values.flatten()
+rural_population = data.loc[data['指标'] == '乡村人口(万人)', years].values.flatten()
+# 计算城市人口与农村人口的比例
+urban_rural_ratio = urban_population / rural_population
+# 绘制折线图
+plt.figure(figsize=(12, 6))
+plt.plot(years, urban_rural_ratio, marker='o', linestyle='-', color='r')
+plt.title('每年城市人口与农村人口的比例变化')
+plt.xlabel('年份')
+plt.ylabel('城市人口/农村人口')
+plt.xticks(rotation=45)
+plt.grid(True)
+plt.show()
+import torch
+import torch.nn as nn
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import MinMaxScaler
+# 预测城镇
+data2 = {
+    "年份": [2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1999, 1998, 1997, 1996, 1995, 1994, 1993, 1992, 1991, 1990],
+    "城镇人口(万人)": [92071, 91425, 90220, 88426, 86433, 84343, 81924, 79302, 76738, 74502, 72175, 69927, 66978, 64512, 62403, 60633, 58288, 56212, 54283, 52376, 50212, 48064, 45906, 43748, 41608, 39449, 37304, 35174, 34169, 33173, 32175, 31203, 30195],
+}
+# 作为时间序列，倒序排列列表数据
+for key in data2:
+    data2[key] = data2[key][::-1]
+# 将数据转换为 numpy 数组
+data_urban = np.array(data2["城镇人口(万人)"]).reshape(-1, 1)
+# 数据归一化
+scaler = MinMaxScaler(feature_range=(-1, 1))
+data_normalized = scaler.fit_transform(data_urban)
+# 转换为 PyTorch tensors
+data_normalized = torch.FloatTensor(data_normalized).view(-1)
+# 创建数据集
+train_window = 5  # 使用 5 年的数据预测下一年
+def create_inout_sequences(input_data, tw):
+    inout_seq = []
+    L = len(input_data)
+    for i in range(L-tw):
+        train_seq = input_data[i:i+tw]
+        train_label = input_data[i+tw:i+tw+1]
+        inout_seq.append((train_seq, train_label))
+    return inout_seq
+train_inout_seq = create_inout_sequences(data_normalized, train_window)
+# 定义 LSTM 模型
+class LSTM(nn.Module):
+    def __init__(self, input_size=1, hidden_layer_size=100, output_size=1):
+        super().__init__()
+        self.hidden_layer_size = hidden_layer_size
+        self.lstm = nn.LSTM(input_size, hidden_layer_size)
+        self.linear = nn.Linear(hidden_layer_size, output_size)
+        self.hidden_cell = (torch.zeros(1, 1, self.hidden_layer_size),
+                            torch.zeros(1, 1, self.hidden_layer_size))
+    def forward(self, input_seq):
+        lstm_out, self.hidden_cell = self.lstm(input_seq.view(len(input_seq), 1, -1), self.hidden_cell)
+        predictions = self.linear(lstm_out.view(len(input_seq), -1))
+        return predictions[-1]
+# 实例化模型
+model = LSTM()
+loss_function = nn.MSELoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+# 训练模型
+epochs = 200
+for epoch in range(epochs):
+    for seq, labels in train_inout_seq:
+        optimizer.zero_grad()
+        model.hidden_cell = (torch.zeros(1, 1, model.hidden_layer_size),
+                             torch.zeros(1, 1, model.hidden_layer_size))
+        y_pred = model(seq)
+        single_loss = loss_function(y_pred, labels)
+        single_loss.backward()
+        optimizer.step()
+    if epoch%25 == 1:
+        print(f'epoch: {epoch:3} loss: {single_loss.item():10.8f}')
+print(f'epoch: {epoch:3} loss: {single_loss.item():10.10f}')
+
+# 使用模型对整个数据集进行预测以创建拟合与真实数据对比图
+# 为预测做准备
+future_pred = 5
+test_inputs = data_normalized[-train_window:].tolist()
+# 预测未来五年
+model.eval()
+for i in range(future_pred):
+    seq = torch.FloatTensor(test_inputs[-train_window:])
+    with torch.no_grad():
+        model.hidden_cell = (torch.zeros(1, 1, model.hidden_layer_size),
+                             torch.zeros(1, 1, model.hidden_layer_size))
+        test_inputs.append(model(seq).item())
+# 将预测数据转换回原始规模
+actual_predictions = scaler.inverse_transform(np.array(test_inputs[train_window:] ).reshape(-1, 1))
+# 准备绘制图表
+years = np.array(data2["年份"])[-train_window:]
+predicted_years = np.arange(years[-1] + 1, years[-1] + 1 + future_pred)
+real_data = scaler.inverse_transform(data_normalized.reshape(-1, 1)).reshape(-1)
+# 绘制图表
+plt.figure(figsize=(10, 6))
+plt.title('未来五年城镇人口变化')
+plt.xlabel('年份')
+plt.ylabel('城镇人口')
+plt.grid(True)
+plt.autoscale(axis='x', tight=True)
+plt.plot(data2["年份"], real_data, label='Real Data')
+plt.plot(predicted_years, actual_predictions, label='Predictions', linestyle='--')
+plt.legend()
+plt.show()
+# 重置测试输入
+test_inputs = data_normalized.tolist()
+# 对整个数据集进行预测
+model.eval()
+predictions = []
+for i in range(len(test_inputs) - train_window):
+    seq = torch.FloatTensor(test_inputs[i:i+train_window])
+    with torch.no_grad():
+        model.hidden_cell = (torch.zeros(1, 1, model.hidden_layer_size),
+                             torch.zeros(1, 1, model.hidden_layer_size))
+        predictions.append(model(seq).item())
+# 将预测数据转换回原始规模
+predictions_scaled = scaler.inverse_transform(np.array(predictions).reshape(-1, 1))
+# 准备绘制图表
+plt.figure(figsize=(10, 6))
+plt.title('拟合城镇人口与真实的对比图')
+plt.xlabel('年份')
+plt.ylabel('城市人口')
+plt.grid(True)
+plt.autoscale(axis='x', tight=True)
+plt.plot(data2["年份"][train_window:], real_data[train_window:], label='Real Data')
+plt.plot(data2["年份"][train_window:], predictions_scaled, label='Model Fit', linestyle='--')
+plt.legend()
+plt.show()
+# 输出预测的未来五年城镇人口数值
+predicted_population = actual_predictions.flatten()
+predicted_years = np.arange(years[-1] + 1, years[-1] + 1 + future_pred)
+# 输出预测的未来五年城镇人口数值
+for year, population in zip(predicted_years, actual_predictions):
+    print(f"年份: {year}, 预测城镇人口(万人): {population[0]:.2f}")
+# 预测年末总
+data3 = {
+    "年份": [2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1999, 1998, 1997, 1996, 1995, 1994, 1993, 1992, 1991, 1990],
+    "年末总人口(万人)": [141175,141260,141212,141008,140541,140011,139232,138326,137646,136726,135922,134916,134091,133450,132802,132129,131448,130756,129988,129227,128453,127627,126743,125786,124761,123626,122389,121121,119850,118517,117171,115823,114333],
+}
+# 作为时间序列，倒序排列列表数据
+for key in data3:
+    data3[key] = data3[key][::-1]
+# 将数据转换为 numpy 数组
+data_rural = np.array(data3["年末总人口(万人)"]).reshape(-1, 1)
+# 数据归一化
+scaler = MinMaxScaler(feature_range=(-1, 1))
+data_normalized = scaler.fit_transform(data_rural)
+# 转换为 PyTorch tensors
+data_normalized = torch.FloatTensor(data_normalized).view(-1)
+# 创建数据集
+train_window = 5  # 使用 5 年的数据预测下一年
+def create_inout_sequences(input_data, tw):
+    inout_seq = []
+    L = len(input_data)
+    for i in range(L-tw):
+        train_seq = input_data[i:i+tw]
+        train_label = input_data[i+tw:i+tw+1]
+        inout_seq.append((train_seq, train_label))
+    return inout_seq
+train_inout_seq = create_inout_sequences(data_normalized, train_window)
+# 定义 LSTM 模型
+class LSTM(nn.Module):
+    def __init__(self, input_size=1, hidden_layer_size=100, output_size=1):
+        super().__init__()
+        self.hidden_layer_size = hidden_layer_size
+        self.lstm = nn.LSTM(input_size, hidden_layer_size)
+        self.linear = nn.Linear(hidden_layer_size, output_size)
+        self.hidden_cell = (torch.zeros(1, 1, self.hidden_layer_size),
+                            torch.zeros(1, 1, self.hidden_layer_size))
+    def forward(self, input_seq):
+        lstm_out, self.hidden_cell = self.lstm(input_seq.view(len(input_seq), 1, -1), self.hidden_cell)
+        predictions = self.linear(lstm_out.view(len(input_seq), -1))
+        return predictions[-1]
+# 实例化模型
+model = LSTM()
+loss_function = nn.MSELoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+# 训练模型
+epochs = 150
+for epoch in range(epochs):
+    for seq, labels in train_inout_seq:
+        optimizer.zero_grad()
+        model.hidden_cell = (torch.zeros(1, 1, model.hidden_layer_size),
+                             torch.zeros(1, 1, model.hidden_layer_size))
+        y_pred = model(seq)
+        single_loss = loss_function(y_pred, labels)
+        single_loss.backward()
+        optimizer.step()
+    if epoch%25 == 1:
+        print(f'epoch: {epoch:3} loss: {single_loss.item():10.8f}')
+print(f'epoch: {epoch:3} loss: {single_loss.item():10.10f}')
+# 使用模型对整个数据集进行预测以创建拟合与真实数据对比图
+# 为预测做准备
+future_pred = 5
+test_inputs = data_normalized[-train_window:].tolist()
+# 预测未来五年
+model.eval()
+for i in range(future_pred):
+    seq = torch.FloatTensor(test_inputs[-train_window:])
+    with torch.no_grad():
+        model.hidden_cell = (torch.zeros(1, 1, model.hidden_layer_size),
+                             torch.zeros(1, 1, model.hidden_layer_size))
+        test_inputs.append(model(seq).item())
+# 将预测数据转换回原始规模
+actual_predictions = scaler.inverse_transform(np.array(test_inputs[train_window:] ).reshape(-1, 1))
+# 准备绘制图表
+years = np.array(data3["年份"])[-train_window:]
+predicted_years = np.arange(years[-1] + 1, years[-1] + 1 + future_pred)
+real_data = scaler.inverse_transform(data_normalized.reshape(-1, 1)).reshape(-1)
+# 绘制图表
+plt.figure(figsize=(10, 6))
+plt.title('未来五年年末总人口变化')
+plt.xlabel('年份')
+plt.ylabel('年末总人口')
+plt.grid(True)
+plt.autoscale(axis='x', tight=True)
+plt.plot(data3["年份"], real_data, label='Real Data')
+plt.plot(predicted_years, actual_predictions, label='Predictions', linestyle='--')
+plt.legend()
+plt.show()
+# 重置测试输入
+test_inputs = data_normalized.tolist()
+# 对整个数据集进行预测
+model.eval()
+predictions = []
+for i in range(len(test_inputs) - train_window):
+    seq = torch.FloatTensor(test_inputs[i:i+train_window])
+    with torch.no_grad():
+        model.hidden_cell = (torch.zeros(1, 1, model.hidden_layer_size),
+                             torch.zeros(1, 1, model.hidden_layer_size))
+        predictions.append(model(seq).item())
+# 将预测数据转换回原始规模
+predictions_scaled = scaler.inverse_transform(np.array(predictions).reshape(-1, 1))
+# 准备绘制图表
+plt.figure(figsize=(10, 6))
+plt.title('拟合年末总人口与真实的对比图')
+plt.xlabel('年份')
+plt.ylabel('年末总人口')
+plt.grid(True)
+plt.autoscale(axis='x', tight=True)
+plt.plot(data3["年份"][train_window:], real_data[train_window:], label='Real Data')
+plt.plot(data3["年份"][train_window:], predictions_scaled, label='Model Fit', linestyle='--')
+plt.legend()
+plt.show()
+# 输出预测的未来五年城镇人口数值
+predicted_population = actual_predictions.flatten()
+predicted_years = np.arange(years[-1] + 1, years[-1] + 1 + future_pred)
+# 输出预测的未来五年城镇人口数值
+for year, population in zip(predicted_years, actual_predictions):
+    print(f"年份: {year}, 预测城镇人口(万人): {population[0]:.2f}")
+# 预测人口数量
+urban_population_predictions = {
+    2023: 92876.58,
+    2024: 93542.80,
+    2025: 94068.30,
+    2026: 94475.73,
+    2027: 94797.05
+}
+total_population_predictions = {
+    2023: 141798.21,
+    2024: 141921.48,
+    2025: 141982.03,
+    2026: 142017.37,
+    2027: 142044.71
+}
+# Storing the total population predictions in a dictionary
+total_population_predictions = {
+    2023: 141798.21,
+    2024: 141921.48,
+    2025: 141982.03,
+    2026: 142017.37,
+    2027: 142044.71
+}
+# Calculating the rural population by subtracting the urban population from the total population
+rural_population_predictions = {year: total_population_predictions[year] - urban_population_predictions[year] 
+                                for year in total_population_predictions}
+rural_population_predictions
+# 预测农村总人口
+data3 = {
+    "年份": [2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000, 1999, 1998, 1997, 1996, 1995, 1994, 1993, 1992, 1991, 1990],
+    "农村总人口(万人)": [ 49104 ,49835, 50992, 52582, 54108, 55668, 57308, 59024 ,60908, 62224 ,63747 ,64989 ,67113 ,68938 ,70399 ,71496 ,73160 ,74544 ,75705 ,76851 ,78241 ,79563 ,80837 ,82038 ,83153 ,84177 ,85085 ,85947 ,85681 ,85344 ,84996 ,84620, 84138],
+}
+# 作为时间序列，倒序排列列表数据
+for key in data3:
+    data3[key] = data3[key][::-1]
+# 将数据转换为 numpy 数组
+data_rural = np.array(data3["农村总人口(万人)"]).reshape(-1, 1)
+# 数据归一化
+scaler = MinMaxScaler(feature_range=(-1, 1))
+data_normalized = scaler.fit_transform(data_rural)
+# 转换为 PyTorch tensors
+data_normalized = torch.FloatTensor(data_normalized).view(-1)
+# 创建数据集
+train_window = 3  # 使用 5 年的数据预测下一年
+def create_inout_sequences(input_data, tw):
+    inout_seq = []
+    L = len(input_data)
+    for i in range(L-tw):
+        train_seq = input_data[i:i+tw]
+        train_label = input_data[i+tw:i+tw+1]
+        inout_seq.append((train_seq, train_label))
+    return inout_seq
+train_inout_seq = create_inout_sequences(data_normalized, train_window)
+# 定义 LSTM 模型
+class LSTM(nn.Module):
+    def __init__(self, input_size=1, hidden_layer_size=100, output_size=1):
+        super().__init__()
+        self.hidden_layer_size = hidden_layer_size
+        self.lstm = nn.LSTM(input_size, hidden_layer_size)
+        self.linear = nn.Linear(hidden_layer_size, output_size)
+        self.hidden_cell = (torch.zeros(1, 1, self.hidden_layer_size),
+                            torch.zeros(1, 1, self.hidden_layer_size))
+    def forward(self, input_seq):
+        lstm_out, self.hidden_cell = self.lstm(input_seq.view(len(input_seq), 1, -1), self.hidden_cell)
+        predictions = self.linear(lstm_out.view(len(input_seq), -1))
+        return predictions[-1]
+# 实例化模型
+model = LSTM()
+loss_function = nn.MSELoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+# 训练模型
+epochs = 50
+for epoch in range(epochs):
+    for seq, labels in train_inout_seq:
+        optimizer.zero_grad()
+        model.hidden_cell = (torch.zeros(1, 1, model.hidden_layer_size),
+                             torch.zeros(1, 1, model.hidden_layer_size))
+        y_pred = model(seq)
+        single_loss = loss_function(y_pred, labels)
+        single_loss.backward()
+        optimizer.step()
+    if epoch%25 == 1:
+        print(f'epoch: {epoch:3} loss: {single_loss.item():10.8f}')
+print(f'epoch: {epoch:3} loss: {single_loss.item():10.10f}')
+# 使用模型对整个数据集进行预测以创建拟合与真实数据对比图
+# 为预测做准备
+future_pred = 10
+test_inputs = data_normalized[-train_window:].tolist()
+# 预测未来五年
+model.eval()
+for i in range(future_pred):
+    seq = torch.FloatTensor(test_inputs[-train_window:])
+    with torch.no_grad():
+        model.hidden_cell = (torch.zeros(1, 1, model.hidden_layer_size),
+                             torch.zeros(1, 1, model.hidden_layer_size))
+        test_inputs.append(model(seq).item())
+# 将预测数据转换回原始规模
+actual_predictions = scaler.inverse_transform(np.array(test_inputs[train_window:] ).reshape(-1, 1))
+# 准备绘制图表
+years = np.array(data3["年份"])[-train_window:]
+predicted_years = np.arange(years[-1] + 1, years[-1] + 1 + future_pred)
+real_data = scaler.inverse_transform(data_normalized.reshape(-1, 1)).reshape(-1)
+# 绘制图表
+plt.figure(figsize=(10, 6))
+plt.title('未来五年年末农村总人口变化')
+plt.xlabel('年份')
+plt.ylabel('农村年末总人口')
+plt.grid(True)
+plt.autoscale(axis='x', tight=True)
+plt.plot(data3["年份"], real_data, label='Real Data')
+plt.plot(predicted_years, actual_predictions, label='Predictions', linestyle='--')
+plt.legend()
+plt.show()
+# 重置测试输入
+test_inputs = data_normalized.tolist()
+# 对整个数据集进行预测
+model.eval()
+predictions = []
+for i in range(len(test_inputs) - train_window):
+    seq = torch.FloatTensor(test_inputs[i:i+train_window])
+    with torch.no_grad():
+        model.hidden_cell = (torch.zeros(1, 1, model.hidden_layer_size),
+                             torch.zeros(1, 1, model.hidden_layer_size))
+        predictions.append(model(seq).item())
+# 将预测数据转换回原始规模
+predictions_scaled = scaler.inverse_transform(np.array(predictions).reshape(-1, 1))
+# 准备绘制图表
+plt.figure(figsize=(10, 6))
+plt.title('拟合年末农村总人口与真实的对比图')
+plt.xlabel('年份')
+plt.ylabel('农村年末总人口')
+plt.grid(True)
+plt.autoscale(axis='x', tight=True)
+plt.plot(data3["年份"][train_window:], real_data[train_window:], label='Real Data')
+plt.plot(data3["年份"][train_window:], predictions_scaled, label='Model Fit', linestyle='--')
+plt.legend()
+plt.show()
+# 打印未来五年的预测数据
+print("未来五年的农村总人口预测值:")
+for i, val in enumerate(actual_predictions):
+    year = predicted_years[i]
+    population = val[0]  # 从预测结果中获取人口数值
+    print(f"年份 {year}: {population:.2f} 万人")
+# 定义未来十年的农村总人口预测值
+populations = [84138, 84620, 84996, 85344, 85681, 85947, 85085, 84177, 83153, 82038, 80837, 79563, 78241, 76851, 75705, 74544, 73160, 71496, 70399, 68938, 67113, 64989, 63747, 62224, 60908, 59024, 57308, 55668, 54108, 52582, 50992, 49835, 49104,47548.48, 46795.32, 46118.73, 45412.10, 44972.02, 44588.71, 44266.00, 44038.31, 43850.55, 43703.22]
+# 计算每年的下降比率（前一年/今年）
+decline_rates = [populations[i - 1] / populations[i] for i in range(1, len(populations))]
+decline_rates
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.interpolate import make_interp_spline
+# 定义未来几年的农村总人口预测值
+populations = [84138, 84620, 84996, 85344, 85681, 85947, 85085, 84177, 83153, 82038, 80837, 79563, 78241, 76851, 75705, 74544, 73160, 71496, 70399, 68938, 67113, 64989, 63747, 62224, 60908, 59024, 57308, 55668, 54108, 52582, 50992, 49835, 49104, 47548.48, 46795.32, 46118.73, 45412.10, 44972.02, 44588.71, 44266.00, 44038.31, 43850.55, 43703.22]
+# 计算每年的下降比率（前一年/今年）
+decline_rates = [populations[i - 1] / populations[i] for i in range(1, len(populations))]
+# 创建更平滑的曲线
+years = range(len(decline_rates))
+x_new = np.linspace(0, len(years) - 1, 300)  # 生成更多的x值点以平滑曲线
+spl = make_interp_spline(years, decline_rates, k=3)  # 生成平滑函数
+y_smooth = spl(x_new)  # 生成平滑的y值
+# 绘制图形
+plt.figure(figsize=(10, 6))
+plt.plot(x_new, y_smooth, label='下降比率', color='b')
+plt.axhline(y=1, color='r', linestyle='-', label='比率=1')
+plt.title('年度农村总人口下降比率（平滑化）')
+plt.xlabel('时间（年）')
+plt.ylabel('下降比率')
+plt.grid(True)
+plt.legend()
+plt.tight_layout()
+plt.show()
+\end{lstlisting}

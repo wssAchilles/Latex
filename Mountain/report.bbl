@@ -1,0 +1,230 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{national-agricultural-green-development-plan}{article}{}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{农业绿色发展}
+      \field{title}{十四五全国农业绿色发展规划}
+      \field{year}{2019}
+    \endentry
+    \entry{农办科〔2023〕15号附件}{article}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{农办科〔2023〕15号附件}
+      \field{title}{2023年农业重大引领性技术及其他相关技术列表}
+      \field{year}{2023}
+    \endentry
+    \entry{china-digital-inclusion-development-report-2022}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=381a64ed94bf44a991bacc0dfc4e2e2c}{%
+           family={中国信息通信研究院政策与经济研究所},
+           familyi={中\bibinitperiod}}}%
+      }
+      \strng{namehash}{381a64ed94bf44a991bacc0dfc4e2e2c}
+      \strng{fullhash}{381a64ed94bf44a991bacc0dfc4e2e2c}
+      \strng{fullhashraw}{381a64ed94bf44a991bacc0dfc4e2e2c}
+      \strng{bibnamehash}{381a64ed94bf44a991bacc0dfc4e2e2c}
+      \strng{authorbibnamehash}{381a64ed94bf44a991bacc0dfc4e2e2c}
+      \strng{authornamehash}{381a64ed94bf44a991bacc0dfc4e2e2c}
+      \strng{authorfullhash}{381a64ed94bf44a991bacc0dfc4e2e2c}
+      \strng{authorfullhashraw}{381a64ed94bf44a991bacc0dfc4e2e2c}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{数字农业}
+      \field{month}{12}
+      \field{title}{2022年 中国城乡数字包容发展研究报告：数字化助力乡村振兴与共同富裕}
+      \field{year}{2021}
+    \endentry
+    \entry{china-digital-rural-development-2022}{article}{}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{数字农业}
+      \field{title}{中国数字乡村发展报告（2022年）}
+      \field{year}{2023}
+    \endentry
+    \entry{digital-village-strategy}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=f7baa90c62454c796f7374e714789bd3}{%
+           family={{中共中央办公厅 国务院办公厅}},
+           familyi={中\bibinitperiod}}}%
+      }
+      \strng{namehash}{f7baa90c62454c796f7374e714789bd3}
+      \strng{fullhash}{f7baa90c62454c796f7374e714789bd3}
+      \strng{fullhashraw}{f7baa90c62454c796f7374e714789bd3}
+      \strng{bibnamehash}{f7baa90c62454c796f7374e714789bd3}
+      \strng{authorbibnamehash}{f7baa90c62454c796f7374e714789bd3}
+      \strng{authornamehash}{f7baa90c62454c796f7374e714789bd3}
+      \strng{authorfullhash}{f7baa90c62454c796f7374e714789bd3}
+      \strng{authorfullhashraw}{f7baa90c62454c796f7374e714789bd3}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{中共中央办公厅 国务院办公厅印发《数字乡村发展战略纲要》}
+      \field{urlday}{25}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.gov.cn/zhengce/2019-05/16/content_5392269.htm
+      \endverb
+      \verb{url}
+      \verb https://www.gov.cn/zhengce/2019-05/16/content_5392269.htm
+      \endverb
+    \endentry
+    \entry{heywhale-dataset}{online}{}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{month}{3}
+      \field{title}{乡村振兴-生态宜居指标（2012-2020年）}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.heywhale.com/mw/dataset/6445342bff981dedde2302d9/file
+      \endverb
+      \verb{url}
+      \verb https://www.heywhale.com/mw/dataset/6445342bff981dedde2302d9/file
+      \endverb
+    \endentry
+    \entry{rural-revitalization-environmental-report-2022}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=560cdc5c9c9bb5ec0442d58c11922149}{%
+           family={严家源},
+           familyi={严\bibinitperiod}}}%
+      }
+      \strng{namehash}{560cdc5c9c9bb5ec0442d58c11922149}
+      \strng{fullhash}{560cdc5c9c9bb5ec0442d58c11922149}
+      \strng{fullhashraw}{560cdc5c9c9bb5ec0442d58c11922149}
+      \strng{bibnamehash}{560cdc5c9c9bb5ec0442d58c11922149}
+      \strng{authorbibnamehash}{560cdc5c9c9bb5ec0442d58c11922149}
+      \strng{authornamehash}{560cdc5c9c9bb5ec0442d58c11922149}
+      \strng{authorfullhash}{560cdc5c9c9bb5ec0442d58c11922149}
+      \strng{authorfullhashraw}{560cdc5c9c9bb5ec0442d58c11922149}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{证券研究报告}
+      \field{month}{1}
+      \field{title}{美好乡土，生态宜居——乡村振兴专题系列报告（环保篇）}
+      \field{year}{2022}
+    \endentry
+    \entry{农质发〔2023〕5号}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=bd2ac1a9d3e0b36cac9d28f7f55951d1}{%
+           family={农业农村部},
+           familyi={农\bibinitperiod}}}%
+        {{hash=f1a8cc97ff7d5f37a403e6d6ef53ce1d}{%
+           family={国家标准化管理委员会},
+           familyi={国\bibinitperiod}}}%
+        {{hash=7a2f714322a32fea21456ecefbc5c77a}{%
+           family={住房和城乡建设部},
+           familyi={住\bibinitperiod}}}%
+      }
+      \strng{namehash}{3e70d5c5eb60d5ecc669f41b7acd573b}
+      \strng{fullhash}{3e70d5c5eb60d5ecc669f41b7acd573b}
+      \strng{fullhashraw}{3e70d5c5eb60d5ecc669f41b7acd573b}
+      \strng{bibnamehash}{3e70d5c5eb60d5ecc669f41b7acd573b}
+      \strng{authorbibnamehash}{3e70d5c5eb60d5ecc669f41b7acd573b}
+      \strng{authornamehash}{3e70d5c5eb60d5ecc669f41b7acd573b}
+      \strng{authorfullhash}{3e70d5c5eb60d5ecc669f41b7acd573b}
+      \strng{authorfullhashraw}{3e70d5c5eb60d5ecc669f41b7acd573b}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{农质发〔2023〕5号}
+      \field{title}{乡村振兴标准化行动方案}
+      \field{year}{2023}
+    \endentry
+    \entry{bisu-rural-tourism-report}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=6847746d8313352a0931fb42fae20504}{%
+           family={{北京第二外国语学院旅游科学学院}},
+           familyi={北\bibinitperiod}}}%
+      }
+      \strng{namehash}{6847746d8313352a0931fb42fae20504}
+      \strng{fullhash}{6847746d8313352a0931fb42fae20504}
+      \strng{fullhashraw}{6847746d8313352a0931fb42fae20504}
+      \strng{bibnamehash}{6847746d8313352a0931fb42fae20504}
+      \strng{authorbibnamehash}{6847746d8313352a0931fb42fae20504}
+      \strng{authornamehash}{6847746d8313352a0931fb42fae20504}
+      \strng{authorfullhash}{6847746d8313352a0931fb42fae20504}
+      \strng{authorfullhashraw}{6847746d8313352a0931fb42fae20504}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{中国第一本乡村旅游绿皮书《中国乡村旅游发展报告（2022）》在京发布}
+      \field{urlday}{25}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.bisu.edu.cn/art/2022/12/23/art_18952_307731.html
+      \endverb
+      \verb{url}
+      \verb https://www.bisu.edu.cn/art/2022/12/23/art_18952_307731.html
+      \endverb
+    \endentry
+    \entry{china-engel-coefficients}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=735c1540e45a8176bc7d24f3e564afa3}{%
+           family={{数据基地}},
+           familyi={数\bibinitperiod}}}%
+      }
+      \strng{namehash}{735c1540e45a8176bc7d24f3e564afa3}
+      \strng{fullhash}{735c1540e45a8176bc7d24f3e564afa3}
+      \strng{fullhashraw}{735c1540e45a8176bc7d24f3e564afa3}
+      \strng{bibnamehash}{735c1540e45a8176bc7d24f3e564afa3}
+      \strng{authorbibnamehash}{735c1540e45a8176bc7d24f3e564afa3}
+      \strng{authornamehash}{735c1540e45a8176bc7d24f3e564afa3}
+      \strng{authorfullhash}{735c1540e45a8176bc7d24f3e564afa3}
+      \strng{authorfullhashraw}{735c1540e45a8176bc7d24f3e564afa3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{中国历年恩格尔系数(1978年-2021年)}
+      \field{urlday}{25}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.shujujidi.com/caijing/211.html
+      \endverb
+      \verb{url}
+      \verb https://www.shujujidi.com/caijing/211.html
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
