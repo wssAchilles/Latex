@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b25823bd-8185-493e-9c56-4f971dbcb59b" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/report.log" beforeDir="false" afterPath="$PROJECT_DIR$/report.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/report.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mountain/report.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Mountain/report.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mountain/report.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Mountain/report.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mountain/report.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Mountain/report.run.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mountain/report.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../Mountain/report.synctex.gz" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "wssAchilles"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/wssAchilles/Latex",
+    "accountId": "0499bcdd-39f0-4503-b022-58084e15fba6"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2wleylsBP0yER8LJZNOuzJnnBIN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "LaTeX.report.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler />
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file />
+        <aux-dir />
+        <latex-distribution>PROJECT_SDK</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration name="report bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler>BIBER</compiler>
+        <compiler-path />
+        <compiler-arguments />
+        <envs>
+          <env name="BIBINPUTS" value="$PROJECT_DIR$" />
+          <env name="BSTINPUTS" value="$PROJECT_DIR$/../Match;" />
+        </envs>
+        <main-file>$PROJECT_DIR$/report.tex</main-file>
+        <aux-dir>$PROJECT_DIR$/out</aux-dir>
+        <latex-distribution>TEXLIVE</latex-distribution>
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="b25823bd-8185-493e-9c56-4f971dbcb59b" name="更改" comment="" />
+      <created>1746620844578</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746620844578</updated>
+    </task>
+    <servers />
+  </component>
+</project>

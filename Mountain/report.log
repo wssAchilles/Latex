@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.4.11)  18 APR 2025 19:02
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.4.11)  7 MAY 2025 20:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1978,22 +1978,10 @@ L3 programming layer <2022/07/14>
  ***********
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `report.out':
-(rerunfilecheck)             Before: 4967E22BC5586522F1C9C135F626FDCC;3269
-(rerunfilecheck)             After:  A66FB945490ACD4876F1D34E41932F56;3347.
-
-Package biblatex Warning: Please rerun LaTeX.
-
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: A66FB945490ACD4876F1D34E41932F56;3347.
 Package logreq Info: Writing requests to 'report.run.xml'.
 \openout1 = `report.run.xml'.
 
@@ -2001,7 +1989,7 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 Here is how much of TeX's memory you used:
  48573 strings out of 475796
  1054362 string characters out of 5774033
- 1858837 words of memory out of 5000000
+ 1859309 words of memory out of 5000000
  70668 multiletter control sequences out of 15000+600000
  585722 words of font info for 144 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
