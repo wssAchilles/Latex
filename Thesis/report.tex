@@ -1,0 +1,95 @@
+% !TEX program = xelatex
+% !TEX encoding = UTF-8
+
+\documentclass[12pt, a4paper, oneside]{ctexbook}
+
+% --- 基础宏包 ---
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb} % <-- 已添加，用于修复 \mathbb 未定义错误
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{eso-pic} 
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage[colorlinks=true, linkcolor=black, citecolor=black]{hyperref}
+
+% --- 页面与字体设置 ---
+\geometry{a4paper, left=2.5cm, right=2.5cm, top=3cm, bottom=3cm}
+\graphicspath{{figures/}}
+
+% --- 字体设置 ---
+\setCJKmainfont{SimSun}
+\setCJKsansfont{SimHei}
+\setCJKfamilyfont{kaiti}{KaiTi}
+
+% --- 页眉页脚设置 ---
+\pagestyle{fancy}
+\setlength{\headheight}{15pt}
+\fancyhf{}
+\fancyhead[L]{\leftmark} 
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% --- 参考文献设置 ---
+\usepackage[backend=biber, style=gb7714-2015, sorting=none]{biblatex}
+\addbibresource{references.bib}
+
+% --- 文档信息 ---
+\title{Java 编程报告}
+\author{许子祺}
+\date{\today}
+
+% --- 文档开始 ---
+\begin{document}
+
+\frontmatter
+
+% --- 封面 ---
+\begin{titlepage}
+    \centering
+    \AddToShipoutPictureBG*{%
+      \put(0,0){%
+        \includegraphics[width=\paperwidth,height=\paperheight]{cover.png}%
+      }%
+    }
+    \includegraphics[width=7cm]{CIT.png}
+    \vfill
+    {\heiti \Huge 课程设计报告}
+    \vfill
+    \renewcommand{\arraystretch}{2.5}
+    \Large
+    \begin{tabular}{r@{\hspace{1em}}l}
+        课程名： & 面向对象程序设计 \\
+        二级学院： & 计算机信息工程学院 \\
+        班\hspace{1em}级： & 23 软一 \\
+        学\hspace{1em}号： & 23030327 \\
+        姓\hspace{1em}名： & 许子祺 \\
+    \end{tabular}
+    \vfill
+\end{titlepage}
+
+% --- 摘要与前言 ---
+\input{frontmatter/abstract.tex}
+\clearpage
+\input{frontmatter/preface.tex}
+\clearpage
+
+% --- 目录 ---
+\tableofcontents
+\clearpage
+
+\mainmatter
+
+% --- 引用各个章节 ---
+\input{mainmatter/chapter1.tex}
+\input{mainmatter/chapter2.tex}
+\input{mainmatter/chapter3.tex}
+
+\backmatter
+
+% --- 参考文献 ---
+\printbibliography[heading=bibintoc, title={参考文献}]
+
+\end{document}

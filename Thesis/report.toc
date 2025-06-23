@@ -1,0 +1,30 @@
+\contentsline {chapter}{\numberline {第一章\hspace {.3em}}人工智能的基础与历史演进}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}引言}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}核心概念与定义}{1}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}人工智能的定义}{1}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}强人工智能与弱人工智能}{2}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}机器学习与深度学习概述}{3}{subsection.1.2.3}%
+\contentsline {section}{\numberline {1.3}哲学思辨与早期探索}{6}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}图灵测试与机器智能的界定}{6}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}达特茅斯会议与人工智能的诞生}{7}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}早期AI研究范式}{7}{subsection.1.3.3}%
+\contentsline {section}{\numberline {1.4}AI的发展阶段与“寒冬”}{8}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}第一次AI寒冬（约1974-1980年）}{8}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}第二次AI寒冬（约1987-1993年）}{8}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}AI的复兴与深度学习的爆发}{9}{subsection.1.4.3}%
+\contentsline {section}{\numberline {1.5}总结}{9}{section.1.5}%
+\contentsline {chapter}{\numberline {第二章\hspace {.3em}}现代人工智能的关键技术与突破}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}引言}{11}{section.2.1}%
+\contentsline {section}{\numberline {2.2}机器学习范式}{11}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}监督学习}{11}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}无监督学习}{12}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}强化学习}{13}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}深度学习的崛起与应用}{14}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}卷积神经网络（CNN）与计算机视觉}{14}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}循环神经网络（RNN）与长短期记忆网络（LSTM）}{15}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Transformer架构与自注意力机制}{15}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}生成式人工智能（Generative AI）}{16}{section.2.4}%
+\contentsline {section}{\numberline {2.5}大型语言模型（LLMs）的兴起}{17}{section.2.5}%
+\contentsline {section}{\numberline {2.6}其他新兴技术}{17}{section.2.6}%
+\contentsline {section}{\numberline {2.7}总结}{18}{section.2.7}%
+\contentsline {chapter}{参考文献}{19}{chapter*.12}%

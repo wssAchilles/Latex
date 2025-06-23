@@ -1,17 +1,17 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'report.blg'
-[101] biber-MSWIN64:340> INFO - === 
-[136] Biber.pm:420> INFO - Reading 'report.bcf'
-[229] Biber.pm:994> INFO - Found 14 citekeys in bib section 0
-[239] Biber.pm:4463> INFO - Processing section 0
-[250] Biber.pm:4654> INFO - Looking for bibtex file 'report.bib' for section 0
-[301] bibtex.pm:1713> INFO - LaTeX decoding ...
-[317] bibtex.pm:1519> INFO - Found BibTeX data source 'report.bib'
-[384] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[384] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[386] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
-[386] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
-[396] bbl.pm:676> INFO - Writing 'report.bbl' with encoding 'UTF-8'
-[403] bbl.pm:779> INFO - Output to report.bbl
-[403] Biber.pm:131> WARN - legacy month field 'July' in entry 'Chen2022' is not an integer - this will probably not sort properly.
-[403] Biber.pm:133> INFO - WARNINGS: 1
+[107] biber-MSWIN64:340> INFO - === 
+[148] Biber.pm:420> INFO - Reading 'report.bcf'
+[234] Biber.pm:994> INFO - Found 14 citekeys in bib section 0
+[247] Biber.pm:4463> INFO - Processing section 0
+[263] Biber.pm:4654> INFO - Looking for bibtex file 'report.bib' for section 0
+[324] bibtex.pm:1713> INFO - LaTeX decoding ...
+[345] bibtex.pm:1519> INFO - Found BibTeX data source 'report.bib'
+[429] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[429] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[429] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[429] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[446] bbl.pm:676> INFO - Writing 'report.bbl' with encoding 'UTF-8'
+[455] bbl.pm:779> INFO - Output to report.bbl
+[456] Biber.pm:131> WARN - legacy month field 'July' in entry 'Chen2022' is not an integer - this will probably not sort properly.
+[456] Biber.pm:133> INFO - WARNINGS: 1
