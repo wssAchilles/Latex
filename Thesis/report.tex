@@ -7,28 +7,24 @@
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{amsmath}
-\usepackage{amssymb} 
+\usepackage{amssymb}
 \usepackage{booktabs}
 \usepackage{fancyhdr}
-\usepackage{eso-pic} 
+\usepackage{eso-pic}
 \usepackage{float}
 \usepackage{subcaption}
 \usepackage[colorlinks=true, linkcolor=black, citecolor=black]{hyperref}
+\usepackage{amsfonts} % 用于 \mathbb
 
-% --- 页面与字体设置 ---
+% --- 页面与路径设置 ---
 \geometry{a4paper, left=2.5cm, right=2.5cm, top=3cm, bottom=3cm}
 \graphicspath{{figures/}}
-
-% --- 字体设置 ---
-\setCJKmainfont{SimSun}
-\setCJKsansfont{SimHei}
-\setCJKfamilyfont{kaiti}{KaiTi}
 
 % --- 页眉页脚设置 ---
 \pagestyle{fancy}
 \setlength{\headheight}{15pt}
 \fancyhf{}
-\fancyhead[L]{\leftmark} 
+\fancyhead[L]{\leftmark}
 \fancyhead[R]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 
@@ -50,9 +46,9 @@
 \begin{titlepage}
     \centering
     \AddToShipoutPictureBG*{%
-      \put(0,0){%
-        \includegraphics[width=\paperwidth,height=\paperheight]{cover.png}%
-      }%
+        \put(0,0){%
+            \includegraphics[width=\paperwidth,height=\paperheight]{cover.png}%
+        }%
     }
     \includegraphics[width=7cm]{CIT.png}
     \vfill

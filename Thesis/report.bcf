@@ -2958,11 +2958,19 @@
     <bcf:citekey order="9" intorder="1">maurer2021cognitive</bcf:citekey>
     <bcf:citekey order="10" intorder="1">shehadeh2024expert</bcf:citekey>
     <bcf:citekey order="11" intorder="1">xu2022separable</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">mahesh2020machine</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">lecun2015deep</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">glielmo2021unsupervised</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">matsuo2022deep</bcf:citekey>
-    <bcf:citekey order="16" intorder="1">ahmed2023deep</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">机器学习范式</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">rani2023self</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">neuer2024unsupervised</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">shakya2023reinforcement</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">hussain2022design</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">15</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">15</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">15</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">15</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">89</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">90</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">croitoru2023diffusion</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">315</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
