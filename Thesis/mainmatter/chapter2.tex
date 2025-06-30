@@ -42,7 +42,7 @@
         \paragraph{1. 数据探索}
         在训练模型之前，首先需要了解数据的基本情况。例如，通过可视化分析训练集中各个数字的分布是否均衡（如图 \ref{fig:digit_exploration}a），以及查看单个数据样本的形态（如图 \ref{fig:digit_exploration}b），这有助于我们判断是否需要进行数据增强或特定的预处理。
         
-        \begin{figure}[H]
+        \begin{figure}[htbp]
             \centering
             \begin{subfigure}[b]{0.48\textwidth}
                 \centering
@@ -235,7 +235,7 @@ LSTM的核心在于其单元（Cell）结构,它通过三个“门”（Gate）�
 
 \paragraph{2. 探索性数据分析（EDA）}
 在将文本数据送入LSTM模型前,进行探索性数据分析（EDA）至关重要。这有助于理解语料库的特征,例如文本长度、词汇构成和标点符号的使用。图 \ref{fig:lstm_eda_basic} 展示了灾难性与非灾难性推文在字符数、词数和平均词长上的分布对比。
-\begin{figure}[H]
+\begin{figure}[htbp]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
@@ -262,7 +262,7 @@ LSTM的核心在于其单元（Cell）结构,它通过三个“门”（Gate）�
 \end{figure}
 
 进一步地,我们分析了停用词（Stopwords）和标点符号的使用频率,如图 \ref{fig:lstm_eda_stop_punct} 所示。这些分析可以指导我们进行数据清洗和预处理,例如是否需要移除停用词和标点。
-\begin{figure}[H]
+\begin{figure}[htbp]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
@@ -333,7 +333,7 @@ LSTM的核心在于其单元（Cell）结构,它通过三个“门”（Gate）�
 
 \paragraph{1. 输入向量化与Q、K、V矩阵}
 模型的第一步是将每个输入词的词嵌入（Embedding）向量,通过乘以三个可学习的权重矩阵 $W^Q, W^K, W^V$,分别转换为查询向量（Query）、键向量（Key）和值向量（Value）。如图 \ref{fig:qkv_creation} 所示,这些向量是计算自注意力的基础。
-\begin{figure}[H]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{figures/T1.png}
     \caption{从词嵌入向量X生成查询（Q）、键（K）、值（V）矩阵}
@@ -373,7 +373,7 @@ $$ \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right
 \end{figure}
 
 图 \ref{fig:self_attention_example} 直观地展示了自注意力机制的效果。在处理句子“The animal didn't cross the street because it was too tired”时,其中一个注意力头在编码单词“it”时,会将大部分的注意力分配给“animal”,从而正确地理解了“it”的指代对象。
-\begin{figure}[H]
+\begin{figure}[htbp]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
@@ -480,7 +480,7 @@ Transformer模型由编码器（Encoder）和解码器（Decoder）堆栈组成�
         $$ \max_{G} V_G = \mathbb{E}_{z \sim p_{z}(z)}[\log D(G(z))] $$
     \end{itemize}
     
-    \begin{figure}[H]
+    \begin{figure}[htbp]
         \centering
         \begin{subfigure}[b]{0.48\textwidth}
             \centering
@@ -507,7 +507,7 @@ Transformer模型由编码器（Encoder）和解码器（Decoder）堆栈组成�
     \paragraph{3. GAN的架构与应用实例}
     现代GAN,特别是深度卷积生成对抗网络（DCGAN）,使用深度卷积网络作为生成器和判别器的架构。生成器通常由一系列转置卷积（或称反卷积）层构成,将一个低维的随机噪声向量 $z$ 逐步上采样,最终生成高分辨率的图像（如图 \ref{fig:dcgan_generator_arch} 所示）。通过学习,GAN能够捕捉到数据背后的复杂流形结构,将简单的噪声分布（如图 \ref{fig:gan_manifold_learning} 中的Samples）映射为具有丰富细节的生成图像。
 
-    \begin{figure}[H]
+    \begin{figure}[htbp]
         \centering
         \begin{subfigure}[b]{0.48\textwidth}
             \centering
@@ -539,7 +539,7 @@ Transformer模型由编码器（Encoder）和解码器（Decoder）堆栈组成�
     $$ q(x_t | x_0) = \mathcal{N}(x_t; \sqrt{\bar{\alpha}_t} x_0, (1 - \bar{\alpha}_t) \mathbf{I}) $$
     其中 $\alpha_t = 1 - \beta_t$ 且 $\bar{\alpha}_t = \prod_{i=1}^t \alpha_i$。
 
-    \begin{figure}[H]
+    \begin{figure}[htbp]
         \centering
         \includegraphics[width=\textwidth]{figures/D1.png}
         \caption{扩散模型的前向过程：从清晰图像（$x_0$）逐步添加噪声,直至变为纯噪声图像（$x_T$）。}
@@ -551,7 +551,7 @@ Transformer模型由编码器（Encoder）和解码器（Decoder）堆栈组成�
     $$ p_\theta(x_{t-1} | x_t) = \mathcal{N}(x_{t-1}; \mu_\theta(x_t, t), \Sigma_\theta(x_t, t)) $$
     如图 \ref{fig:diffusion_reverse_process} 所示,模型在每个时间步 $t$ 预测噪声,然后从含噪图像 $x_t$ 中减去预测的噪声,得到一个更清晰的图像 $x_{t-1}$。
     
-    \begin{figure}[H]
+    \begin{figure}[htbp]
         \centering
         \includegraphics[width=\textwidth]{figures/D2.png}
         \caption{扩散模型的反向（去噪）过程：从随机噪声（$x_T$）开始,由神经网络引导,逐步恢复出清晰图像（$x_0$）。}
@@ -563,7 +563,7 @@ Transformer模型由编码器（Encoder）和解码器（Decoder）堆栈组成�
     $$ L_{\text{simple}}(\theta) = \mathbb{E}_{t, x_0, \epsilon} \left[ || \epsilon - \epsilon_\theta(\sqrt{\bar{\alpha}_t}x_0 + \sqrt{1 - \bar{\alpha}_t}\epsilon, t) ||^2 \right] $$
     其中 $t$ 从 $\{1, ..., T\}$ 中均匀采样,$\epsilon \sim \mathcal{N}(0, \mathbf{I})$。如图 \ref{fig:diffusion_training_objective} 所示,模型通过不断地比较真实噪声和预测噪声的差异来优化自身参数。
     
-    \begin{figure}[H]
+    \begin{figure}[htbp]
         \centering
         \includegraphics[width=0.8\textwidth]{figures/D3.png}
         \caption{扩散模型的训练目标：神经网络 $\epsilon_\theta$ 学习预测在时间步t添加到原始图像$x_0$上的噪声。}
@@ -652,7 +652,7 @@ $$ L(N, D) = E + \frac{A}{N^\alpha} + \frac{B}{D^\beta} $$
 
 \paragraph{2. 发展趋势的可视化分析}
 近年来,对AI模型训练的投入呈现指数级增长。图 \ref{fig:llm_compute_trends} 展示了AI领域,特别是前沿LLMs,在训练计算量（以FLOPs为单位）上的惊人增长趋势。无论是通用模型还是特定领域的模型,其计算投入都大致遵循着每年数倍增长的规律。
-\begin{figure}[H]
+\begin{figure}[htbp]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
@@ -672,7 +672,7 @@ $$ L(N, D) = E + \frac{A}{N^\alpha} + \frac{B}{D^\beta} $$
 \end{figure}
 
 这种指数级的计算投入直接转化为高昂的训练成本。如图 \ref{fig:llm_cost_perception}a 所示,从早期的Transformer模型到最新的Gemini Ultra,训练成本已从数千美元飙升至接近两亿美元。同时,模型的性能和行为也变得愈发复杂,使得如何评估和理解它们成为新的研究课题。图 \ref{fig:llm_cost_perception}b 则展示了人类对不同AI(包括早期的ELIZA和现代的LLMs)的识别原因分布,反映出随着模型能力的增强,其行为的“人性化”程度也在提高,对“图灵测试”提出了新的挑战。
-\begin{figure}[H]
+\begin{figure}[htbp]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
@@ -693,7 +693,7 @@ $$ L(N, D) = E + \frac{A}{N^\alpha} + \frac{B}{D^\beta} $$
 
 \paragraph{3. 模型性能与置信度校准}
 随着模型规模的扩大,其输出的准确性与自身的置信度（Confidence）之间的关系变得至关重要。一个“校准良好”的模型,其预测的置信度应该能真实反映其预测的正确率。图 \ref{fig:llm_confidence_calibration} 展示了不同LLMs在与人类的对比测试中的准确率与置信度的关系。理想情况下,准确率应随置信度的增加而提高。这些图表揭示了不同模型在“自我认知”能力上的差异,这是评估其可靠性和可信度的重要维度。
-\begin{figure}[H]
+\begin{figure}[htbp]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
         \centering

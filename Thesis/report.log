@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.4.11)  25 JUN 2025 18:34
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.4.11)  26 JUN 2025 00:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1070,14 +1070,13 @@ File: figures/digit_distribution.png Graphic file (type bmp)
 <figures/digit_distribution.png>
 File: figures/sample_digit.png Graphic file (type bmp)
 <figures/sample_digit.png>
-
-
-[12]
 File: figures/confusion_matrix.png Graphic file (type bmp)
 <figures/confusion_matrix.png>
 File: figures/error_analysis.png Graphic file (type bmp)
 <figures/error_analysis.png>
 
+
+[12]
 
 [13]
 File: figures/correlation_heatmap.png Graphic file (type bmp)
@@ -1106,9 +1105,6 @@ File: figures/LSTM3.png Graphic file (type bmp)
 <figures/LSTM3.png>
 File: figures/LSTM4.png Graphic file (type bmp)
 <figures/LSTM4.png>
-
-
-[18]
 File: figures/LSTM5.png Graphic file (type bmp)
 <figures/LSTM5.png>
 File: figures/LSTM6.png Graphic file (type bmp)
@@ -1118,6 +1114,8 @@ File: figures/LSTM7.png Graphic file (type bmp)
 File: figures/LSTM8.png Graphic file (type bmp)
 <figures/LSTM8.png>
 
+
+[18]
 
 [19]
 File: figures/LSTM9.png Graphic file (type bmp)
@@ -1145,13 +1143,13 @@ File: figures/T5.png Graphic file (type bmp)
 <figures/T5.png>
 File: figures/T6.png Graphic file (type bmp)
 <figures/T6.png>
-
-
-[23]
 File: figures/T7.png Graphic file (type bmp)
 <figures/T7.png>
 File: figures/T8.png Graphic file (type bmp)
 <figures/T8.png>
+
+
+[23]
 File: figures/T9.png Graphic file (type bmp)
 <figures/T9.png>
 File: figures/T10.png Graphic file (type bmp)
@@ -1254,20 +1252,112 @@ File: figures/LLM5.png Graphic file (type bmp)
 <figures/LLM5.png>
 File: figures/LLM6.png Graphic file (type bmp)
 <figures/LLM6.png>
-
-
-[33]
 File: figures/LLM3.png Graphic file (type bmp)
 <figures/LLM3.png>
 File: figures/LLM4.png Graphic file (type bmp)
 <figures/LLM4.png>
 
 
-[34]
+[33]
 
-[35]) (./mainmatter/chapter3.tex)
+[34]) (./mainmatter/chapter3.tex
 
-[36]
+[35]
+第三章
+
+
+[36
+
+]
+
+[37]
+
+[38]
+File: figures/M2.png Graphic file (type bmp)
+<figures/M2.png>
+File: figures/M1.png Graphic file (type bmp)
+<figures/M1.png>
+
+
+[39]
+File: figures/M3.png Graphic file (type bmp)
+<figures/M3.png>
+File: figures/M4.png Graphic file (type bmp)
+<figures/M4.png>
+
+
+[40]
+
+[41]
+File: figures/F7.png Graphic file (type bmp)
+<figures/F7.png>
+File: figures/F4.png Graphic file (type bmp)
+<figures/F4.png>
+
+
+[42]
+
+[43]
+File: figures/F3.png Graphic file (type bmp)
+<figures/F3.png>
+File: figures/F1.png Graphic file (type bmp)
+<figures/F1.png>
+File: figures/F2.png Graphic file (type bmp)
+<figures/F2.png>
+File: figures/F6.png Graphic file (type bmp)
+<figures/F6.png>
+File: figures/F8.png Graphic file (type bmp)
+<figures/F8.png>
+
+
+[44]
+
+[45]
+
+[46]
+
+[47]
+File: figures/DR6.png Graphic file (type bmp)
+<figures/DR6.png>
+
+
+[48]
+
+[49]
+File: figures/DR1.png Graphic file (type bmp)
+<figures/DR1.png>
+File: figures/DR3.png Graphic file (type bmp)
+<figures/DR3.png>
+File: figures/DR2.png Graphic file (type bmp)
+<figures/DR2.png>
+File: figures/DR4.png Graphic file (type bmp)
+<figures/DR4.png>
+File: figures/DR5.png Graphic file (type bmp)
+<figures/DR5.png>
+
+
+[50]
+
+[51]
+File: figures/DR7.png Graphic file (type bmp)
+<figures/DR7.png>
+File: figures/DR9.png Graphic file (type bmp)
+<figures/DR9.png>
+File: figures/DR8.png Graphic file (type bmp)
+<figures/DR8.png>
+
+
+[52]
+
+[53]
+
+[54]
+
+[55]
+
+[56])
+
+[57]
 
 Package fontspec Info: 
 (fontspec)             Could not resolve font "FangSong/BI" (it probably
@@ -1296,29 +1386,29 @@ Package fontspec Info:
 
 
 
-[37
+[58
 
 
 ]
 
-[38] (./report.aux)
+[59] (./report.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/07/14>
  ***********
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 781E8E20A7AA227A9BFAE8C881D657EF;4048.
+(rerunfilecheck)             Checksum: A47D9CF07F2814122769D187D8A7AC31;6505.
 Package logreq Info: Writing requests to 'report.run.xml'.
 \openout1 = `report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27814 strings out of 475796
- 599263 string characters out of 5774033
- 1522693 words of memory out of 5000000
- 50332 multiletter control sequences out of 15000+600000
- 570530 words of font info for 115 fonts, out of 8000000 for 9000
+ 28160 strings out of 475796
+ 609491 string characters out of 5774033
+ 1527427 words of memory out of 5000000
+ 50657 multiletter control sequences out of 15000+600000
+ 572086 words of font info for 122 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  93i,12n,111p,1223b,4981s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on report.pdf (43 pages).
+Output written on report.pdf (64 pages).
