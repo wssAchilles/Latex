@@ -1,20 +1,15 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'report.blg'
-[92] biber-MSWIN64:340> INFO - === 
-[131] Biber.pm:420> INFO - Reading 'report.bcf'
-[247] Biber.pm:994> INFO - Found 21 citekeys in bib section 0
-[258] Biber.pm:4463> INFO - Processing section 0
-[268] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
-[319] bibtex.pm:1713> INFO - LaTeX decoding ...
-[336] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[528] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[528] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[528] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
-[528] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
-[539] bbl.pm:676> INFO - Writing 'report.bbl' with encoding 'UTF-8'
-[561] bbl.pm:779> INFO - Output to report.bbl
-[561] Biber.pm:131> WARN - I didn't find a database entry for '15' (section 0)
-[561] Biber.pm:131> WARN - I didn't find a database entry for '89' (section 0)
-[561] Biber.pm:131> WARN - I didn't find a database entry for '90' (section 0)
-[561] Biber.pm:131> WARN - I didn't find a database entry for '315' (section 0)
-[561] Biber.pm:133> INFO - WARNINGS: 4
+[91] biber-MSWIN64:340> INFO - === 
+[128] Biber.pm:420> INFO - Reading 'report.bcf'
+[236] Biber.pm:994> INFO - Found 17 citekeys in bib section 0
+[249] Biber.pm:4463> INFO - Processing section 0
+[259] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
+[310] bibtex.pm:1713> INFO - LaTeX decoding ...
+[328] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[517] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[517] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[518] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[518] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[527] bbl.pm:676> INFO - Writing 'report.bbl' with encoding 'UTF-8'
+[548] bbl.pm:779> INFO - Output to report.bbl

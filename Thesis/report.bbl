@@ -1400,8 +1400,8 @@
       \strng{nameanamehash}{793c828c3a021269ecd5e2fa18603772}
       \strng{nameafullhash}{a22b1d465f486c6b0680dd4889cd3f7b}
       \strng{nameafullhashraw}{a22b1d465f486c6b0680dd4889cd3f7b}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine Intelligence}
@@ -1421,10 +1421,6 @@
       \keyw{croitoru2023diffusion}
     \endentry
   \enddatalist
-  \missing{15}
-  \missing{315}
-  \missing{89}
-  \missing{90}
 \endrefsection
 \endinput
 

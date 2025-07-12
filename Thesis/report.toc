@@ -28,9 +28,9 @@
 \contentsline {subsection}{\numberline {2.3.2}循环神经网络（RNN）与长短期记忆网络（LSTM）}{17}{subsection.2.3.2}%
 \contentsline {paragraph}{1. LSTM核心数学表达式}{18}{paragraph*.23}%
 \contentsline {paragraph}{2. 探索性数据分析（EDA）}{20}{paragraph*.24}%
-\contentsline {subsection}{\numberline {2.3.3}Transformer架构与自注意力机制}{21}{subsection.2.3.3}%
-\contentsline {paragraph}{1. 输入向量化与Q、K、V矩阵}{22}{paragraph*.29}%
-\contentsline {paragraph}{2. 缩放点积注意力（Scaled Dot-Product Attention）}{22}{paragraph*.31}%
+\contentsline {subsection}{\numberline {2.3.3}Transformer架构与自注意力机制}{20}{subsection.2.3.3}%
+\contentsline {paragraph}{1. 输入向量化与Q、K、V矩阵}{21}{paragraph*.29}%
+\contentsline {paragraph}{2. 缩放点积注意力（Scaled Dot-Product Attention）}{21}{paragraph*.31}%
 \contentsline {paragraph}{3. 多头注意力机制（Multi-Head Attention）}{23}{paragraph*.33}%
 \contentsline {paragraph}{4. 整体架构：编码器与解码器}{23}{paragraph*.36}%
 \contentsline {section}{\numberline {2.4}生成式人工智能（Generative AI）}{25}{section.2.4}%
@@ -38,7 +38,7 @@
 \contentsline {paragraph}{2. 收敛与理论最优解}{27}{paragraph*.44}%
 \contentsline {paragraph}{3. GAN的架构与应用实例}{27}{paragraph*.45}%
 \contentsline {paragraph}{1. 前向过程（Forward Process / Diffusion Process）}{28}{paragraph*.48}%
-\contentsline {paragraph}{2. 反向过程（Reverse Process / Denoising Process）}{28}{paragraph*.50}%
+\contentsline {paragraph}{2. 反向过程（Reverse Process / Denoising Process）}{29}{paragraph*.50}%
 \contentsline {paragraph}{3. 训练目标与损失函数}{29}{paragraph*.52}%
 \contentsline {paragraph}{4. 架构与应用实例}{30}{paragraph*.54}%
 \contentsline {section}{\numberline {2.5}大型语言模型（LLMs）的兴起}{32}{section.2.5}%
@@ -75,7 +75,7 @@
 \contentsline {subsection}{\numberline {3.3.2}国际合作与全球治理的重要性}{57}{subsection.3.3.2}%
 \contentsline {section}{\numberline {3.4}未来趋势与展望}{57}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}通用人工智能（AGI）的潜在路径与挑战}{57}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}人机协作的深化与人机共生社会}{57}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}人工智能在可持续发展目标中的作用}{57}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}对人类社会未来发展的深远影响与启示}{57}{subsection.3.4.4}%
-\contentsline {chapter}{参考文献}{58}{chapter*.92}%
+\contentsline {subsection}{\numberline {3.4.2}人机协作的深化与人机共生社会}{61}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}人工智能在可持续发展目标中的作用}{61}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}对人类社会未来发展的深远影响与启示}{62}{subsection.3.4.4}%
+\contentsline {chapter}{参考文献}{64}{chapter*.97}%

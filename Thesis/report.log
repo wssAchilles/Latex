@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.4.11)  26 JUN 2025 00:01
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.4.11)  12 JUL 2025 16:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -900,36 +900,7 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'report.bbl' found.
- (./report.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                15
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                315
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                89
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                90
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+ (./report.bbl)
 Package biblatex Info: Reference section=0 on input line 41.
 Package biblatex Info: Reference segment=0 on input line 41.
 File: figures/CIT.png Graphic file (type bmp)
@@ -1127,12 +1098,11 @@ File: figures/LSTM10.png Graphic file (type bmp)
 [20]
 File: figures/T1.png Graphic file (type bmp)
 <figures/T1.png>
-
-
-[21]
 File: figures/T2.png Graphic file (type bmp)
 <figures/T2.png>
 
+
+[21]
 
 [22]
 File: figures/T3.png Graphic file (type bmp)
@@ -1157,42 +1127,22 @@ File: figures/T10.png Graphic file (type bmp)
 
 
 [24]
-
-LaTeX Warning: Citation '15' on page 25 undefined on input line 443.
-
 File: figures/GAN1.png Graphic file (type bmp)
 <figures/GAN1.png>
 File: figures/GAN2.png Graphic file (type bmp)
 <figures/GAN2.png>
-
-
-[25]
 File: figures/GAN4.png Graphic file (type bmp)
 <figures/GAN4.png>
 
 
-LaTeX Warning: Citation '15' on page 26 undefined on input line 476.
-
-
-LaTeX Warning: Citation '15' on page 26 undefined on input line 479.
-
-
-LaTeX Warning: Citation '15' on page 26 undefined on input line 479.
-
-
-
-[26]
+[25]
 File: figures/GAN5.png Graphic file (type bmp)
 <figures/GAN5.png>
 File: figures/GAN6.png Graphic file (type bmp)
 <figures/GAN6.png>
 
 
-LaTeX Warning: Citation '89' on page 27 undefined on input line 503.
-
-
-LaTeX Warning: Citation '90' on page 27 undefined on input line 505.
-
+[26]
 File: figures/GAN7.png Graphic file (type bmp)
 <figures/GAN7.png>
 File: figures/GAN8.png Graphic file (type bmp)
@@ -1208,19 +1158,15 @@ File: figures/D1.png Graphic file (type bmp)
 File: figures/D2.png Graphic file (type bmp)
 <figures/D2.png>
 
-
-LaTeX Warning: Citation '315' on page 29 undefined on input line 562.
-
-
 Overfull \hbox (5.82999pt too wide) in paragraph at lines 562--563
 \TU/lmr/bx/n/12 3. \TU/SimSun(0)/b/n/12 训 练 目 标 与 损 失 函 数[] \TU/SimSun(0)/m/n/12 扩 散 模 型 的 训 练 目 标 是 最 大 化 数 据 的 对 数 似 然 $[] \OML/cmm/m/it/12 p[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]\OT1/cmr/m/n/12 )$\TU/SimSun(0)/m/n/12 。|
  []
 
+File: figures/D3.png Graphic file (type bmp)
+<figures/D3.png>
 
 
 [29]
-File: figures/D3.png Graphic file (type bmp)
-<figures/D3.png>
 File: figures/D4.png Graphic file (type bmp)
 <figures/D4.png>
 File: figures/D5.png Graphic file (type bmp)
@@ -1355,9 +1301,42 @@ File: figures/DR8.png Graphic file (type bmp)
 
 [55]
 
-[56])
+[56]
 
 [57]
+File: figures/AGI2.png Graphic file (type bmp)
+<figures/AGI2.png>
+File: figures/AGI4.png Graphic file (type bmp)
+<figures/AGI4.png>
+File: figures/AGI6.png Graphic file (type bmp)
+<figures/AGI6.png>
+File: figures/AGI7.png Graphic file (type bmp)
+<figures/AGI7.png>
+
+
+[58]
+File: figures/AGI1.png Graphic file (type bmp)
+<figures/AGI1.png>
+File: figures/AGI3.png Graphic file (type bmp)
+<figures/AGI3.png>
+File: figures/AGI5.png Graphic file (type bmp)
+<figures/AGI5.png>
+File: figures/AGI9.png Graphic file (type bmp)
+<figures/AGI9.png>
+
+
+[59]
+File: figures/AGI10.png Graphic file (type bmp)
+<figures/AGI10.png>
+
+
+[60]
+
+[61]
+
+[62])
+
+[63]
 
 Package fontspec Info: 
 (fontspec)             Could not resolve font "FangSong/BI" (it probably
@@ -1386,29 +1365,29 @@ Package fontspec Info:
 
 
 
-[58
+[64
 
 
 ]
 
-[59] (./report.aux)
+[65] (./report.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/07/14>
  ***********
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: A47D9CF07F2814122769D187D8A7AC31;6505.
+(rerunfilecheck)             Checksum: B70C1FC732E9FC7B29EF41663D33F73E;6505.
 Package logreq Info: Writing requests to 'report.run.xml'.
 \openout1 = `report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28160 strings out of 475796
- 609491 string characters out of 5774033
- 1527427 words of memory out of 5000000
- 50657 multiletter control sequences out of 15000+600000
- 572086 words of font info for 122 fonts, out of 8000000 for 9000
+ 28276 strings out of 475796
+ 611939 string characters out of 5774033
+ 1528979 words of memory out of 5000000
+ 50766 multiletter control sequences out of 15000+600000
+ 572078 words of font info for 121 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  93i,12n,111p,1223b,4981s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on report.pdf (64 pages).
+Output written on report.pdf (70 pages).
