@@ -1,0 +1,204 @@
+% !TEX program = xelatex
+% !TEX encoding = UTF-8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 专业化学位论文 LaTeX 模板
+% --- 宏包与全局设置文件 (preamble.tex) ---
+% --- 版本: 4.0 (目录格式最终微调版) ---
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[UTF8, a4paper]{ctexart}
+
+%======================================================================
+% 1. 页面布局与边距 (Page Layout)
+%======================================================================
+\usepackage[
+    a4paper,
+    top=2.5cm,
+    bottom=2.5cm,
+    left=2.5cm,
+    right=2.5cm,
+    headheight=15pt
+]{geometry}
+\usepackage{changepage} % 引入 changepage 以支持目录页边距的调整
+
+%======================================================================
+% 2. 核心功能宏包 (Core Packages)
+%======================================================================
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{bm}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{cite}
+\usepackage{setspace}
+\usepackage{url}
+
+%======================================================================
+% 3. 字体与字号设置 (Fonts Setup)
+%======================================================================
+\usepackage{xeCJK}
+\setmainfont{Times New Roman}[Ligatures=TeX]
+\setCJKmainfont{SimSun}[BoldFont=SimHei]
+\setsansfont{Arial}
+\setCJKsansfont{SimHei}
+\setmonofont{Courier New}
+
+% --- 全局正文字号与行距 ---
+\newcommand{\BodyFontSize}{14pt}
+\newcommand{\BodyBaseline}{22pt} % 约1.6倍行距
+\makeatletter
+\renewcommand\normalsize{\@setfontsize\normalsize{\BodyFontSize}{\BodyBaseline}}
+\makeatother
+\normalsize
+
+%======================================================================
+% 4. 章节与标题格式 (Chapter & Section Styling)
+%======================================================================
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\numberwithin{equation}{section}
+\providecommand{\frontmatter}{\clearpage\pagenumbering{Roman}}
+\providecommand{\mainmatter}{\clearpage\pagenumbering{arabic}}
+
+%======================================================================
+% 5. 目录、图录、表录格式 (TOC/LOF/LOT Styling) - 【规范格式最终版】
+%======================================================================
+\usepackage{tocloft}
+\usepackage[section]{tocbibind}
+
+% --- 目录主标题格式 ---
+\renewcommand{\cfttoctitlefont}{\hfill\bfseries\zihao{2}}
+\renewcommand{\cftaftertoctitle}{\hfill}
+\renewcommand{\cftloftitlefont}{\hfill\bfseries\zihao{2}}
+\renewcommand{\cftafterloftitle}{\hfill}
+\renewcommand{\cftlottitlefont}{\hfill\bfseries\zihao{2}}
+\renewcommand{\cftafterlottitle}{\hfill}
+
+% --- 目录内容格式 ---
+% (1) "章" 标题格式
+\renewcommand{\cftsecpresnum}{第}
+\renewcommand{\cftsecaftersnum}{章}
+\setlength{\cftsecnumwidth}{4.5em}
+
+% (2) 引导点格式 (数值越小越密集)
+\renewcommand{\cftdotsep}{1.5}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsubsecleader}{\cftdotfill{\cftdotsep}}
+
+% (3) 各级条目字体
+\renewcommand{\cftsecfont}{\bfseries\zihao{3}}
+\renewcommand{\cftsecpagefont}{\bfseries\zihao{3}}
+\renewcommand{\cftsubsecfont}{\zihao{4}}
+\renewcommand{\cftsubsecpagefont}{\zihao{4}}
+\renewcommand{\cftsubsubsecfont}{\zihao{-4}}
+\renewcommand{\cftsubsubsecpagefont}{\zihao{-4}}
+
+% (4) 各级条目缩进 (实现节标题与章标题的左对齐)
+\setlength{\cftsubsecindent}{\cftsecnumwidth} % 节的缩进量 = 章编号的宽度
+\addtolength{\cftsubsecindent}{\cftsecindent}  % 再加上章本身的缩进
+\setlength{\cftsubsubsecindent}{5.5em}
+
+% (5) 垂直间距 (调小以使目录更紧凑)
+\setlength{\cftbeforesecskip}{2pt}
+\setlength{\cftbeforesubsecskip}{1pt}
+\setlength{\cftbeforesubsubsecskip}{1pt}
+
+% --- 为"目录"和"摘要"条目名称添加字间距 ---
+\renewcommand{\contentsname}{目\hspace{1.5em}录}
+\newcommand{\AbstractTOCTitle}{摘\hspace{1.5em}要}
+
+% --- [核心] 重定义 \tableofcontents 等命令, 使其内容块收窄 ---
+\let\oldtableofcontents\tableofcontents
+\renewcommand{\tableofcontents}{%
+    \begin{adjustwidth}{1cm}{1cm}
+    \oldtableofcontents
+    \end{adjustwidth}
+}
+\let\oldlistoffigures\listoffigures
+\renewcommand{\listoffigures}{%
+    \begin{adjustwidth}{1cm}{1cm}
+    \oldlistoffigures
+    \end{adjustwidth}
+}
+\let\oldlistoftables\listoftables
+\renewcommand{\listoftables}{%
+    \begin{adjustwidth}{1cm}{1cm}
+    \oldlistoftables
+    \end{adjustwidth}
+}
+
+%======================================================================
+% 6. 页眉页脚 (Header & Footer)
+%======================================================================
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\leftmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\renewcommand{\subsectionmark}[1]{}
+\fancypagestyle{plain}{\fancyhf{}\fancyhead[L]{\small \leftmark}\cfoot{\thepage}\renewcommand{\headrulewidth}{0.4pt}}
+
+%======================================================================
+% 7. 摘要环境定义 (Abstract Environment)
+%======================================================================
+\renewenvironment{abstract}{%
+    \clearpage
+    \thispagestyle{plain}
+    \begin{center}
+        \bfseries\zihao{3} 摘\hspace{1em}要
+    \end{center}
+    \vspace{1.5em}
+    \setlength{\parindent}{2em}
+    \normalsize
+}{\par\vfill\clearpage}
+
+%======================================================================
+% 8. 图表标题 (Caption Styling)
+%======================================================================
+\usepackage{caption}
+\captionsetup{font=small, labelfont=bf, justification=centering}
+
+%======================================================================
+% 9. 代码块格式 (Code Listing)
+%======================================================================
+\usepackage{listings}
+\lstset{
+    language=Python, basicstyle=\footnotesize\ttfamily, keywordstyle=\bfseries,
+    commentstyle=\itshape\color{gray}, stringstyle=\ttfamily,
+    showstringspaces=false, breaklines=true, frame=single, framerule=0.4pt,
+    numbers=left, numberstyle=\tiny\color{gray}, captionpos=b,
+    tabsize=4, keepspaces=true, columns=flexible
+}
+
+%======================================================================
+% 10. 超链接与交叉引用 (Hyperlinks & Cross-references)
+%======================================================================
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black,
+    pdfauthor={}, pdftitle={关于农作物种植策略的优化模型}
+}
+\usepackage[nameinlink, noabbrev, capitalize]{cleveref}
+\crefname{section}{第}{章}
+\Crefname{section}{第}{章}
+\crefname{figure}{图}{~}
+\Crefname{figure}{图}{~}
+\crefname{table}{表}{~}
+\Crefname{table}{表}{~}
+\crefname{equation}{公式}{~}
+\Crefname{equation}{公式}{~}
+
+%======================================================================
+% 11. 论文全局信息 (Thesis Info)
+%======================================================================
+\title{\heiti \zihao{2} \bfseries 关于农作物种植策略的优化模型}
+\author{}
+\date{}

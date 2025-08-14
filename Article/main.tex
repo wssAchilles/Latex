@@ -32,6 +32,7 @@
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
+    citecolor=black,
     filecolor=magenta,      
     urlcolor=cyan,
     pdftitle={Overleaf Example},
@@ -43,7 +44,7 @@
 % 标题页
 \begin{titlepage}
     \centering
-    {\zihao{-2} 许子祺\par}
+    {\zihao{-2} 许子祺帅哥\par}
     \vspace{0.5cm}
     {\zihao{-2} ——人工交互技术文件检索作业\par}
     \vspace{1cm}
@@ -57,7 +58,7 @@
 
 生成式人工智能（Generative Artificial Intelligence, Generative AI）\cite{banh2023generative}是人工智能领域的重要分支，致力于通过机器学习模型生成与训练数据相似的全新内容，包括但不限于文本、图像、音频等。与专注于分类和预测的判别式模型不同，生成式模型通过学习数据的概率分布，生成具有创造性和真实性的输出。这种范式转变为人工智能的应用开辟了新的可能性\cite{ooi2025potential}。
 
-生成式人工智能的发展历程可追溯至多个关键技术突破。2014年，Goodfellow等人提出了生成对抗网络（Generative Adversarial Networks, GANs）\cite{saxena2021generative}，其核心思想是通过生成器（Generator）和判别器（Discriminator）之间的对抗博弈优化模型性能。生成器尝试生成逼真的样本，而判别器则负责区分生成样本与真实样本。两者的优化目标可表示为以下最小-最大博弈问题 \cite{goodfellow2014generative}：
+生成式人工智能的发展历程可追溯至多个关键技术突破。2014年，Goodfellow等人提出了生成对抗网络（Generative Adversarial Networks, GANs）\cite{saxena2021generative}，其核心思想是通过生成器（Generator）和判别器（Discriminator）之间的对抗博弈优化模型性能。生成器尝试生成逼真\cite{ji2023survey}的样本，而判别器则负责区分生成样本与真实样本。两者的优化目标可表示为以下最小-最大博弈问题 \cite{goodfellow2014generative}：
 \[
 \min_G \max_D V(D, G) = \mathbb{E}_{x \sim p_{\text{data}}(x)}[\log D(x)] + \mathbb{E}_{z \sim p_z(z)}[\log (1 - D(G(z)))]
 \]

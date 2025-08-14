@@ -1,0 +1,97 @@
+% !TeX encoding = UTF-8
+% !TeX program = xelatex
+% !TeX spellcheck = en_US
+
+% Ensure siunitx v2 compatibility for class settings
+% Load siunitx v2 explicitly before the class in case the class loads siunitx itself
+\RequirePackage{siunitx}[=v2]
+% (thuthesis.cls uses legacy \sisetup keys)
+
+\documentclass[fontset=windows,windows-font-dir={C:/Windows/Fonts}]{thuthesis}
+ 
+\input{thusetup}
+\begin{document}
+\begin{titlepage}
+\begin{flushleft}
+\textbf{作品编码：} \underline{\makebox[3cm][c]{509403}}
+\end{flushleft}
+\vspace{2cm}
+\centering
+
+% 主标题
+{\fontsize{18bp}{22bp}\selectfont\bfseries
+方圆知音：基于多智能体协同与音系知识图谱的\\[0.5cm]
+方言自适应学习系统\\[1cm]
+产品说明书
+}
+
+\vspace{4cm}
+
+% 表格内容
+\begin{tabular}{@{}p{4cm}p{10cm}@{}}
+\textbf{学校名称：} & \underline{\makebox[10cm][c]{常州工学院}} \\[1cm]
+\textbf{揭榜榜题名称：} & \underline{\makebox[10cm][c]{CQ-02 基于深度推理大模型的自适应学习路径规划研究}} \\[0.5cm]
+
+\textbf{榜题发榜单位：} & \underline{\makebox[10cm][c]{科大讯飞股份有限公司}} \\[1cm]
+
+\textbf{成员姓名：} & {\makebox[10cm][c]{王凌宇乐，曹磊，许子祺，范晓雨，费扬，杨熙承}} \\[0.05cm]
+& {\underline{\makebox[10cm][c]{王雨欣，陈俊豪，夏思彤，刘岩}}}
+\\[1cm]
+\textbf{指导老师：} & \underline{\makebox[10cm][c]{蒋巍，胡智喜，孟祥莲}}
+\end{tabular}
+\vfill
+\end{titlepage}
+
+\frontmatter
+\input{data/abstract}	
+
+\begin{table}[H]
+\centering
+\caption{文档版本迭代表}
+\begin{tabularx}{\textwidth}{|c|c|c|X|}
+\hline
+日期 & 作者 & 更新内容 & 主要变更说明 \\
+\hline
+2025-07-01 & 王凌宇乐 & 创建初始版本 & 编写项目背景、市场分析初稿，确立整体框架与章节结构 \\
+\hline
+2025-07-05 & 曹磊 & 算法模块补充 & 增加多模态方言音系知识图谱与自适应多步检索生成模型的算法说明 \\
+\hline
+2025-07-10 & 许子祺 & 后端架构设计 & 完成云端服务架构、接口定义及与讯飞星火 API 的集成说明 \\
+\hline
+2025-07-15 & 范晓雨 & 数据与知识图谱完善 & 补充方言音系知识图谱 Schema、实体关系及向量化存储细节 \\
+\hline
+2025-07-20 & 费扬 & 前端交互优化 & 新增多模态反馈界面设计与交互逻辑描述 \\
+\hline
+2025-07-25 & 杨熙承 & 测试计划添加 & 编写系统测试方案，包括性能测试与多平台兼容性测试 \\
+\hline
+2025-07-28 & 王雨欣 & 用户需求细化 & 收集试用用户反馈，调整学习路径规划与练习题生成逻辑 \\
+\hline
+2025-08-02 & 陈俊豪 & UI 设计完善 & 完成界面视觉风格统一与跨平台一致性优化 \\
+\hline
+2025-08-06 & 夏思彤 & 运维与部署文档 & 添加云服务器部署流程、数据库备份方案与应急处理步骤 \\
+\hline
+2025-08-08 & 刘岩 & 数据标注质量提升 & 优化语音数据与文本标注规范，补充数据质控流程 \\
+\hline
+\end{tabularx}
+\end{table}
+% 目录
+\tableofcontents
+
+% 正文部分
+\mainmatter
+\input{data/chap01}
+\input{data/chap02}
+\input{data/chap03}
+\input{data/chap04}
+\input{data/chap05}
+\input{data/chap06}
+% 参考文献
+%\bibliography{ref/refs}  % 参考文献使用 BibTeX 编译
+% \printbibliography       % 参考文献使用 BibLaTeX 编译
+
+% 附录
+%\appendix
+%\input{data/appendix}
+
+
+\end{document}

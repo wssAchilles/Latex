@@ -2,12 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b25823bd-8185-493e-9c56-4f971dbcb59b" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/report.log" beforeDir="false" afterPath="$PROJECT_DIR$/report.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/report.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Mountain/report.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Mountain/report.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Mountain/report.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Mountain/report.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Mountain/report.run.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Mountain/report.run.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Mountain/report.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../Mountain/report.synctex.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thesis/figures/weather1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thesis/figures/weather2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thesis/figures/weather3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thesis/figures/weather4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thesis/figures/weather5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thesis/figures/weather6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thesis/figures/weather7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thesis/figures/weather8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Thesis/figures/weather9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mountain/frontmatter/title-report.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../Mountain/frontmatter/title-report.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mountain/mainmatter/famer.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../Mountain/mainmatter/famer.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mountain/report.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../Mountain/report.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thesis/mainmatter/chapter1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../Thesis/mainmatter/chapter1.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thesis/mainmatter/chapter3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../Thesis/mainmatter/chapter3.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thesis/report.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../Thesis/report.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thesis/report.blg" beforeDir="false" afterPath="$PROJECT_DIR$/../Thesis/report.blg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thesis/report.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Thesis/report.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thesis/report.out" beforeDir="false" afterPath="$PROJECT_DIR$/../Thesis/report.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thesis/report.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Thesis/report.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thesis/report.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../Thesis/report.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thesis/report.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../Thesis/report.toc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,21 +33,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "wssAchilles"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;wssAchilles&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/wssAchilles/Latex",
-    "accountId": "0499bcdd-39f0-4503-b022-58084e15fba6"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/wssAchilles/Latex&quot;,
+    &quot;accountId&quot;: &quot;0499bcdd-39f0-4503-b022-58084e15fba6&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2wleylsBP0yER8LJZNOuzJnnBIN" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -39,25 +55,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "BibTeX.report bibliography.executor": "Run",
     "LaTeX.report.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+    "RunOnceActivity.git.unshallow": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler />
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file />
-        <aux-dir />
-        <latex-distribution>PROJECT_SDK</latex-distribution>
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
     <configuration name="report bibliography" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify-bibtex>
         <compiler>BIBER</compiler>

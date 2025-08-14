@@ -1,6 +1,14 @@
-\chapter{人工智能的应用、挑战与未来展望}
+\chapter{人工智能的应用挑战与未来展望}
 
-本章将从宏观层面探讨人工智能对社会各领域的影响，并分析其带来的挑战和未来的发展方向。
+本章\cite{ahmed2023deep}将从宏观层面探讨人工智能对社会各领域的影响，并分析其带来的挑战和未来的发展方向。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/M2.png}
+    \caption{人工智能的广泛应用}
+    \label{fig:ai_application}
+\end{figure}
+
 
 \section{AI的广泛应用}
 
@@ -35,7 +43,7 @@
     在癌症的早期诊断中，AI影像识别已经取得了显著进展。例如，浙江省肿瘤医院的研究团队利用AI成功从平扫CT中识别早期胃癌。他们通过一个名为“DAMO GRAPE”的模型，对数万例CT影像进行训练，使其能够精准识别早期胃癌病灶。在一个实际案例中，一名患者6个月前的CT片在当时未报告病变，但经过AI模型分析后，却提示存在早期胃癌，这为患者赢得了宝贵的早期治疗时间。
 
     \subsubsection{AI加速药物研发：从浩瀚分子到精准靶点}
-    新药研发是一个漫长、昂贵且高风险的过程。传统上，从靶点发现到药物上市可能需要十年甚至更长时间，耗费数十亿美元。而\textbf{人工智能}的引入，正像一台强大的“加速器”，颠覆着这一传统模式，尤其在\textbf{新药筛选}和\textbf{靶点识别}方面展现出革命性潜力。
+    研发是一个漫长、昂贵且高风险的过程。传统上，从靶点发现到药物上市可能需要十年甚至更长时间，耗费数十亿美元。而\textbf{人工智能}的引入，正像一台强大的“加速器”，颠覆着这一传统模式，尤其在\textbf{新药筛选}和\textbf{靶点识别}方面展现出革命性潜力。
 
     AI在药物研发中的核心技术包括：
     \begin{itemize}
@@ -75,7 +83,7 @@
 
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.7\textwidth]{M2.png}
+        \includegraphics[width=0.7\textwidth]{figures/M2.png}
         \caption{一项关于髋部骨折患者术前抗凝管理的临床研究患者筛选流程图，展示了对照组、维生素K组和PCC组的构成。}
         \label{fig:clinical_trial_patient_selection}
     \end{figure}
@@ -84,7 +92,7 @@
 
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.8\textwidth]{M1.png}
+        \includegraphics[width=0.8\textwidth]{figures/M1.png}
         \caption{VKA患者髋部骨折围手术期管理流程图，根据术前INR水平决定PCC给药剂量。}
         \label{fig:hip_fracture_treatment_protocol}
     \end{figure}
@@ -101,14 +109,14 @@
         \centering
         \begin{subfigure}[b]{0.48\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{M3.png}
+            \includegraphics[width=\textwidth]{figures/M3.png}
             \caption{不同治疗方案对中位手术等待时间的影响}
             \label{fig:time_to_surgery_comparison}
         \end{subfigure}
         \hfill
         \begin{subfigure}[b]{0.48\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{M4.png}
+            \includegraphics[width=\textwidth]{figures/M4.png}
             \caption{不同治疗方案对中位住院天数的影响}
             \label{fig:length_of_stay_comparison}
         \end{subfigure}
@@ -139,7 +147,7 @@
         
         \begin{figure}[htbp]
             \centering
-            \includegraphics[width=0.6\textwidth]{F7.png}
+            \includegraphics[width=0.6\textwidth]{figures/F7.png}
             \caption{高斯混合模型中两个成分（高斯分布）的散点图示例。}
             \label{fig:gmm_components_example}
         \end{figure}
@@ -152,7 +160,7 @@
 
         \begin{figure}[htbp]
             \centering
-            \includegraphics[width=0.9\textwidth]{F4.png}
+            \includegraphics[width=0.9\textwidth]{figures/F4.png}
             \caption{GMM算法在不同初始化策略下的迭代次数与收敛情况对比，其中k-means++是常用的高效初始化方法。}
             \label{fig:gmm_initialization_comparison}
         \end{figure}
@@ -161,7 +169,7 @@
 
         \begin{figure}[htbp]
             \centering
-            \includegraphics[width=0.7\textwidth]{F3.png}
+            \includegraphics[width=0.7\textwidth]{figures/F3.png}
             \caption{由GMM预测的负对数似然度等高线图。离中心区域越远的数据点，其似然度越低，越可能是异常点。}
             \label{fig:gmm_log_likelihood}
         \end{figure}
@@ -174,14 +182,14 @@
         \centering
         \begin{subfigure}[b]{\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{F1.png}
+            \includegraphics[width=\textwidth]{figures/F1.png}
             \caption{有限混合模型，展示了先验强度$\gamma_0$较小时，模型倾向于发现更少的簇。}
             \label{fig:finite_mixture_dirichlet}
         \end{subfigure}
         \vfill
         \begin{subfigure}[b]{\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{F2.png}
+            \includegraphics[width=\textwidth]{figures/F2.png}
             \caption{无限混合模型，展示了随着先验强度$\gamma_0$增大，模型能够发现更多、更细粒度的簇。}
             \label{fig:infinite_mixture_dirichlet}
         \end{subfigure}
@@ -191,14 +199,14 @@
 
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.8\textwidth]{F6.png}
+        \includegraphics[width=0.8\textwidth]{figures/F6.png}
         \caption{标准GMM（上）与使用狄利克雷过程先验的贝叶斯GMM（下）的聚类结果对比。}
         \label{fig:gmm_vs_bayesian_gmm}
     \end{figure}
     
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.9\textwidth]{F8.png}
+        \includegraphics[width=0.9\textwidth]{figures/F8.png}
         \caption{EM算法与不同先验强度下的贝叶斯GMM的详细聚类效果对比。}
         \label{fig:gmm_dirichlet_process_detailed}
     \end{figure}
@@ -239,7 +247,7 @@
         
         \begin{figure}[htbp]
             \centering
-            \includegraphics[width=0.8\textwidth]{DR6.png}
+            \includegraphics[width=0.8\textwidth]{figures/DR6.png}
             \caption{用于传感器融合的深度学习算法分类，展示了CNN和RNN两大技术分支及其典型模型。}
             \label{fig:deep_learning_sensor_fusion_algorithms}
         \end{figure}
@@ -254,7 +262,7 @@
 
         \begin{figure}[htbp]
             \centering
-            \includegraphics[width=0.95\textwidth]{DR1.png}
+            \includegraphics[width=0.95\textwidth]{figures/DR1.png}
             \caption{一个典型的自动驾驶多传感器融合架构，展示了从RGB图像、深度图像和点云输入，经过并行处理与融合，到最终输出驾驶策略的完整流程。}
             \label{fig:multisensor_fusion_architecture}
         \end{figure}
@@ -271,14 +279,14 @@
             \centering
             \begin{subfigure}[b]{0.48\textwidth}
                 \centering
-                \includegraphics[width=\textwidth]{DR3.png}
+                \includegraphics[width=\textwidth]{figures/DR3.png}
                 \caption{一个用于处理深度图像的CNN架构示例。}
                 \label{fig:cnn_for_depth_image}
             \end{subfigure}
             \hfill
             \begin{subfigure}[b]{0.48\textwidth}
                 \centering
-                \includegraphics[width=\textwidth]{DR2.png}
+                \includegraphics[width=\textwidth]{figures/DR2.png}
                 \caption{视觉Transformer中的一个核心Encoder模块。}
                 \label{fig:vision_transformer_architecture}
             \end{subfigure}
@@ -290,7 +298,7 @@
             
             \begin{figure}[htbp]
                 \centering
-                \includegraphics[width=0.9\textwidth]{DR4.png}
+                \includegraphics[width=0.9\textwidth]{figures/DR4.png}
                 \caption{PointNet模型处理激光雷达点云数据的流程示意图。}
                 \label{fig:pointnet_architecture}
             \end{figure}
@@ -299,7 +307,7 @@
 
              \begin{figure}[htbp]
                 \centering
-                \includegraphics[width=0.8\textwidth]{DR5.png}
+                \includegraphics[width=0.8\textwidth]{figures/DR5.png}
                 \caption{一种特征融合机制的示意图，可能代表了注意力或特征叠加操作。}
                 \label{fig:feature_fusion_mechanism}
             \end{figure}
@@ -322,14 +330,14 @@
         \centering
         \begin{subfigure}[b]{0.48\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{DR7.png}
+            \includegraphics[width=\textwidth]{figures/DR7.png}
             \caption{基于卡尔曼滤波的多传感器融合框架。}
             \label{fig:kalman_filter_fusion_framework}
         \end{subfigure}
         \hfill
         \begin{subfigure}[b]{0.48\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{DR9.png}
+            \includegraphics[width=\textwidth]{figures/DR9.png}
             \caption{惯性系统（如SINS）的对准流程图。}
             \label{fig:inertial_system_alignment_flowchart}
         \end{subfigure}
@@ -339,7 +347,7 @@
     
     \begin{figure}[htbp]
         \centering
-        \includegraphics[width=0.7\textwidth]{DR8.png}
+        \includegraphics[width=0.7\textwidth]{figures/DR8.png}
         \caption{自动驾驶系统中常见的多传感器标定拓扑结构。}
         \label{fig:sensor_calibration_topologies}
     \end{figure}
@@ -472,14 +480,14 @@ AGI面临的挑战是巨大的：
     \centering
     \begin{subfigure}[b]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{AGI2.png}
+        \includegraphics[width=\textwidth]{figures/AGI2.png}
         \caption{周期性与线性任务中数据分布示例}
         \label{fig:agi_task_distribution}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{AGI4.png}
+        \includegraphics[width=\textwidth]{figures/AGI4.png}
         \caption{随时间变化的类别分布}
         \label{fig:agi_time_varying_classes}
     \end{subfigure}
@@ -491,14 +499,14 @@ AGI面临的挑战是巨大的：
     \centering
     \begin{subfigure}[b]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{AGI6.png}
+        \includegraphics[width=\textwidth]{figures/AGI6.png}
         \caption{多任务与状态转移}
         \label{fig:agi_multi_task_states}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{AGI7.png}
+        \includegraphics[width=\textwidth]{figures/AGI7.png}
         \caption{强化学习中的Actor-Critic架构与任务奖励}
         \label{fig:agi_actor_critic}
     \end{subfigure}
@@ -512,14 +520,14 @@ AGI的性能评估不仅关注其在特定任务上的准确率，更关注其�
     \centering
     \begin{subfigure}[b]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{AGI1.png}
+        \includegraphics[width=\textwidth]{figures/AGI1.png}
         \caption{异构环境中的即时与预期风险}
         \label{fig:agi_heterogeneous_risk}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{AGI3.png}
+        \includegraphics[width=\textwidth]{figures/AGI3.png}
         \caption{周期性与线性过程中的预期风险}
         \label{fig:agi_periodic_linear_risk}
     \end{subfigure}
@@ -531,14 +539,14 @@ AGI的性能评估不仅关注其在特定任务上的准确率，更关注其�
     \centering
     \begin{subfigure}[b]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{AGI5.png}
+        \includegraphics[width=\textwidth]{figures/AGI5.png}
         \caption{长期学习中的预期风险趋势}
         \label{fig:agi_long_term_risk}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.49\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{AGI9.png}
+        \includegraphics[width=\textwidth]{figures/AGI9.png}
         \caption{非独立同分布数据下的预期风险}
         \label{fig:agi_non_iid_risk}
     \end{subfigure}
@@ -550,7 +558,7 @@ AGI的性能评估不仅关注其在特定任务上的准确率，更关注其�
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{AGI10.png}
+    \includegraphics[width=0.9\textwidth]{figures/AGI10.png}
     \caption{AgentBench性能的Jolt分析}
     \label{fig:agi_jolt_analysis}
 \end{figure}
@@ -560,7 +568,7 @@ AGI的最终目标可以概念化为一个通用优化问题，它不仅要最�
 $$
 \mathcal{L}_{\text{AGI}}(\theta) = \sum_{i=1}^{M} \mathbb{E}_{x \sim \mathcal{D}_i} \left[ L(f_\theta(x), y_i(x)) \right] + \lambda_1 \mathcal{R}_{\text{knowledge}}(\theta) - \lambda_2 \mathcal{R}_{\text{complexity}}(\theta)
 $$
-其中，$M$ 是任务的数量，$\mathcal{D}_i$ 是第 $i$ 个任务的数据分布，$L$ 是损失函数，$f_\theta$ 是由参数 $\theta$ 定义的AGI模型，$\mathcal{R}_{\text{knowledge}}$ 是知识累积或泛化能力的正则项（目标是最大化），$\mathcal{R}_{\text{complexity}}$ 是模型复杂度的惩罚项（目标是最小化），$\lambda_1, \lambda_2$ 是权重系数。这个公式强调了AGI不仅要完成已知任务，还要不断学习、积累知识，并保持一定的效率和简洁性。
+其中，$M$ 是任务的数量，$\mathcal{D}_i$ 是第 $i$ 个任务的数据分布，$L$ 是损失函数，$f_\theta$ 是由参数 $\theta$ 定义的AGI模型，$\mathcal{R}_{\text{knowledge}}$ 是知识累积或泛化能力的正则项（目标是最大化），$\mathcal{R}_{\text{complexity}}$ 是模型复杂度的惩罚项（目标是最小化），$\lambda_1, \lambda_2$ 是权重系数。这个公式\cite{ahmed2023deep}强调了AGI不仅要完成已知任务，还要不断学习、积累知识，并保持一定的效率和简洁性。
 
 \subsection{人机协作的深化与人机共生社会}
 未来，人与机器将更加紧密地协作，AI将成为人类的智能助手和增强工具。这种深化的人机协作将逐渐形成人机共生社会，共同推动社会进步。这种协作不仅仅是简单的工具使用，而是涉及知识共享、任务分配、共同决策和相互适应的复杂动态过程。
@@ -577,26 +585,137 @@ $$
 AI有望在解决全球性挑战方面发挥关键作用，特别是在推动联合国可持续发展目标（SDGs）的实现上，其潜力巨大。
 
 \begin{itemize}
-    \item \textbf{气候变化：} AI可以助力应对气候变化，例如：
+    \item \textbf{气候变化与天气预测：} 
+    精准的天气与气候预测是应对气候变化、保障粮食安全、防灾减灾和优化能源结构的核心。传统上，这一领域由基于物理方程的数值天气预报（NWP）模型主导。然而，近年来，人工智能，特别是深度学习，正成为一种革命性的新范式，通过直接从海量观测和模拟数据中学习大气演变的复杂规律，展现出与顶尖NWP模型相媲美甚至超越的潜力。
+
+    \subsubsection*{AI天气预测模型架构}
+    现代AI天气模型通常采用为地球科学数据专门设计的复杂神经网络架构。这些模型将地球大气层视为一个多通道的3D或2D图像序列，并利用深度学习技术进行时空预测。其通用目标可以表示为：
+    $$
+    \mathbf{X}_{t+\Delta t} = F_{\theta}(\mathbf{X}_{t}, \mathbf{P})
+    $$
+    其中，$\mathbf{X}_{t}$ 是在时间 $t$ 地球大气的多变量状态（如温度、风速、气压等），$\mathbf{P}$ 是静态地表特征（如地形），$F_{\theta}$ 是由参数 $\theta$ 定义的AI模型。
+
+    例如，\textbf{自适应傅里叶神经算子（AFNO）}（如图 \ref{fig:afno_architecture}a）通过在频域中进行计算，高效地捕捉全球不同尺度天气系统的相互作用。而\textbf{3D地球专用Transformer（3D Earth-Specific Transformer）}（如图 \ref{fig:earth_transformer_arch}b）则采用编码器-解码器结构，融合处理高空和地表变量，实现对整个地球系统状态的精准预测。
+
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{figures/weather1.png}
+            \caption{AFNO（自适应傅里叶神经算子）模型架构，展示了其用于天气预测的流程，包括空间混合、通道混合及多层处理。}
+            \label{fig:afno_architecture}
+        \end{subfigure}
+        \vfill
+        \vspace{1cm}
+        \begin{subfigure}[b]{\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{figures/weather4.png}
+            \caption{3D地球专用Transformer模型架构，一个用于地球科学的编码器-解码器模型，能够并行处理和预测高空与地表变量。}
+            \label{fig:earth_transformer_arch}
+        \end{subfigure}
+        \caption{现代AI天气预测模型的先进架构示例。}
+        \label{fig:ai_weather_model_architectures}
+    \end{figure}
+
+    \subsubsection*{AI模型与传统NWP模型的性能对比}
+    AI天气模型的有效性通过与顶级NWP系统的直接对比得到了验证。评估预报性能通常使用两个核心指标：
     \begin{itemize}
-        \item \textbf{气候模型预测与优化：} 利用AI分析和融合多源气候数据，构建更精确的气候模型，预测极端天气事件和气候变化趋势，从而更好地规划应对策略。
-        \item \textbf{能源系统优化：} 智能电网利用AI预测能源需求和可再生能源（如太阳能、风能）的波动性，优化电力分配，提高能源效率，减少对化石燃料的依赖。
-        \item \textbf{碳排放监测与管理：} AI结合卫星图像和传感器数据，可以更精确地监测温室气体排放源，评估减排效果，并优化碳捕获与储存技术。
-        \item \textbf{智慧农业：} 通过AI监控土壤健康、作物生长和水资源利用，实现精准农业，减少农药和化肥使用，降低农业碳足迹。
+        \item \textbf{均方根误差（RMSE）}：衡量预报值与真实值之间的平均误差幅度，值越低越好。
+        $$ \text{RMSE} = \sqrt{\frac{1}{N}\sum_{i=1}^{N}(\hat{y}_i - y_i)^2} $$
+        \item \textbf{异常相关系数（ACC）}：衡量预报场与真实场相对于气候平均态的形态相似度，值越接近1越好。
+        $$ \text{ACC} = \frac{\sum_{i=1}^{N}(f'_i \cdot o'_i)}{\sqrt{\sum_{i=1}^{N}(f'_i)^2 \cdot \sum_{i=1}^{N}(o'_i)^2}} $$
+        其中 $f'$ 和 $o'$ 分别是预报和观测相对于气候态的距平。
     \end{itemize}
-    \item \textbf{能源优化：} AI能够优化能源生产、分配和消耗，提高能源利用效率。
+    
+    图 \ref{fig:ai_vs_nwp_performance} 展示了多个AI模型（如FourCastNet、GraphCast）与传统NWP黄金标准（如ECMWF的IFS/HRES）的性能对比。数据显示，AI模型在中期预报（3-10天）中的准确率正迅速赶上甚至在某些指标和预报时长上超越了传统模型，且计算成本显著降低。
+
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{figures/weather2.png}
+            \caption{FourCastNet与IFS模型在Z500和U10两个变量上的ACC与RMSE对比。}
+            \label{fig:fourcastnet_vs_ifs}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[b]{0.49\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{figures/weather3.png}
+            \caption{GraphCast与HRES模型在Z500变量上的RMSE和ACC技能评分对比。}
+            \label{fig:graphcast_vs_hres}
+        \end{subfigure}
+        \caption{AI天气模型与传统数值天气预报（NWP）模型的性能比较。}
+        \label{fig:ai_vs_nwp_performance}
+    \end{figure}
+
+    \subsubsection*{特定应用：AI驱动的降水与空间天气预测}
+    除了全局大气状态，AI在预测如降水等特定关键变量方面也展现出巨大潜力。例如，Org-NN模型（图 \ref{fig:org_nn_precipitation}）通过一个自编码器学习高分辨率可降水量（PW）的物理组织模式，然后将这些学到的特征（org）与大尺度变量结合，以提升降水预测的准确性。这体现了AI模型从简单的数据驱动向更具物理解释性的方向发展。
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/weather6.png}
+        \caption{用于降水预测的Org-NN模型架构。模型首先通过自编码器学习水汽的组织结构，然后将其作为输入特征之一来提升预测精度。}
+        \label{fig:org_nn_precipitation}
+    \end{figure}
+
+    AI的应用也延伸到了空间天气领域。如图 \ref{fig:cnn_solar_flare} 所示，一个卷积神经网络（CNN）可以被训练用于分析太阳日冕图像，以预测和分类太阳耀斑等空间天气事件。准确预测这些事件对于保护卫星、通信系统和电网等关键基础设施免受地磁暴影响至关重要，是保障社会可持续运行的重要一环。
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{figures/weather7.png}
+        \caption{一个用于处理太阳活动图像的卷积神经网络（CNN）架构，展示了从输入图像经过卷积、池化和全连接层最终进行分类（Softmax）的过程。}
+        \label{fig:cnn_solar_flare}
+    \end{figure}
+
+    \item \textbf{可持续基础设施与材料科学：} 
+    可持续发展目标（特别是SDG 9）强调了建设有韧性的基础设施的重要性。材料的耐久性，尤其是其抗腐蚀能力，是决定基础设施寿命和安全的关键因素。AI技术正在通过加速新材料的评估和性能预测，为这一领域带来变革。
+    
+    \subsubsection*{案例：AI预测材料的点蚀电位}
+    点蚀是一种极具破坏性的局部腐蚀形式。AI模型可以被用来预测材料的点蚀电位——一个衡量其抗点蚀能力的关键指标。如图 \ref{fig:pitting_potential_model_arch} 所示，一个先进的“过程感知”深度神经网络（Process-aware DNN）能够融合多种类型的数据来做出精准预测：
+    \begin{itemize}
+        \item \textbf{数值特征：} 包括材料的化学成分、测试环境参数等29个数值输入。
+        \item \textbf{文本特征：} 实验过程中的文本描述，如热处理工艺、测试方法等，通过自然语言处理（NLP）技术进行编码。
+    \end{itemize}
+    
+    该模型中的NLP部分首先将文本分词（Tokenizing），然后通过嵌入层（Embedding Layer）将词元映射为高维向量，最后送入一个长短期记忆网络（LSTM）层来捕捉文本序列中的信息，其隐状态更新可简化表示为 $h_t = f(h_{t-1}, x_t)$。
+    
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.9\textwidth]{figures/weather8.png}
+        \caption{一个用于预测材料点蚀电位的多模态DNN架构。该模型结合了数值特征和通过NLP（LSTM）处理的文本特征，输入到一个具有多个隐藏层的密集网络中。}
+        \label{fig:pitting_potential_model_arch}
+    \end{figure}
+    
+    该AI模型的性能通过与简单DNN模型的对比得到了验证（图 \ref{fig:pitting_potential_model_results}）。通过引入过程文本信息，过程感知DNN的平均绝对误差（Mean Absolute Error）显著降低，而决定系数（$R^2$）则从0.72提升至0.84，表明其预测结果与真实值的相关性更强。决定系数的计算公式为：
+    $$ R^2 = 1 - \frac{\sum_i (y_i - \hat{y}_i)^2}{\sum_i (y_i - \bar{y})^2} $$
+    其中 $y_i$ 是真实值，$\hat{y}_i$ 是预测值，$\bar{y}$ 是真实值的平均值。$R^2$越接近1，表明模型的拟合效果越好。这些结果有力地证明了AI在加速材料性能评估、助力设计更耐久和可持续的基础设施材料方面的巨大潜力。
+
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.9\textwidth]{figures/weather9.png}
+        \caption{点蚀电位预测模型的性能评估。（A）展示了模型训练过程中的损失下降情况。（B）展示了模型预测值与真实值的散点图，R²值达到0.84，显示出高预测精度。（C）对比了过程感知DNN与简单DNN的性能，前者在平均绝对误差和R²上均表现出显著优势。}
+        \label{fig:pitting_potential_model_results}
+    \end{figure}
+
+    \item \textbf{能源优化：} AI能够优化能源生产、分配和消耗，提高能源利用效率。如图 \ref{fig:energy_model_comparison} 所示，AI模型（如EM、PGW）在预测关键气象变量（如T850，850hPa温度）时，相比传统模型（IFS）和再分析数据（ERA5），可以在长期预报中展现出更低的偏差（bias），这对于可再生能源（如风能、太阳能）的功率预测和电网的稳定调度至关重要。
     \begin{itemize}
         \item \textbf{建筑能源管理：} 智能建筑系统利用AI实时调节照明、暖通空调等，根据occupancy和天气预测优化能源消耗。
         \item \textbf{工业生产优化：} AI分析生产线数据，优化设备运行参数，减少能耗和废弃物，提升工业能效。
         \item \textbf{交通流量管理：} AI优化交通信号、路线规划和公共交通调度，减少交通拥堵，降低燃料消耗和排放。
     \end{itemize}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.9\textwidth]{figures/weather5.png}
+        \caption{不同模型（包括AI模型EM、PGW和传统模型IFS）对T850和Z500两个变量在1-10天预报时效内的RMSE、activity和bias对比。}
+        \label{fig:energy_model_comparison}
+    \end{figure}
 \end{itemize}
 
 \subsection{对人类社会未来发展的深远影响与启示}
-人工智能的发展将深刻重塑人类社会，从经济结构到文化生活都将受到影响，并引发对就业、道德、隐私和治理等方面的深刻反思。
+人工智能发展将深刻重塑人类社会，从经济结构到文化生活都将受到影响，并引发对就业、道德、隐私和治理等方面的深刻反思。
 
 \begin{itemize}
-    \item \textbf{经济转型：} AI将推动产业升级和新经济模式的诞生，但也会加速传统行业的自动化，引发就业结构性变化。社会需要投资于劳动力再培训和终身学习，以适应新的人才需求。
+    \item \textbf{经济的转型：} AI将推动产业升级和新经济模式的诞生，但也会加速传统行业的自动化，引发就业结构性变化。社会需要投资于劳动力再培训和终身学习，以适应新的人才需求。
     \item \textbf{文化与创意重塑：} AI在艺术、音乐、写作等领域的生成能力，将模糊人类与机器创作的界限，带来新的文化形式和伦理挑战。
     \item \textbf{社会治理与公平：} AI在公共服务、司法和政策制定中的应用，需要建立严格的伦理准则和监管框架，确保算法的公平性、透明度和可问责性，避免加剧社会不平等和偏见。
     \item \textbf{人类身份与价值：} 随着AI能力提升，人类将重新审视自身的独特价值，可能促使我们更关注创造力、批判性思维、情感智能和人际交往等非机械化能力。

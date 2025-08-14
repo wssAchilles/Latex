@@ -1,0 +1,81 @@
+{
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "E:/texlive/2025/bin/windows/xelatex.exe",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "xelatex-no-pdf",
+            "command": "E:/texlive/2025/bin/windows/xelatex.exe",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-no-pdf",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "biber",
+            "command": "E:/texlive/2025/bin/windows/biber.exe",
+            "args": [
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "xdvipdfmx",
+            "command": "E:/texlive/2025/bin/windows/xdvipdfmx.exe",
+            "args": [
+                "-V", "5",
+                "-z", "9",
+                "-o", "%DOCFILE%.pdf",
+                "%DOCFILE%.xdv"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex ➞ biber ➞ xelatex×2",
+            "tools": [
+                "xelatex",
+                "biber",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ]
+        },
+        {
+            "name": "xelatex(-no-pdf) ➞ xdvipdfmx",
+            "tools": [
+                "xelatex-no-pdf",
+                "xdvipdfmx"
+            ]
+        }
+    ],
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
+    "latex-workshop.latex.recipe.default": "xelatex(-no-pdf) ➞ xdvipdfmx",
+    "latex-workshop.latex.clean.enabled": false,
+    "latex-workshop.latex.autoClean.run": "never",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    "latex-workshop.view.pdf.zoom": "page-width",
+    "latex-workshop.message.error.show": false,
+    "latex-workshop.message.warning.show": false,
+    "latex-workshop.message.badbox.show": "none",
+    "latex-workshop.latex.build.clearLog.everyRecipeStep.enabled": false,
+    "latex-workshop.latex.option.maxPrintLine.enabled": false,
+    "latex-workshop.message.log.show": false,
+    "latex-workshop.progress.enabled": false
+}

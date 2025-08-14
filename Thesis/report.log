@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.4.11)  12 JUL 2025 16:19
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.4.11)  12 AUG 2025 00:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/xuzq0/Desktop/Latex/Thesis/report
-(c:/Users/xuzq0/Desktop/Latex/Thesis/report.tex
+**report
+(./report.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (e:/texlive/2025/texmf-dist/tex/latex/ctex/ctexbook.cls (e:/texlive/2025/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
@@ -762,31 +762,40 @@ Package biblatex Info: ... and expl3
  (e:/texlive/2025/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
 Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
 ))
+
+Package xeCJK Warning: Redefining CJKfamily `\CJKrmdefault' (SimSun(0)).
+
+
+Package xeCJK Warning: Redefining CJKfamily `\CJKsfdefault' (Microsoft YaHei).
+
+
+Package xeCJK Warning: Redefining CJKfamily `\CJKttdefault' (FangSong).
+
 \@quotelevel=\count474
 \@quotereset=\count475
- (./report.aux)
+(./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
 
 Package fontspec Info: 
 (fontspec)             Adjusting the maths setup (use [no-math] to avoid
@@ -794,56 +803,56 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 41.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 41.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 41.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 41.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 41.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 41.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 41.
-LaTeX Font Info:    Redeclaring math accent \check on input line 41.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 41.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 41.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 41.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 41.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 41.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 41.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 41.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 41.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 41.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 41.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 41.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 41.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 41.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 41.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 41.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 41.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 70.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 70.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 70.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 70.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 70.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 70.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 70.
+LaTeX Font Info:    Redeclaring math accent \check on input line 70.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 70.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 70.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 70.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 70.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 41.
+(Font)              `operators' in the math version `normal' on input line 70.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 41.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 70.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 41.
+(Font)              `operators' in the math version `bold' on input line 70.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 41.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 70.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 41.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 70.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 41.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 70.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 41.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 70.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 41.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 70.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 41.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 70.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 41.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 70.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 41.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 70.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 41.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 70.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 41.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 70.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -882,7 +891,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 41.
+Package hyperref Info: Link coloring ON on input line 70.
 (./report.out) (./report.out)
 \@outlinefile=\write4
 \openout4 = `report.out'.
@@ -901,8 +910,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'report.bbl' found.
  (./report.bbl)
-Package biblatex Info: Reference section=0 on input line 41.
-Package biblatex Info: Reference segment=0 on input line 41.
+Package biblatex Info: Reference section=0 on input line 70.
+Package biblatex Info: Reference segment=0 on input line 70.
 File: figures/CIT.png Graphic file (type bmp)
 <figures/CIT.png>
 
@@ -931,11 +940,11 @@ Package fontspec Info:
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->"SimHei/OT:script=hani;language=dflt;"
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 59.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 88.
  (e:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 59.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 88.
  (e:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -990,14 +999,14 @@ File: figures/parse.png Graphic file (type bmp)
 File: figures/ai.png Graphic file (type bmp)
 <figures/ai.png>
 
-Overfull \hbox (20.75563pt too wide) in paragraph at lines 82--83
+Overfull \hbox (43.51923pt too wide) in paragraph at lines 82--83
  [][] 
  []
 
 File: figures/network.png Graphic file (type bmp)
 <figures/network.png>
 
-Overfull \hbox (142.59067pt too wide) in paragraph at lines 89--90
+Overfull \hbox (165.35426pt too wide) in paragraph at lines 89--90
  [][] 
  []
 
@@ -1064,8 +1073,6 @@ File: figures/linear_regression_results.png Graphic file (type bmp)
 
 
 [15]
-Missing character: There is no ₁ (U+2081) in font [lmroman12-regular]:mapping=tex-text;!
-
 
 [16]
 
@@ -1087,28 +1094,28 @@ File: figures/LSTM8.png Graphic file (type bmp)
 
 
 [18]
-
-[19]
 File: figures/LSTM9.png Graphic file (type bmp)
 <figures/LSTM9.png>
 File: figures/LSTM10.png Graphic file (type bmp)
 <figures/LSTM10.png>
 
 
+[19]
+
 [20]
 File: figures/T1.png Graphic file (type bmp)
 <figures/T1.png>
 File: figures/T2.png Graphic file (type bmp)
 <figures/T2.png>
+File: figures/T3.png Graphic file (type bmp)
+<figures/T3.png>
+File: figures/T4.png Graphic file (type bmp)
+<figures/T4.png>
 
 
 [21]
 
 [22]
-File: figures/T3.png Graphic file (type bmp)
-<figures/T3.png>
-File: figures/T4.png Graphic file (type bmp)
-<figures/T4.png>
 File: figures/T5.png Graphic file (type bmp)
 <figures/T5.png>
 File: figures/T6.png Graphic file (type bmp)
@@ -1152,19 +1159,13 @@ File: figures/GAN8.png Graphic file (type bmp)
 [27]
 File: figures/D1.png Graphic file (type bmp)
 <figures/D1.png>
-
-
-[28]
 File: figures/D2.png Graphic file (type bmp)
 <figures/D2.png>
-
-Overfull \hbox (5.82999pt too wide) in paragraph at lines 562--563
-\TU/lmr/bx/n/12 3. \TU/SimSun(0)/b/n/12 训 练 目 标 与 损 失 函 数[] \TU/SimSun(0)/m/n/12 扩 散 模 型 的 训 练 目 标 是 最 大 化 数 据 的 对 数 似 然 $[] \OML/cmm/m/it/12 p[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]\OT1/cmr/m/n/12 )$\TU/SimSun(0)/m/n/12 。|
- []
-
 File: figures/D3.png Graphic file (type bmp)
 <figures/D3.png>
 
+
+[28]
 
 [29]
 File: figures/D4.png Graphic file (type bmp)
@@ -1210,6 +1211,8 @@ File: figures/LLM4.png Graphic file (type bmp)
 
 [35]
 第三章
+File: figures/M2.png Graphic file (type bmp)
+<figures/M2.png>
 
 
 [36
@@ -1239,13 +1242,13 @@ File: figures/F7.png Graphic file (type bmp)
 <figures/F7.png>
 File: figures/F4.png Graphic file (type bmp)
 <figures/F4.png>
+File: figures/F3.png Graphic file (type bmp)
+<figures/F3.png>
 
 
 [42]
 
 [43]
-File: figures/F3.png Graphic file (type bmp)
-<figures/F3.png>
 File: figures/F1.png Graphic file (type bmp)
 <figures/F1.png>
 File: figures/F2.png Graphic file (type bmp)
@@ -1265,13 +1268,13 @@ File: figures/F8.png Graphic file (type bmp)
 [47]
 File: figures/DR6.png Graphic file (type bmp)
 <figures/DR6.png>
+File: figures/DR1.png Graphic file (type bmp)
+<figures/DR1.png>
 
 
 [48]
 
 [49]
-File: figures/DR1.png Graphic file (type bmp)
-<figures/DR1.png>
 File: figures/DR3.png Graphic file (type bmp)
 <figures/DR3.png>
 File: figures/DR2.png Graphic file (type bmp)
@@ -1283,8 +1286,6 @@ File: figures/DR5.png Graphic file (type bmp)
 
 
 [50]
-
-[51]
 File: figures/DR7.png Graphic file (type bmp)
 <figures/DR7.png>
 File: figures/DR9.png Graphic file (type bmp)
@@ -1292,6 +1293,8 @@ File: figures/DR9.png Graphic file (type bmp)
 File: figures/DR8.png Graphic file (type bmp)
 <figures/DR8.png>
 
+
+[51]
 
 [52]
 
@@ -1302,8 +1305,6 @@ File: figures/DR8.png Graphic file (type bmp)
 [55]
 
 [56]
-
-[57]
 File: figures/AGI2.png Graphic file (type bmp)
 <figures/AGI2.png>
 File: figures/AGI4.png Graphic file (type bmp)
@@ -1314,7 +1315,7 @@ File: figures/AGI7.png Graphic file (type bmp)
 <figures/AGI7.png>
 
 
-[58]
+[57]
 File: figures/AGI1.png Graphic file (type bmp)
 <figures/AGI1.png>
 File: figures/AGI3.png Graphic file (type bmp)
@@ -1325,18 +1326,55 @@ File: figures/AGI9.png Graphic file (type bmp)
 <figures/AGI9.png>
 
 
-[59]
+[58]
 File: figures/AGI10.png Graphic file (type bmp)
 <figures/AGI10.png>
 
 
+[59]
+
 [60]
+File: figures/weather1.png Graphic file (type bmp)
+<figures/weather1.png>
+File: figures/weather4.png Graphic file (type bmp)
+<figures/weather4.png>
+
 
 [61]
 
-[62])
+[62]
+File: figures/weather2.png Graphic file (type bmp)
+<figures/weather2.png>
+File: figures/weather3.png Graphic file (type bmp)
+<figures/weather3.png>
+File: figures/weather6.png Graphic file (type bmp)
+<figures/weather6.png>
+
 
 [63]
+File: figures/weather7.png Graphic file (type bmp)
+<figures/weather7.png>
+
+
+[64]
+File: figures/weather8.png Graphic file (type bmp)
+<figures/weather8.png>
+File: figures/weather9.png Graphic file (type bmp)
+<figures/weather9.png>
+
+
+[65]
+File: figures/weather5.png Graphic file (type bmp)
+<figures/weather5.png>
+
+
+[66]
+
+[67]
+
+[68])
+
+[69]
 
 Package fontspec Info: 
 (fontspec)             Could not resolve font "FangSong/BI" (it probably
@@ -1365,29 +1403,29 @@ Package fontspec Info:
 
 
 
-[64
+[70
 
 
 ]
 
-[65] (./report.aux)
+[71] (./report.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2022/07/14>
  ***********
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: B70C1FC732E9FC7B29EF41663D33F73E;6505.
+(rerunfilecheck)             Checksum: B1D8F9E5E12E759436DC4CA40ED51F18;6498.
 Package logreq Info: Writing requests to 'report.run.xml'.
 \openout1 = `report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28276 strings out of 475796
- 611939 string characters out of 5774033
- 1528979 words of memory out of 5000000
- 50766 multiletter control sequences out of 15000+600000
+ 28324 strings out of 475796
+ 613929 string characters out of 5774033
+ 1532055 words of memory out of 5000000
+ 50806 multiletter control sequences out of 15000+600000
  572078 words of font info for 121 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 93i,12n,111p,1223b,4981s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,12n,111p,1187b,4981s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on report.pdf (70 pages).
+Output written on report.xdv (76 pages, 819820 bytes).

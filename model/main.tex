@@ -1,0 +1,94 @@
+% !TEX program = xelatex
+% !TEX encoding = UTF-8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 全国大学生数学建模竞赛 CUMCM LaTeX 模板
+% --- 主文件 (main.tex) ---
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 载入宏包与设置
+\input{preamble.tex}
+
+%--------------------文档正式开始--------------------
+\begin{document}
+% (你的封面内容予以保留)
+\begin{titlepage}
+    \begin{flushleft}
+    \textbf{作品编码：} \underline{\makebox[3cm][c]{509403}}
+    \end{flushleft}
+    \vspace{2cm}
+    \centering
+    % 主标题
+    {\fontsize{18bp}{22bp}\selectfont\bfseries
+    方圆知音：基于多智能体协同与音系知识图谱的\\[0.5cm]
+    方言自适应学习系统\\[1cm]
+    技术方案
+    }
+
+    \vspace{4cm}
+
+    % 表格内容
+    \begin{tabular}{@{}p{4cm}p{10cm}@{}}
+    \textbf{学校名称：} & \underline{\makebox[10cm][c]{常州工学院}} \\[1cm]
+    \textbf{揭榜榜题名称：} & \underline{\makebox[10cm][c]{CQ-02 基于深度推理大模型的自适应学习路径规划研究}} \\[0.5cm]
+    \textbf{榜题发榜单位：} & \underline{\makebox[10cm][c]{科大讯飞股份有限公司}} \\[1cm]
+    \textbf{成员姓名：} & \underline{\makebox[10cm][c]{许子祺}} \\[0.5cm]
+    \textbf{指导老师：} & \underline{\makebox[10cm][c]{许子祺}}
+    \end{tabular}
+    \vfill
+\end{titlepage}
+    
+%==================== 前置部分 (Front Matter) ====================
+% --- 关键修改：调整了此处的结构和命令 ---
+\frontmatter
+\pagenumbering{Roman}
+
+% --- 摘要 ---
+% 中文摘要
+\clearpage % 确保从一个干净的新页面开始（这将是第 i 页）
+\phantomsection % 1. 在页面顶部，先创建一个“隐形”的超链接锚点
+\addcontentsline{toc}{section}{\AbstractTOCTitle} % 2. 紧接着告诉目录，"摘要"条目就指向这个锚点和当前页码
+\input{frontmatter/01-abstract.tex} % 3. 最后再载入并排版摘要的实际内容
+
+% 英文摘要占位符... (后面的代码保持不变)
+% 英文摘要占位符 (如果需要请取消注释)
+% \input{frontmatter/01b-abstract-en.tex}
+% \phantomsection
+% \addcontentsline{toc}{section}{Abstract}
+% \newpage
+
+% --- 目录、图表清单 ---
+% tocbibind 会自动将这些内容加入目录，无需手动添加 \addcontentsline
+\tableofcontents
+\newpage
+
+\renewcommand{\listfigurename}{插图清单}
+\listoffigures
+\newpage
+
+\renewcommand{\listtablename}{附表清单}
+\listoftables
+\newpage
+
+%==================== 主体部分 (Main Matter) =====================
+\mainmatter
+
+% 载入你的正文内容
+\input{frontmatter/02-problem_restate.tex}
+\input{frontmatter/03-assumptions.tex}
+\input{mainmatter/01-model_1.tex}
+\input{mainmatter/02-model_2.tex}
+\input{mainmatter/03-model_3.tex}
+\input{mainmatter/04-evaluation.tex}
+
+%==================== 参考文献 ====================
+% tocbibind 会自动处理参考文献的目录条目
+\bibliographystyle{unsrt}
+\bibliography{references}
+
+%==================== 附录 ====================
+\appendix
+\newpage
+\input{mainmatter/05-appendix.tex}
+
+\end{document}
