@@ -7,7 +7,7 @@
 % --- 版本: 4.0 (目录格式最终微调版) ---
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[UTF8, a4paper]{ctexart}
+
 
 %======================================================================
 % 1. 页面布局与边距 (Page Layout)
@@ -25,27 +25,33 @@
 %======================================================================
 % 2. 核心功能宏包 (Core Packages)
 %======================================================================
-\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{amsmath, amssymb, amsfonts, amsthm}
 \usepackage{bm}
 \usepackage{graphicx}
 \graphicspath{{figures/}}
 \usepackage{subcaption}
 \usepackage{float}
+\usepackage[section]{placeins} % 控制浮动体，避免跨节堆叠
+\captionsetup[table]{position=bottom} % 表题置于表格下方
 \usepackage{booktabs}
+\usepackage{array}
 \usepackage{longtable}
-\usepackage{cite}
 \usepackage{setspace}
+\usepackage{changepage} % 提供 adjustwidth 环境
 \usepackage{url}
+\usepackage[table]{xcolor} % 为 listings 的 \color{gray} 等颜色提供支持
 
 %======================================================================
 % 3. 字体与字号设置 (Fonts Setup)
 %======================================================================
+% 使用 XeLaTeX 时需要先加载 fontspec 再加载 xeCJK，以启用 \setmainfont 等命令
+\usepackage{fontspec}
 \usepackage{xeCJK}
 \setmainfont{Times New Roman}[Ligatures=TeX]
-\setCJKmainfont{SimSun}[BoldFont=SimHei]
+\setCJKmainfont{SimSun}[BoldFont=SimHei, AutoFakeSlant=true]
 \setsansfont{Arial}
-\setCJKsansfont{SimHei}
-\setmonofont{Courier New}
+\setCJKsansfont{SimHei}[AutoFakeSlant=true]
+\setmonofont{Consolas}
 
 % --- 全局正文字号与行距 ---
 \newcommand{\BodyFontSize}{14pt}
@@ -55,20 +61,33 @@
 \makeatother
 \normalsize
 
+% 轻度放宽断行，减少 Overfull \hbox 警告
+\emergencystretch=2em
+
 %======================================================================
 % 4. 章节与标题格式 (Chapter & Section Styling)
 %======================================================================
-\renewcommand{\thesection}{\arabic{section}}
-\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+% 章节编号：标题使用中文数字（使用 zhnumber 的 \zhnumber）其余保持阿拉伯数字不变
+\renewcommand{\thesection}{\zhnumber{\arabic{section}}}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
 \numberwithin{equation}{section}
+% 确保公式编号中的“章”部分仍为阿拉伯数字（避免出现“\CJKnumber.1”样式）
+\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
 \providecommand{\frontmatter}{\clearpage\pagenumbering{Roman}}
 \providecommand{\mainmatter}{\clearpage\pagenumbering{arabic}}
+
+% --- 定理环境（用于命题、引理、证明等） ---
+\newtheorem{theorem}{定理}
+\newtheorem{lemma}{引理}
+\newtheorem{proposition}{命题}
+\theoremstyle{remark}
+\newtheorem{remark}{注}
 
 %======================================================================
 % 5. 目录、图录、表录格式 (TOC/LOF/LOT Styling) - 【规范格式最终版】
 %======================================================================
 \usepackage{tocloft}
-\usepackage[section]{tocbibind}
+\usepackage[section,notbib]{tocbibind}
 
 % --- 目录主标题格式 ---
 \renewcommand{\cfttoctitlefont}{\hfill\bfseries\zihao{2}}
@@ -153,12 +172,25 @@
     \clearpage
     \thispagestyle{plain}
     \begin{center}
-        \bfseries\zihao{3} 摘\hspace{1em}要
+        \bfseries\zihao{2} 摘\hspace{1em}要
     \end{center}
-    \vspace{1.5em}
+    % 标题下方留白略减小
+    \vspace{0.5em}
+    % 摘要正文首行缩进
     \setlength{\parindent}{2em}
+    % 仅对摘要启用更紧凑的行距与更宽的文字区域
+    \begingroup
     \normalsize
-}{\par\vfill\clearpage}
+    \setlength{\baselineskip}{18pt} % 行距从全局 22pt 收紧到 18pt
+    \begin{adjustwidth}{-0.5cm}{-0.5cm} % 左右各放宽 0.5cm
+    % 保证摘要内每一自然段首行缩进（安全实现）：
+    \setlength{\parskip}{0pt}% 段间距为0，保持标准缩进行为
+    \indent % 让首段也缩进；其余段落由 \parindent=2em 自动缩进
+}{%
+    \end{adjustwidth}
+    \endgroup
+    \par\vfill\clearpage
+}
 
 %======================================================================
 % 8. 图表标题 (Caption Styling)
@@ -175,8 +207,11 @@
     commentstyle=\itshape\color{gray}, stringstyle=\ttfamily,
     showstringspaces=false, breaklines=true, frame=single, framerule=0.4pt,
     numbers=left, numberstyle=\tiny\color{gray}, captionpos=b,
-    tabsize=4, keepspaces=true, columns=flexible
+    tabsize=4, keepspaces=true, columns=flexible,
+    literate=*{∈}{{\ensuremath{\in}}}1 {⊕}{{\ensuremath{\oplus}}}1 {Δ}{{\ensuremath{\Delta}}}1 {Σ}{{\ensuremath{\Sigma}}}1 {≤}{{\ensuremath{\le}}}1 {≥}{{\ensuremath{\ge}}}1
 }
+
+
 
 %======================================================================
 % 10. 超链接与交叉引用 (Hyperlinks & Cross-references)
@@ -186,15 +221,36 @@
     colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black,
     pdfauthor={}, pdftitle={关于农作物种植策略的优化模型}
 }
-\usepackage[nameinlink, noabbrev, capitalize]{cleveref}
-\crefname{section}{第}{章}
-\Crefname{section}{第}{章}
+\usepackage[nameinlink, noabbrev]{cleveref}
+% 使用 \crefformat 正确生成 “第n章”，避免在 \csname 构造中混入中文造成解析问题
+\crefformat{section}{第#2#1#3章}
+\Crefformat{section}{第#2#1#3章}
 \crefname{figure}{图}{~}
 \Crefname{figure}{图}{~}
 \crefname{table}{表}{~}
 \Crefname{table}{表}{~}
 \crefname{equation}{公式}{~}
 \Crefname{equation}{公式}{~}
+
+% 为算法环境添加中文名称，便于 \cref 引用
+\crefname{algorithm}{算法}{算法}
+\Crefname{algorithm}{算法}{算法}
+
+%======================================================================
+% 10+. 参考文献（使用 biblatex + biber）
+%======================================================================
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\addbibresource{references.bib}
+
+%======================================================================
+% 10+. 算法伪代码 (Algorithms)
+%======================================================================
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+% 绘图（用于简洁流程图）
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, shapes.geometric}
 
 %======================================================================
 % 11. 论文全局信息 (Thesis Info)

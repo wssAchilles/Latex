@@ -1,5 +1,140 @@
 \contentsline {section}{摘\hspace {1.5em}要}{I}{section*.1}%
 \contentsline {section}{目\hspace {1.5em}录}{III}{section*.2}%
-\contentsline {section}{插图清单}{IV}{section*.3}%
-\contentsline {section}{附表清单}{V}{section*.4}%
-\contentsline {section}{参考文献}{1}{section*.5}%
+\contentsline {section}{插图清单}{VII}{section*.3}%
+\contentsline {section}{附表清单}{IX}{section*.4}%
+\contentsline {section}{\numberline {一}问题重述}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}任务概述}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}数据与预处理}{1}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}问题拆解}{1}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}模型轮廓与求解思路}{2}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}评价指标与结果呈现}{2}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}极简符号表}{2}{subsection.1.6}%
+\contentsline {section}{\numberline {二}假设与符号}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}数据口径与单位}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}基本假设}{3}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}农艺规则与可行域补充}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}价格与销量机制}{4}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}符号表（扩展）}{4}{subsection.2.5}%
+\contentsline {paragraph}{集合与索引}{5}{table.caption.6}%
+\contentsline {paragraph}{决策变量}{5}{table.caption.8}%
+\contentsline {paragraph}{参数}{6}{table.caption.10}%
+\contentsline {section}{\numberline {三}确定性最优化模型（问题一）}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}问题背景与建模思路}{6}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}问题分析（与赛题对齐）}{6}{subsubsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.2}模型与约束}{8}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}决策变量}{8}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}目标函数}{8}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}场景与敏感性设计（文字化）}{9}{subsubsection.3.2.3}%
+\contentsline {paragraph}{业务解读与取值逻辑}{10}{paragraph*.13}%
+\contentsline {subsubsection}{\numberline {3.2.4}约束条件}{10}{subsubsection.3.2.4}%
+\contentsline {paragraph}{地块可用性与同季不重叠}{10}{paragraph*.14}%
+\contentsline {paragraph}{作物—地块适宜性与大棚限制}{10}{paragraph*.15}%
+\contentsline {paragraph}{产销匹配与销量上限}{11}{paragraph*.16}%
+\contentsline {paragraph}{重茬与轮作（示例化建模）}{11}{paragraph*.18}%
+\contentsline {paragraph}{资源与切换成本扩展}{12}{paragraph*.19}%
+\contentsline {paragraph}{可实施性与业务规则对应}{13}{paragraph*.21}%
+\contentsline {subsubsection}{\numberline {3.2.5}复核清单（问题一）}{13}{subsubsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.3}数据与口径}{14}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}符号与参数定义}{14}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}数据预处理与口径统一}{15}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}数据清洗细则}{15}{subsubsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.4}数值实验与结果解读}{17}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}求解流程与可解性}{18}{subsection.3.5}%
+\contentsline {paragraph}{轮作/切换割的增量加入}{18}{paragraph*.26}%
+\contentsline {paragraph}{正确性与复杂度（文字化）}{18}{paragraph*.27}%
+\contentsline {subsection}{\numberline {3.6}讨论与扩展（可选）}{19}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}答案与输出}{19}{subsection.3.7}%
+\contentsline {paragraph}{复现说明}{19}{paragraph*.29}%
+\contentsline {subsection}{\numberline {3.8}工程落地与实施计划}{20}{subsection.3.8}%
+\contentsline {paragraph}{可解性要点}{20}{paragraph*.30}%
+\contentsline {section}{\numberline {四}不确定性与保底收益（问题二）}{21}{section.4}%
+\contentsline {subsection}{\numberline {4.1}背景与建模框架}{21}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}问题背景与建模思路}{21}{subsubsection.4.1.1}%
+\contentsline {paragraph}{本章贡献与创新点}{22}{paragraph*.32}%
+\contentsline {subsubsection}{\numberline {4.1.2}不确定集定义（业务口径）}{22}{subsubsection.4.1.2}%
+\contentsline {paragraph}{数据映射与口径}{23}{paragraph*.33}%
+\contentsline {paragraph}{盒式不确定集的特例}{23}{paragraph*.34}%
+\contentsline {subsection}{\numberline {4.2}鲁棒目标与等价重构}{23}{subsection.4.2}%
+\contentsline {paragraph}{销量上限的鲁棒化（示例）}{24}{paragraph*.35}%
+\contentsline {paragraph}{代表性鲁棒重构示例（预算不确定集，Bertsimas–Sim \blx@tocontentsinit {0}\cite {bertsimas2022online}\,体例）}{24}{paragraph*.36}%
+\contentsline {paragraph}{推导要点（对偶化模板）}{25}{paragraph*.37}%
+\contentsline {paragraph}{一般化鲁棒模板小结（Bertsimas–Sim）}{25}{paragraph*.38}%
+\contentsline {paragraph}{右端不确定与“$\ge $”型约束的处理}{26}{paragraph*.39}%
+\contentsline {paragraph}{成本与价格的不确定性}{26}{paragraph*.40}%
+\contentsline {subsection}{\numberline {4.3}约束体系与求解流程}{27}{subsection.4.3}%
+\contentsline {paragraph}{复杂度与求解建议}{27}{paragraph*.41}%
+\contentsline {subsubsection}{\numberline {4.3.1}求解流程与可解性（工程实现）}{28}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}可调鲁棒与分布鲁棒的取舍（说明）}{28}{subsubsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.4}实验设计与评测指标}{28}{subsection.4.4}%
+\contentsline {paragraph}{指标与估计量的形式化定义}{29}{paragraph*.42}%
+\contentsline {paragraph}{样本量与功效（简析）}{29}{paragraph*.43}%
+\contentsline {subsubsection}{\numberline {4.4.1}参数边界与 $\sigma $ 标定方法}{29}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}抽样设计与置信区间}{30}{subsubsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.5}参数标定与 Gamma 选择}{30}{subsection.4.5}%
+\contentsline {paragraph}{选点流程（工程化指引）}{30}{paragraph*.44}%
+\contentsline {paragraph}{算法伪代码：$\Gamma $ 网格—帕累托过滤}{31}{figure.caption.46}%
+\contentsline {paragraph}{$\Gamma $ 的边际分析与停增准则}{32}{paragraph*.47}%
+\contentsline {paragraph}{分层 $\Gamma $ 设定（按季/品种）}{32}{paragraph*.48}%
+\contentsline {paragraph}{与机会约束的关系（保守外逼近）}{32}{paragraph*.49}%
+\contentsline {paragraph}{鲁棒化模板总表（汇总）}{33}{paragraph*.50}%
+\contentsline {paragraph}{规模与复杂度估计}{33}{paragraph*.51}%
+\contentsline {paragraph}{等价命题要点补充（Bertsimas–Sim）}{34}{paragraph*.52}%
+\contentsline {subsection}{\numberline {4.6}数值结果与业务解读}{34}{subsection.4.6}%
+\contentsline {subsubsection}{\numberline {4.6.1}业务解读与管理启示}{34}{subsubsection.4.6.1}%
+\contentsline {subsubsection}{\numberline {4.6.2}数值实验与结果解读}{34}{subsubsection.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.6.3}复现实验指引}{35}{subsubsection.4.6.3}%
+\contentsline {paragraph}{统计显著性与稳健性检验}{35}{paragraph*.53}%
+\contentsline {paragraph}{多重比较校正（避免第一类错误膨胀）}{35}{paragraph*.54}%
+\contentsline {paragraph}{收益差异的要素分解}{36}{paragraph*.55}%
+\contentsline {paragraph}{消融一：盒式 vs. 预算不确定集}{37}{paragraph*.56}%
+\contentsline {paragraph}{消融二：无切换成本 vs. 有切换成本}{37}{paragraph*.57}%
+\contentsline {paragraph}{图~\ref {fig:model2-revenue-curve} 解读}{37}{paragraph*.59}%
+\contentsline {paragraph}{鲁棒预算 $\Gamma $ 的定量权衡}{38}{paragraph*.61}%
+\contentsline {paragraph}{结构变化的机制}{39}{paragraph*.63}%
+\contentsline {paragraph}{违约风险的度量}{40}{paragraph*.65}%
+\contentsline {paragraph}{后悔值与 ECDF}{41}{paragraph*.67}%
+\contentsline {paragraph}{资源瓶颈的缓解}{41}{paragraph*.69}%
+\contentsline {paragraph}{切换频次的形式化定义}{42}{paragraph*.71}%
+\contentsline {paragraph}{敏感性口径}{43}{paragraph*.73}%
+\contentsline {subsection}{\numberline {4.7}实施建议与复核}{43}{subsection.4.7}%
+\contentsline {subsubsection}{\numberline {4.7.1}答案与输出（落地口径）}{43}{subsubsection.4.7.1}%
+\contentsline {subsubsection}{\numberline {4.7.2}符号与参数对照表}{44}{subsubsection.4.7.2}%
+\contentsline {subsubsection}{\numberline {4.7.3}Gamma 选点操作化指引}{44}{subsubsection.4.7.3}%
+\contentsline {subsubsection}{\numberline {4.7.4}实施与运维建议}{44}{subsubsection.4.7.4}%
+\contentsline {paragraph}{$\Gamma $ 自适应运维（控制图思路）}{45}{paragraph*.76}%
+\contentsline {subsubsection}{\numberline {4.7.5}数值稳定性与尺度化建议}{45}{subsubsection.4.7.5}%
+\contentsline {subsubsection}{\numberline {4.7.6}影子价（对偶）与业务含义}{45}{subsubsection.4.7.6}%
+\contentsline {subsubsection}{\numberline {4.7.7}本章小结与展望}{46}{subsubsection.4.7.7}%
+\contentsline {paragraph}{局限}{46}{paragraph*.77}%
+\contentsline {paragraph}{展望}{46}{paragraph*.78}%
+\contentsline {section}{\numberline {五}价格反馈与动态滚动优化策略}{47}{section.5}%
+\contentsline {subsection}{\numberline {5.1}模型动机与设定}{48}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}变量与约束总览}{49}{subsubsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.2}价格—供给—销量反馈与识别}{50}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}数据清洗与稳健性}{51}{subsubsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.3}情景生成与参数更新}{51}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}相关结构与采样}{52}{subsubsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.4}含 CVaR 的两阶段滚动优化模型}{53}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}价格分段线性化与 MIP}{53}{subsubsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.5}求解策略与算法流程}{54}{subsection.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.1}复杂度与收敛性讨论}{55}{subsubsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.6}数值实验与对比分析}{55}{subsection.5.6}%
+\contentsline {subsubsection}{\numberline {5.6.1}实验设置}{56}{subsubsection.5.6.1}%
+\contentsline {subsubsection}{\numberline {5.6.2}结果解读}{56}{subsubsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.7}敏感性与稳健性讨论}{57}{subsection.5.7}%
+\contentsline {subsubsection}{\numberline {5.7.1}管理启示与实施建议}{58}{subsubsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.8}本章小结}{59}{subsection.5.8}%
+\contentsline {section}{参考文献}{61}{section*.87}%
+\contentsline {section}{\numberline {A}算法与实现说明}{62}{appendix.A}%
+\contentsline {subsection}{\numberline {1.1}切换成本的邻接线性化与增量割生成}{62}{subsection.A.1}%
+\contentsline {paragraph}{Python实现阐释}{62}{paragraph*.88}%
+\contentsline {subsection}{\numberline {1.2}轮作约束的窗口化线性近似与冲突窗口检测}{64}{subsection.A.2}%
+\contentsline {paragraph}{Python实现阐释}{64}{paragraph*.89}%
+\contentsline {subsection}{\numberline {1.3}Bertsimas--Sim 预算不确定集的鲁棒等价}{65}{subsection.A.3}%
+\contentsline {paragraph}{Python实现阐释}{65}{paragraph*.90}%
+\contentsline {subsection}{\numberline {1.4}$\Gamma $ 网格与帕累托过滤}{66}{subsection.A.4}%
+\contentsline {paragraph}{Python实现阐释}{67}{paragraph*.91}%
+\contentsline {subsection}{\numberline {1.5}相关一致化的情景生成与尾部加密}{68}{subsection.A.5}%
+\contentsline {paragraph}{Python实现阐释}{69}{paragraph*.92}%
+\contentsline {subsection}{\numberline {1.6}含 CVaR 的年度滚动优化（简化演示）}{72}{subsection.A.6}%
+\contentsline {paragraph}{Python实现阐释}{73}{paragraph*.93}%

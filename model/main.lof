@@ -1,0 +1,24 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces 作物结构随时间的堆叠面积图（示意）}}{8}{figure.caption.11}%
+\contentsline {figure}{\numberline {2}{\ignorespaces 资源利用对比：跨期折线 vs. 季—设施热力图}}{9}{figure.caption.12}%
+\contentsline {figure}{\numberline {3}{\ignorespaces 销量与销量上限对照（示意）}}{11}{figure.caption.17}%
+\contentsline {figure}{\numberline {4}{\ignorespaces 作物切换成本/频次热力图（示意）}}{13}{figure.caption.20}%
+\contentsline {figure}{\numberline {5}{\ignorespaces 主要作物：面积与收益属性的并排对比}}{15}{figure.caption.23}%
+\contentsline {figure}{\numberline {6}{\ignorespaces 收益表现：曲线与分布的联合呈现}}{17}{figure.caption.25}%
+\contentsline {figure}{\numberline {7}{\ignorespaces 参数敏感性雷达图（示意）}}{21}{figure.caption.31}%
+\contentsline {figure}{\numberline {8}{\ignorespaces 参数标定流程（$\Gamma $-Grid 与帕累托过滤）}}{31}{figure.caption.46}%
+\contentsline {figure}{\numberline {9}{\ignorespaces 年度收益曲线：确定性 vs. 鲁棒（问题二）。鲁棒方案显著抬升最坏情形的收益下界，年际波动更小；确定性方案在名义情景下略高，但尾部更弱。}}{37}{figure.caption.58}%
+\contentsline {figure}{\numberline {10}{\ignorespaces 鲁棒度—收益前沿（名义与最坏的权衡）。随 $\Gamma $ 增大，最坏收益单调抬升、名义收益小幅让渡；推荐点应在“保底收益提升与机会成本”之间折中。}}{38}{figure.caption.60}%
+\contentsline {figure}{\numberline {11}{\ignorespaces 作物结构随鲁棒度变化：$\Gamma =0$ vs. $\Gamma =3$。高不确定季/品种的配置更克制，整体结构更稳，利于执行与库存管理。}}{39}{figure.caption.62}%
+\contentsline {figure}{\numberline {12}{\ignorespaces 约束违约风险对比：确定性 vs. 鲁棒。鲁棒方案在产销匹配、销量上限与关键资源约束上显著降低违约概率与幅度。}}{40}{figure.caption.64}%
+\contentsline {figure}{\numberline {13}{\ignorespaces 后悔值 ECDF 对比。鲁棒方案的后悔值分布整体左移、尾部概率显著降低，体现“抗尾部”的稳健性。}}{40}{figure.caption.66}%
+\contentsline {figure}{\numberline {14}{\ignorespaces 资源利用率跨期对比（鲁棒 vs. 确定性）。鲁棒方案在关键瓶颈期更均衡，峰值占用降低，有助于缓解产能与人力压力。}}{41}{figure.caption.68}%
+\contentsline {figure}{\numberline {15}{\ignorespaces 鲁棒方案切换频次热力图。跨季/跨作物的跳变明显减少，执行路径更平滑，切换成本与不确定性暴露同步下降。}}{42}{figure.caption.70}%
+\contentsline {figure}{\numberline {16}{\ignorespaces 关键因素对收益波动的敏感性（鲁棒 vs. 确定性）。两方案对主要因素的影响排序基本一致，但鲁棒方案对负向扰动的灵敏度更低。}}{43}{figure.caption.72}%
+\contentsline {figure}{\numberline {17}{\ignorespaces 基线收入—供给曲线示意（用于刻画价格弹性与容量上限对总收入的影响）}}{47}{figure.caption.79}%
+\contentsline {figure}{\numberline {18}{\ignorespaces 销量—产能的配比关系示意（容量约束导致的瓶颈区间）}}{50}{figure.caption.80}%
+\contentsline {figure}{\numberline {19}{\ignorespaces 确定性方案在历史波动下的收益分布（作为滚动优化的对照基线）}}{51}{figure.caption.81}%
+\contentsline {figure}{\numberline {20}{\ignorespaces 地块—作物切换热图（利于识别滚动优化中需重点稳定的子区）}}{52}{figure.caption.82}%
+\contentsline {figure}{\numberline {21}{\ignorespaces 鲁棒预算与后悔值的并排对比}}{54}{figure.caption.83}%
+\contentsline {figure}{\numberline {22}{\ignorespaces 滚动策略相关图的并排整合展示}}{56}{figure.caption.84}%
+\contentsline {figure}{\numberline {23}{\ignorespaces 敏感性与风险的并排对比（基线 vs 滚动 + CVaR）}}{58}{figure.caption.85}%
+\contentsline {figure}{\numberline {24}{\ignorespaces 年度单产与资源使用的并排对比}}{59}{figure.caption.86}%

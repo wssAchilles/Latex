@@ -1,11 +1,12 @@
 % !TEX program = xelatex
 % !TEX encoding = UTF-8
 
+% !BIB program = biber
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 全国大学生数学建模竞赛 CUMCM LaTeX 模板
 % --- 主文件 (main.tex) ---
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\documentclass[UTF8, a4paper, fontset=windows]{ctexart}
 % 载入宏包与设置
 \input{preamble.tex}
 
@@ -81,10 +82,11 @@
 \input{mainmatter/03-model_3.tex}
 \input{mainmatter/04-evaluation.tex}
 
+\clearpage
 %==================== 参考文献 ====================
-% tocbibind 会自动处理参考文献的目录条目
-\bibliographystyle{unsrt}
-\bibliography{references}
+% 使用 biblatex 打印参考文献，并将其加入目录
+\nocite{*}
+\printbibliography[heading=bibintoc, title={参考文献}]
 
 %==================== 附录 ====================
 \appendix

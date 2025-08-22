@@ -1,8 +1,177 @@
-\begin{thebibliography}{1}
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
 
-\bibitem{developers2022tensorflow}
-TensorFlow Developers.
-\newblock Tensorflow.
-\newblock {\em Zenodo}, 2022.
 
-\end{thebibliography}
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{ji2021mip}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=cc1a78f899c9f565e21ae8325f99404c}{%
+           family={Ji},
+           familyi={J\bibinitperiod},
+           given={Zhengfeng},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=f3c581aa63707baf1f2badee57d1842e}{%
+           family={Natarajan},
+           familyi={N\bibinitperiod},
+           given={Anand},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6567cc493e565bb418fe122f24f8056e}{%
+           family={Vidick},
+           familyi={V\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=08d606d3cdd9e3e64020f253922ab631}{%
+           family={Wright},
+           familyi={W\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f35e86edce5f9a380e5b3e654407b20e}{%
+           family={Yuen},
+           familyi={Y\bibinitperiod},
+           given={Henry},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM New York, NY, USA}%
+      }
+      \strng{namehash}{76820050152ca24069b0b24e17754275}
+      \strng{fullhash}{23a4747e8424381dac913a0891ffb162}
+      \strng{fullhashraw}{23a4747e8424381dac913a0891ffb162}
+      \strng{bibnamehash}{76820050152ca24069b0b24e17754275}
+      \strng{authorbibnamehash}{76820050152ca24069b0b24e17754275}
+      \strng{authornamehash}{76820050152ca24069b0b24e17754275}
+      \strng{authorfullhash}{23a4747e8424381dac913a0891ffb162}
+      \strng{authorfullhashraw}{23a4747e8424381dac913a0891ffb162}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Communications of the ACM}
+      \field{number}{11}
+      \field{title}{Mip*= re}
+      \field{volume}{64}
+      \field{year}{2021}
+      \field{pages}{131\bibrangedash 138}
+      \range{pages}{8}
+    \endentry
+    \entry{alexander2006minimizing}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=83c1e728a6823306a3e60ca82e45b261}{%
+           family={Alexander},
+           familyi={A\bibinitperiod},
+           given={Siddharth},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5c89f2d25b26146fb83990cc4476a242}{%
+           family={Coleman},
+           familyi={C\bibinitperiod},
+           given={Thomas\bibnamedelima F},
+           giveni={T\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=4c9e2e263cbcdd97f35162c89e8a4626}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yuying},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{45d16dce32f88e5cb249a6ba984b5c21}
+      \strng{fullhash}{45d16dce32f88e5cb249a6ba984b5c21}
+      \strng{fullhashraw}{45d16dce32f88e5cb249a6ba984b5c21}
+      \strng{bibnamehash}{45d16dce32f88e5cb249a6ba984b5c21}
+      \strng{authorbibnamehash}{45d16dce32f88e5cb249a6ba984b5c21}
+      \strng{authornamehash}{45d16dce32f88e5cb249a6ba984b5c21}
+      \strng{authorfullhash}{45d16dce32f88e5cb249a6ba984b5c21}
+      \strng{authorfullhashraw}{45d16dce32f88e5cb249a6ba984b5c21}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Banking \& Finance}
+      \field{number}{2}
+      \field{title}{Minimizing CVaR and VaR for a portfolio of derivatives}
+      \field{volume}{30}
+      \field{year}{2006}
+      \field{pages}{583\bibrangedash 605}
+      \range{pages}{23}
+    \endentry
+    \entry{bertsimas2022online}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=5b57425178d5ae2d2835ef44cb330e42}{%
+           family={Bertsimas},
+           familyi={B\bibinitperiod},
+           given={Dimitris},
+           giveni={D\bibinitperiod}}}%
+        {{hash=8179c934b91af94e487e28a389d4da2c}{%
+           family={Stellato},
+           familyi={S\bibinitperiod},
+           given={Bartolomeo},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {INFORMS}%
+      }
+      \strng{namehash}{ddae6d613e70dbcfd1ab8e80d89bd689}
+      \strng{fullhash}{ddae6d613e70dbcfd1ab8e80d89bd689}
+      \strng{fullhashraw}{ddae6d613e70dbcfd1ab8e80d89bd689}
+      \strng{bibnamehash}{ddae6d613e70dbcfd1ab8e80d89bd689}
+      \strng{authorbibnamehash}{ddae6d613e70dbcfd1ab8e80d89bd689}
+      \strng{authornamehash}{ddae6d613e70dbcfd1ab8e80d89bd689}
+      \strng{authorfullhash}{ddae6d613e70dbcfd1ab8e80d89bd689}
+      \strng{authorfullhashraw}{ddae6d613e70dbcfd1ab8e80d89bd689}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{INFORMS Journal on Computing}
+      \field{number}{4}
+      \field{title}{Online mixed-integer optimization in milliseconds}
+      \field{volume}{34}
+      \field{year}{2022}
+      \field{pages}{2229\bibrangedash 2248}
+      \range{pages}{20}
+    \endentry
+    \entry{arletti2024directional}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=cf00d769a5b19d1f4b08e0b4583ba9db}{%
+           family={Arletti},
+           familyi={A\bibinitperiod},
+           given={Alberto},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{cf00d769a5b19d1f4b08e0b4583ba9db}
+      \strng{fullhash}{cf00d769a5b19d1f4b08e0b4583ba9db}
+      \strng{fullhashraw}{cf00d769a5b19d1f4b08e0b4583ba9db}
+      \strng{bibnamehash}{cf00d769a5b19d1f4b08e0b4583ba9db}
+      \strng{authorbibnamehash}{cf00d769a5b19d1f4b08e0b4583ba9db}
+      \strng{authornamehash}{cf00d769a5b19d1f4b08e0b4583ba9db}
+      \strng{authorfullhash}{cf00d769a5b19d1f4b08e0b4583ba9db}
+      \strng{authorfullhashraw}{cf00d769a5b19d1f4b08e0b4583ba9db}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2411.02557}
+      \field{title}{A Directional Rockafellar-Uryasev Regression}
+      \field{year}{2024}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

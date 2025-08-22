@@ -1,0 +1,20 @@
+# latexmk configuration for XeLaTeX + biblatex/biber
+
+# Use XeLaTeX as the LaTeX engine
+$pdflatex = 'xelatex -interaction=nonstopmode -file-line-error -synctex=1 %O %S';
+
+# Force latexmk to run biber when bibliography is needed
+$bibtex = 'biber %O %B';
+
+# Always enable usage of biber when biblatex requests it
+$bibtex_use = 2;
+
+# Maximum runs of xelatex to resolve references
+$max_repeat = 5;
+
+# Quiet/silent where possible but keep important errors
+$silent = 1;
+$warnings_as_errors = 0;
+
+# Clean up extra intermediate files on -c or -C
+@generated_exts = (@generated_exts, 'run.xml', 'bcf');
