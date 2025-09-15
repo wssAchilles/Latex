@@ -1,0 +1,18 @@
+# LaTeX intermediate files
+*.aux
+*.bbl
+*.blg
+*.lof
+*.log
+*.lot
+*.out
+*.synctex.gz
+*.toc
+*.bcf
+*.xdv
+
+# PDF output file
+*.pdf
+
+# Editor configuration
+.vscode/
