@@ -1,0 +1,41 @@
+% Document class and packages
+
+\usepackage[UTF8]{ctex}  % For Chinese support
+
+\usepackage{xeCJK}
+\usepackage{amsmath,amssymb}
+\usepackage{biblatex}
+\addbibresource{references.bib}  % Adjust path as needed
+
+\usepackage{listings}
+\lstset{
+    basicstyle=\fontspec{Consolas}\ttfamily,
+    breaklines=true,
+    captionpos=b,
+    numbers=left,
+    numberstyle=\tiny,
+    frame=single,
+    language=Python,  % or other languages
+    literate=*{≤}{\(\leq\)}1 {≥}{\(\geq\)}1 {≠}{\(\neq\)}1 {≈}{\(\approx\)}1 {∈}{\(\in\)}1 {∉}{\(\notin\)}1 {∃}{\(\exists\)}1 {∀}{\(\forall\)}1 {⊆}{\(\subseteq\)}1 {⊂}{\(\subset\)}1 {⊇}{\(\supseteq\)}1 {⊃}{\(\supset\)}1 {∩}{\(\cap\)}1 {∪}{\(\cup\)}1 {∧}{\(\wedge\)}1 {∨}{\(\vee\)}1 {¬}{\(\neg\)}1 {⇒}{\(\implies\)}1 {⇔}{\(\iff\)}1 {∑}{\(\sum\)}1 {∏}{\(\prod\)}1 {∫}{\(\int\)}1 {∂}{\(\partial\)}1 {∇}{\(\nabla\)}1 {∞}{\(\infty\)}1 {π}{\(\pi\)}1 {μ}{\(\mu\)}1 {σ}{\(\sigma\)}1 {α}{\(\alpha\)}1 {β}{\(\beta\)}1 {γ}{\(\gamma\)}1 {δ}{\(\delta\)}1 {ε}{\(\epsilon\)}1 {θ}{\(\theta\)}1 {λ}{\(\lambda\)}1 {ρ}{\(\rho\)}1 {τ}{\(\tau\)}1 {φ}{\(\phi\)}1 {ψ}{\(\psi\)}1 {ω}{\(\omega\)}1 {Γ}{\(\Gamma\)}1 {Δ}{\(\Delta\)}1 {Θ}{\(\Theta\)}1 {Λ}{\(\Lambda\)}1 {Ξ}{\(\Xi\)}1 {Π}{\(\Pi\)}1 {Σ}{\(\Sigma\)}1 {Υ}{\(\Upsilon\)}1 {Φ}{\(\Phi\)}1 {Ψ}{\(\Psi\)}1 {Ω}{\(\Omega\)}1
+}
+
+% Other useful packages
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+% Custom commands if needed
+\newcommand{\E}{\mathbb{E}}  % Expectation
+\newcommand{\cvar}{\mathrm{CVaR}}  % Conditional Value at Risk
+
+% Title and author (can be customized in main.tex)
+\title{Your Homework Title}
+\author{Your Name}

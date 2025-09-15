@@ -111,6 +111,141 @@
       \field{pages}{583\bibrangedash 605}
       \range{pages}{23}
     \endentry
+    \entry{bertsimas2004price}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=5b57425178d5ae2d2835ef44cb330e42}{%
+           family={Bertsimas},
+           familyi={B\bibinitperiod},
+           given={Dimitris},
+           giveni={D\bibinitperiod}}}%
+        {{hash=086ff5198352da6fd7c2ec6269ff783c}{%
+           family={Sim},
+           familyi={S\bibinitperiod},
+           given={Melvyn},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {INFORMS}%
+      }
+      \strng{namehash}{465971369feb4d7e16a0201cf37ab897}
+      \strng{fullhash}{465971369feb4d7e16a0201cf37ab897}
+      \strng{fullhashraw}{465971369feb4d7e16a0201cf37ab897}
+      \strng{bibnamehash}{465971369feb4d7e16a0201cf37ab897}
+      \strng{authorbibnamehash}{465971369feb4d7e16a0201cf37ab897}
+      \strng{authornamehash}{465971369feb4d7e16a0201cf37ab897}
+      \strng{authorfullhash}{465971369feb4d7e16a0201cf37ab897}
+      \strng{authorfullhashraw}{465971369feb4d7e16a0201cf37ab897}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Operations Research}
+      \field{number}{1}
+      \field{title}{The price of robustness}
+      \field{volume}{52}
+      \field{year}{2004}
+      \field{pages}{35\bibrangedash 53}
+      \range{pages}{19}
+    \endentry
+    \entry{ben2004adjustable}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=b4f10717c86d56d33bf7c4dadf066084}{%
+           family={Ben-Tal},
+           familyi={B\bibinithyphendelim T\bibinitperiod},
+           given={Aharon},
+           giveni={A\bibinitperiod}}}%
+        {{hash=16d3cb6ddfdd34020854b4aec83aa0c4}{%
+           family={Goryashko},
+           familyi={G\bibinitperiod},
+           given={Arkadi},
+           giveni={A\bibinitperiod}}}%
+        {{hash=996a2737122a9b1338957ed35eed3801}{%
+           family={Guslitzer},
+           familyi={G\bibinitperiod},
+           given={Eitan},
+           giveni={E\bibinitperiod}}}%
+        {{hash=b7bb695716d8b9e139e5d51d5dfd3567}{%
+           family={Nemirovski},
+           familyi={N\bibinitperiod},
+           given={Arkadi},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{b012d2c62a79d648ce0209d21908132c}
+      \strng{fullhash}{1014f7fee284f1e9b68ef4a2ae0e4680}
+      \strng{fullhashraw}{1014f7fee284f1e9b68ef4a2ae0e4680}
+      \strng{bibnamehash}{b012d2c62a79d648ce0209d21908132c}
+      \strng{authorbibnamehash}{b012d2c62a79d648ce0209d21908132c}
+      \strng{authornamehash}{b012d2c62a79d648ce0209d21908132c}
+      \strng{authorfullhash}{1014f7fee284f1e9b68ef4a2ae0e4680}
+      \strng{authorfullhashraw}{1014f7fee284f1e9b68ef4a2ae0e4680}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mathematical Programming}
+      \field{number}{2}
+      \field{title}{Adjustable robust solutions of uncertain linear programs}
+      \field{volume}{99}
+      \field{year}{2004}
+      \field{pages}{351\bibrangedash 376}
+      \range{pages}{26}
+    \endentry
+    \entry{rahimian2019distributionally}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=d27e20b8528d95af9b8f28b5039c76b4}{%
+           family={Rahimian},
+           familyi={R\bibinitperiod},
+           given={Hamed},
+           giveni={H\bibinitperiod}}}%
+        {{hash=2f15f298dce37de45f5e0aead87faf61}{%
+           family={Mehrotra},
+           familyi={M\bibinitperiod},
+           given={Sanjay},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{e389c7387e07a20c4b0f62b9d2a89249}
+      \strng{fullhash}{e389c7387e07a20c4b0f62b9d2a89249}
+      \strng{fullhashraw}{e389c7387e07a20c4b0f62b9d2a89249}
+      \strng{bibnamehash}{e389c7387e07a20c4b0f62b9d2a89249}
+      \strng{authorbibnamehash}{e389c7387e07a20c4b0f62b9d2a89249}
+      \strng{authornamehash}{e389c7387e07a20c4b0f62b9d2a89249}
+      \strng{authorfullhash}{e389c7387e07a20c4b0f62b9d2a89249}
+      \strng{authorfullhashraw}{e389c7387e07a20c4b0f62b9d2a89249}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1908.05659}
+      \field{title}{Distributionally Robust Optimization: A Review}
+      \field{year}{2019}
+    \endentry
+    \entry{arletti2024directional}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=cf00d769a5b19d1f4b08e0b4583ba9db}{%
+           family={Arletti},
+           familyi={A\bibinitperiod},
+           given={Alberto},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{cf00d769a5b19d1f4b08e0b4583ba9db}
+      \strng{fullhash}{cf00d769a5b19d1f4b08e0b4583ba9db}
+      \strng{fullhashraw}{cf00d769a5b19d1f4b08e0b4583ba9db}
+      \strng{bibnamehash}{cf00d769a5b19d1f4b08e0b4583ba9db}
+      \strng{authorbibnamehash}{cf00d769a5b19d1f4b08e0b4583ba9db}
+      \strng{authornamehash}{cf00d769a5b19d1f4b08e0b4583ba9db}
+      \strng{authorfullhash}{cf00d769a5b19d1f4b08e0b4583ba9db}
+      \strng{authorfullhashraw}{cf00d769a5b19d1f4b08e0b4583ba9db}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2411.02557}
+      \field{title}{A Directional Rockafellar-Uryasev Regression}
+      \field{year}{2024}
+    \endentry
     \entry{bertsimas2022online}{article}{}{}
       \name{author}{2}{}{%
         {{hash=5b57425178d5ae2d2835ef44cb330e42}{%
@@ -135,8 +270,8 @@
       \strng{authornamehash}{ddae6d613e70dbcfd1ab8e80d89bd689}
       \strng{authorfullhash}{ddae6d613e70dbcfd1ab8e80d89bd689}
       \strng{authorfullhashraw}{ddae6d613e70dbcfd1ab8e80d89bd689}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{INFORMS Journal on Computing}
@@ -144,8 +279,123 @@
       \field{title}{Online mixed-integer optimization in milliseconds}
       \field{volume}{34}
       \field{year}{2022}
+      \true{nocite}
       \field{pages}{2229\bibrangedash 2248}
       \range{pages}{20}
+    \endentry
+    \entry{moskvichev2023conceptarc}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=6eb9954c5f31b20f64f5ecc6b5f08383}{%
+           family={Moskvichev},
+           familyi={M\bibinitperiod},
+           given={Arseny},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1dcd48171be3306afeb3edbfebd0390e}{%
+           family={Odouard},
+           familyi={O\bibinitperiod},
+           given={Victor\bibnamedelima Vikram},
+           giveni={V\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=3042c3dfb21b9c9089a0aa657bce4f3b}{%
+           family={Mitchell},
+           familyi={M\bibinitperiod},
+           given={Melanie},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{66dc2ee718f1614a506846ef3c39e6b9}
+      \strng{fullhash}{66dc2ee718f1614a506846ef3c39e6b9}
+      \strng{fullhashraw}{66dc2ee718f1614a506846ef3c39e6b9}
+      \strng{bibnamehash}{66dc2ee718f1614a506846ef3c39e6b9}
+      \strng{authorbibnamehash}{66dc2ee718f1614a506846ef3c39e6b9}
+      \strng{authornamehash}{66dc2ee718f1614a506846ef3c39e6b9}
+      \strng{authorfullhash}{66dc2ee718f1614a506846ef3c39e6b9}
+      \strng{authorfullhashraw}{66dc2ee718f1614a506846ef3c39e6b9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2305.07141}
+      \field{title}{The conceptarc benchmark: Evaluating understanding and generalization in the arc domain}
+      \field{year}{2023}
+      \true{nocite}
+    \endentry
+    \entry{wang2024simulation}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=a63fbe95807643a876821fabd6017484}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Chenwei},
+           giveni={C\bibinitperiod}}}%
+        {{hash=4677bcd6915e5e9391edb1e91e1ca641}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Juan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9563467a39d5b3447179cc5d990225ee}{%
+           family={Zheng},
+           familyi={Z\bibinitperiod},
+           given={Shijie},
+           giveni={S\bibinitperiod}}}%
+        {{hash=d37a2e7e6b6d519d414c4f4289c80618}{%
+           family={Xiong},
+           familyi={X\bibinitperiod},
+           given={Shaolin},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c5c19d8d58e4fa43884e35d6519130fe}{%
+           family={An},
+           familyi={A\bibinitperiod},
+           given={Zhenghua},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=2478415b8182ff459b36a4cfbdb8b574}{%
+           family={Peng},
+           familyi={P\bibinitperiod},
+           given={Wenxi},
+           giveni={W\bibinitperiod}}}%
+        {{hash=704bd2d94fd51e67419cba721a9f3084}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Haisheng},
+           giveni={H\bibinitperiod}}}%
+        {{hash=69c02849ce89f1158b99aedd1de29b3e}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Xiaoyun},
+           giveni={X\bibinitperiod}}}%
+        {{hash=ff4159672c2cd450ab1e3d98469ead0f}{%
+           family={Zheng},
+           familyi={Z\bibinitperiod},
+           given={Chao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=18a9eef44a875f121d5bb86d3c65690f}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Peiyi},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{9a96f81bee580015ad83abcf87d50e31}
+      \strng{fullhash}{944b90cd8005c986498ed551d20df322}
+      \strng{fullhashraw}{944b90cd8005c986498ed551d20df322}
+      \strng{bibnamehash}{9a96f81bee580015ad83abcf87d50e31}
+      \strng{authorbibnamehash}{9a96f81bee580015ad83abcf87d50e31}
+      \strng{authornamehash}{9a96f81bee580015ad83abcf87d50e31}
+      \strng{authorfullhash}{944b90cd8005c986498ed551d20df322}
+      \strng{authorfullhashraw}{944b90cd8005c986498ed551d20df322}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Experimental Astronomy}
+      \field{number}{3}
+      \field{title}{Simulation of the in-flight background and performance of DRO/GTM}
+      \field{volume}{57}
+      \field{year}{2024}
+      \true{nocite}
+      \field{pages}{26}
+      \range{pages}{1}
     \endentry
   \enddatalist
 \endrefsection

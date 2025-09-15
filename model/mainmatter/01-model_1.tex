@@ -5,10 +5,10 @@
 \section{确定性最优化模型（问题一）}
  
 \subsection{问题背景与建模思路}
-为紧扣“C题”问题一（确定性最优化），本章在明确赛题数据口径与农艺规则的基础上，构建以“年—季—地块—作物”为核心索引的多期混合整数规划模型。我们以经营净收益最大化为目标，并用“面积不超—同季不重叠—作物适宜—产销匹配—轮作与重茬抑制—资源瓶颈—切换成本”七类约束依次收紧可行域。与之配套，结构类图（如图\ref{fig:model1-stack-area}、图\ref{fig:model1-area-by-crop-bar}）揭示作物结构与地块配置；绩效类图（如图\ref{fig:model1-revenue-curve}、图\ref{fig:model1-profit-distribution}）展示收益水平与分布；约束占用类图（如图\ref{fig:model1-resource-util-line}、图\ref{fig:model1-resource-heatmap}、图\ref{fig:model1-sales-vs-capacity}）解释瓶颈限制与产销匹配。本章作为后续鲁棒与滚动章节的基线，用于对比不同风险设定下的收益—风险权衡。
+针对确定性最优化问题，本章基于明确的数据口径与农艺规则，构建以"年—季—地块—作物"为核心索引的多期混合整数规划模型。我们以经营净收益最大化为目标，并用“面积不超—同季不重叠—作物适宜—产销匹配—轮作与重茬抑制—资源瓶颈—切换成本”七类约束依次收紧可行域。相应地，通过结构类图（如\cref{fig:model1-stack-area,fig:model1-area-by-crop-bar}）展示作物结构与地块配置；绩效类图（如\cref{fig:model1-revenue-curve,fig:model1-profit-distribution}）反映收益水平与分布特征；资源占用类图（如\cref{fig:model1-resource-util-line,fig:model1-resource-heatmap,fig:model1-sales-vs-capacity}）分析瓶颈限制与产销匹配关系。本章作为后续鲁棒与滚动章节的基线，用于对比不同风险设定下的收益—风险权衡。
 
 \subsubsection{问题分析（与赛题对齐）}
-本节以“题面—附件—模型”的映射方式拆解问题一：
+本节通过"数据源—建模要素—约束体系"的逻辑链条分析问题结构：
 首先，\textbf{地块异质性与设施属性}决定了“能不能种、能种多少、需要多少资源”。露天与大棚在季节可用性、气象适应性及设施/工时投入上差异明显。我们以地块—季节—作物三维的适宜性指标 $\eta_{isk}$ 控制“可/不可种”，以季节—作物维度的资源系数 $h_{sk}$ 刻画单位面积对设施/工时的占用强度，从而在约束层面将题面中的农艺规则与产能现实转化为可计算的边界条件。
 
 其次，\textbf{多季耦合与轮作规则}使问题天然具有时序相关性：同一地块同一季不能重复种多种作物（同季不重叠），相邻季或窗口内对同一作物的重复栽培会触发重茬问题，需要最小轮作间隔 $L_k$ 来保证土壤与病虫风险的可控。这些都通过式\eqref{cons:nocontig}--\eqref{cons:rotation} 进行刚性约束，使解在时间维度上保持农艺合规。
@@ -276,7 +276,21 @@ $\kappa_{k\to k'}$ & $k,k'$ & 作物切换成本（元/亩），从 $k$ 切换�
 % 复现与脚本清单（包含大段代码）按要求移除，保留文字化流程与结果描述
 
 \paragraph{复现说明}
-本章图件可由目录 \texttt{python/figures\_model1/} 下脚本一键复现：\texttt{model1\_stack\_area.py} 生成图~\ref{fig:model1-stack-area}；\texttt{model1\_area\_by\_crop\_bar.py} 生成图~\ref{fig:model1-area-by-crop-bar}；\texttt{model1\_resource\_util\_line.py} 与 \texttt{model1\_resource\_heatmap.py} 分别对应图~\ref{fig:model1-resource-util-line} 与图~\ref{fig:model1-resource-heatmap}；\texttt{model1\_sales\_vs\_capacity.py} 对应图~\ref{fig:model1-sales-vs-capacity}；\texttt{revenue\_curve.py} 对应图~\ref{fig:model1-revenue-curve}；\texttt{model1\_profit\_distribution.py} 与 \texttt{model1\_sensitivity\_spider.py} 分别生成图~\ref{fig:model1-profit-distribution} 与图~\ref{fig:model1-sensitivity-spider}；\texttt{model1\_yield\_bar.py} 与 \texttt{model1\_switch\_heatmap.py} 用于基础单产/切换现象的补充可视化。运行环境依赖 Python 3 与常见科学计算栈（如 \texttt{numpy}、\texttt{pandas}、\texttt{matplotlib}）。脚本按“数据预处理与口径统一/数据清洗细则”的口径读取参数与结果，输出至 \texttt{figures/} 目录以便论文直接引用。
+ 为避免长路径与手动断行导致的排版松散，改用左对齐小号体列出脚本—图号对应关系（示例化条目，可按需扩展）：
+ \begin{flushleft}\footnotesize
+ \texttt{\path{python/figures_model1/model1_stack_area.py}} 对应 图~\ref{fig:model1-stack-area}\\
+ \texttt{\path{python/figures_model1/model1_area_by_crop_bar.py}} 对应 图~\ref{fig:model1-area-by-crop-bar}\\
+ \texttt{\path{python/figures_model1/model1_resource_util_line.py}} 对应 图~\ref{fig:model1-resource-util-line}\\
+ \texttt{\path{python/figures_model1/model1_resource_heatmap.py}} 对应 图~\ref{fig:model1-resource-heatmap}\\
+ \texttt{\path{python/figures_model1/model1_sales_vs_capacity.py}} 对应 图~\ref{fig:model1-sales-vs-capacity}\\
+ \texttt{\path{python/figures_model1/revenue_curve.py}} 对应 图~\ref{fig:model1-revenue-curve}\\
+ \texttt{\path{python/figures_model1/model1_profit_distribution.py}} 对应 图~\ref{fig:model1-profit-distribution}\\
+ \texttt{\path{python/figures_model1/model1_sensitivity_spider.py}} 对应 图~\ref{fig:model1-sensitivity-spider}\\
+ \texttt{\path{python/figures_model1/model1_yield_bar.py}} 对应 图~\ref{fig:model1-yield-bar}\\
+ \texttt{\path{python/figures_model1/model1_switch_heatmap.py}} 对应 图~\ref{fig:model1-switch-heatmap}
+ \end{flushleft}
+ 运行环境依赖 Python 3 与常见科学计算栈（如 \texttt{numpy}、\texttt{pandas}、\texttt{matplotlib}）。\linebreak[2]
+ 脚本按“数据预处理与口径统一/数据清洗细则”的口径读取参数与结果，输出至 \texttt{figures/} 目录以便论文直接引用。
 
 \subsection{工程落地与实施计划}
 为将模型转化为可执行的年度/季度计划，建议：

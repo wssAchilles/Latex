@@ -2374,9 +2374,11 @@
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">ji2021mip</bcf:citekey>
     <bcf:citekey order="2" intorder="1">alexander2006minimizing</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">bertsimas2022online</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">arletti2024directional</bcf:citekey>
-    <bcf:citekey order="5" intorder="1" nocite="1">*</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">bertsimas2004price</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">ben2004adjustable</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">rahimian2019distributionally</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">arletti2024directional</bcf:citekey>
+    <bcf:citekey order="7" intorder="1" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

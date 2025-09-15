@@ -19,14 +19,14 @@
 
 为便于后续求解与分析，我们给出两个常用的价格—供给函数原型：
 \begin{align}
-  &\text{线性价格：}\qquad p(q) = a - b\,q,\quad a>0,\,b>0,\\
-  &\text{对数线性：}\qquad \ln p(q) = \ln p_0 - \eta\,q\;\Rightarrow\; p(q)=p_0\,e^{-\eta q},\quad \eta>0.
+  &\text{线性价格：}\qquad p(q) = a - bq,\quad a>0,\,b>0,\\
+  &\text{对数线性：}\qquad \ln p(q) = \ln p_0 - \eta q\;\Rightarrow\; p(q)=p_0 e^{-\eta q},\quad \eta>0.
 \end{align}
 考虑销量上限（或渠道容量）$C$ 与有效销量 $s(q)=\min\{q,\,C\}$，则年度总收入可表述为
 \begin{equation}
   R(q) = p(q)\,s(q) = p(q)\,\min\{q,\,C\},
 \end{equation}
-其一阶导数在 $q=C$ 处出现折点：在 $q<C$ 区间，$\tfrac{\mathrm dR}{\mathrm dq}=p'(q)\,q + p(q)$；在 $q>C$ 区间，$\tfrac{\mathrm dR}{\mathrm dq}=p'(q)\,C$。这正对应图~\ref{fig:m3-revenue-curve} 的拐点与“容量饱和”现象。若进一步计入单位变动成本 $c$ 与固定成本 $F$，则利润为 $\Pi(q)=R(q)-cq-F$，在滚动优化中我们以 $\Pi$ 的分布为核心关切对象。
+其一阶导数在 $q=C$ 处出现折点：在 $q<C$ 区间，$\frac{\mathrm{d}R}{\mathrm{d}q}=p'(q)q + p(q)$；在 $q>C$ 区间，$\frac{\mathrm{d}R}{\mathrm{d}q}=p'(q)C$。这正对应图~\ref{fig:m3-revenue-curve} 的拐点与“容量饱和”现象。若进一步计入单位变动成本 $c$ 与固定成本 $F$，则利润为 $\Pi(q)=R(q)-cq-F$，在滚动优化中我们以 $\Pi$ 的分布为核心关切对象。
 
 年度决策向量为“年—季—地块—作物”的面积矩阵 $x_{t,\,s,\,i,\,k}$，并配合二进制变量 $z_{t,\,s,\,i,\,k}$ 刻画互斥与重茬约束。标注$y_{t,\,s,\,i,\,k}$ 为产量，$u_{t,\,k}$ 为当年售出量，则有效供给 $q_t=\sum_{s,i,k}y_{t,\,s,\,i,\,k}$，销量受 $u_t\le C_t$ 与 $u_t\le q_t$ 共同约束，价格 $p_t$ 由 $q_t$ 反馈决定。
 
@@ -100,12 +100,12 @@
 
 采用 Rockafellar–Uryasev 公式，设情景 $s=1,\dots,S$ 的年度损失为 $\ell_s=-\Pi_s$，则
 \begin{align}
-  \text{CVaR}_\alpha(\ell) &= \min_{\zeta}\Big\{\zeta + \tfrac{1}{(1-\alpha)S}\sum_{s=1}^S [\ell_s-\zeta]_+\Big\}\\
-  &\equiv \min_{\zeta, u_s\ge 0}\Big\{\zeta + \tfrac{1}{(1-\alpha)S}\sum_{s=1}^S u_s:\ u_s\ge \ell_s-\zeta\Big\}.
+  \mathrm{CVaR}_\alpha(\ell) &= \min_{\zeta}\Big\{\zeta + \frac{1}{(1-\alpha)S}\sum_{s=1}^S [\ell_s-\zeta]_+\Big\}\\
+  &\equiv \min_{\zeta, u_s\ge 0}\Big\{\zeta + \frac{1}{(1-\alpha)S}\sum_{s=1}^S u_s:\ u_s\ge \ell_s-\zeta\Big\}.
 \end{align}
 在 MIP 中引入 $\zeta,\,u_s$ 及样本权重，即可线性化地刻画 CVaR 项。年度目标为
 \begin{equation}
-  \max_{x, z, \zeta, u}\ \mathbb{E}[\Pi_s]\; -\; \lambda\,\text{CVaR}_\alpha(\ell)
+  \max_{x, z, \zeta, u}\ \mathbb{E}[\Pi_s]\; -\; \lambda\,\mathrm{CVaR}_\alpha(\ell)
 \end{equation}
 约束：作物—地块—季节、容量与价格—供给反馈等。
 切换惩罚可通过相邻年度解的差分范数惩罚来实现，例如 $\kappa\,\|x^{(t)}-x^{(t-1)}\|_1$，或在变量层面以额外二进制“切换”指示器保障。
@@ -198,10 +198,10 @@
 \subsection{敏感性与稳健性讨论}
 为分离“参数不确定性”和“决策切换成本”两类来源的影响，我们分别在价格弹性、销量上限、单产方差与切换惩罚系数上做一维与交互敏感性实验。图~\ref{fig:m3-spider-robust} 汇总了鲁棒与滚动策略下的关键敏感度排序，图~\ref{fig:m3-spider-compare} 则直观对比了“基线 vs 滚动 + CVaR”的敏感性差异；图~\ref{fig:m3-violate} 展示了在不同保守度与风险参数下的约束违约风险对比，验证滚动策略在高波动区间的约束可行性提升。
 
-在实验设定中，取价格弹性 $\eta\in[0.02,0.15]$、容量 $C\in[0.6\bar q,1.2\bar q]$、单产方差 $\sigma_Y^2$ 与切换惩罚 $\kappa\in[0,\kappa_{\max}]$。我们记录对期望利润、$5\%$ 分位、CVaR@95\% 的敏感度：
+在实验设定中，取价格弹性 $\eta\in[0.02,0.15]$、容量 $C\in[0.6\bar{q},1.2\bar{q}]$、单产方差 $\sigma_Y^2$ 与切换惩罚 $\kappa\in[0,\kappa_{\max}]$。我们记录对期望利润、5\%分位、$\mathrm{CVaR}_{95\%}$ 的敏感度：
 \begin{align}
   S_{\text{exp}}(\eta) &= \frac{\partial \mathbb{E}[\Pi]}{\partial \eta}, \\
-  S_{\text{cvar}}(\kappa) &= \frac{\partial \,\text{CVaR}_{0.95}(-\Pi)}{\partial \kappa}, \\
+  S_{\text{cvar}}(\kappa) &= \frac{\partial \,\mathrm{CVaR}_{0.95}(-\Pi)}{\partial \kappa}, \\
   S_{p5}(C) &= \frac{\partial \,\text{Quantile}_{0.05}(\Pi)}{\partial C}.
 \end{align}
 结果显示，滚动 + CVaR 相较确定性/鲁棒单策，显著降低了 $\eta$ 与 $C$ 在尾部指标上的敏感度，对切换惩罚呈现“先快后缓”的边际改善。

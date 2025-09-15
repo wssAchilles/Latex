@@ -1,6 +1,40 @@
 # -*- coding: utf-8 -*-
 """
-Rotation (minimum spacing) window cuts with violation scanning
+Rotation window cuts (minimum spacing) with violation scanning.
+
+This module provides a minimal, auditable implementation for enforcing
+crop rotation windows of length L_k across a cyclic season order. The
+core idea is to avoid generating all window constraints upfront (which
+can be exponential in count when enumerated naïvely). Instead, we scan
+the current solution for violations and add only the needed window
+inequalities on demand.
+
+Inputs (conceptual)
+-------------------
+Lk: Dict[crop, int]
+    Minimum spacing window length per crop k.
+seasons: Dict[str, Any]
+    Contains a season order list under key 'order' and a shift function
+    under key 'shift' that maps (season, delta) -> shifted season.
+model: Any
+    An abstract MIP model interface exposing add_constr().
+z: Dict[Index, Any]
+    Decision variables indexed by (t, s, i, k), compatible with model.
+"""
+"""
+Outputs
+-------
+int
+    Number of added window inequalities (for auditing and convergence
+    tracking).
+
+Notes on complexity & reproducibility
+-------------------------------------
+- Precomputing windows is O(|K| * L_k * |S|) and scanning is near-linear
+  in the number of windows. Index compression and vectorized summations
+  can substantially reduce constant factors.
+- For stable experiments, fix random seeds and keep a consistent index
+  order; log per-iteration counts of newly added constraints.
 """
 from typing import Dict, Tuple, List, Any
 

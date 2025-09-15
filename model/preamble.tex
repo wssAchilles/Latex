@@ -47,6 +47,7 @@
 % 使用 XeLaTeX 时需要先加载 fontspec 再加载 xeCJK，以启用 \setmainfont 等命令
 \usepackage{fontspec}
 \usepackage{xeCJK}
+\usepackage{zhnumber}
 \setmainfont{Times New Roman}[Ligatures=TeX]
 \setCJKmainfont{SimSun}[BoldFont=SimHei, AutoFakeSlant=true]
 \setsansfont{Arial}
@@ -197,6 +198,8 @@
 %======================================================================
 \usepackage{caption}
 \captionsetup{font=small, labelfont=bf, justification=centering}
+% 代码清单的标题居中展示，并允许多行换行
+\captionsetup[lstlisting]{justification=centering, singlelinecheck=false}
 
 %======================================================================
 % 9. 代码块格式 (Code Listing)
@@ -208,10 +211,35 @@
     showstringspaces=false, breaklines=true, frame=single, framerule=0.4pt,
     numbers=left, numberstyle=\tiny\color{gray}, captionpos=b,
     tabsize=4, keepspaces=true, columns=flexible,
-    literate=*{∈}{{\ensuremath{\in}}}1 {⊕}{{\ensuremath{\oplus}}}1 {Δ}{{\ensuremath{\Delta}}}1 {Σ}{{\ensuremath{\Sigma}}}1 {≤}{{\ensuremath{\le}}}1 {≥}{{\ensuremath{\ge}}}1
+    literate=*{∈}{{\ensuremath{\in}}}1 {⊕}{{\ensuremath{\oplus}}}1 {Δ}{{\ensuremath{\Delta}}}1 {Σ}{{\ensuremath{\Sigma}}}1 {≤}{{\ensuremath{\le}}}1 {≥}{{\ensuremath{\ge}}}1 {–}{{-}}1 {—}{{-}}1
 }
 
-
+% 为附录代码定义更具可读性的彩色样式（不改动全局默认）
+\definecolor{pyKeyword}{RGB}{0,92,184}
+\definecolor{pyString}{RGB}{196,26,22}
+\definecolor{pyComment}{RGB}{0,120,0}
+\definecolor{pyEmph}{RGB}{180,0,90}
+\definecolor{pyBackground}{RGB}{250,250,250}
+\lstdefinestyle{appendixpy}{
+    language=Python,
+    basicstyle=\scriptsize\ttfamily,
+    keywordstyle=\color{pyKeyword}\bfseries,
+    commentstyle=\color{pyComment}\itshape,
+    stringstyle=\color{pyString}\ttfamily,
+    emph={pca_lhs_samples,empirical_cvar,evaluate_decisions,simple_rolling_demo},
+    emphstyle=\color{pyEmph}\bfseries,
+    showstringspaces=false, breaklines=true, breakatwhitespace=false,
+    breakautoindent=true, breakindent=1em,
+    prebreak=\mbox{\tiny$\hookleftarrow$}, postbreak=\mbox{\tiny$\rightarrow$\,},
+    frame=single, framerule=0.4pt, rulecolor=\color{gray},
+    numbers=none, captionpos=b,
+    xleftmargin=0em, xrightmargin=0em,
+    aboveskip=0pt, belowskip=0pt,
+    tabsize=4, keepspaces=true, columns=fullflexible,
+    basewidth=0.52em,
+    backgroundcolor=\color{pyBackground},
+    literate=*{∈}{{\ensuremath{\in}}}1 {⊕}{{\ensuremath{\oplus}}}1 {Δ}{{\ensuremath{\Delta}}}1 {Σ}{{\ensuremath{\Sigma}}}1 {≤}{{\ensuremath{\le}}}1 {≥}{{\ensuremath{\ge}}}1 {–}{{-}}1 {—}{{-}}1
+}
 
 %======================================================================
 % 10. 超链接与交叉引用 (Hyperlinks & Cross-references)
@@ -255,6 +283,6 @@
 %======================================================================
 % 11. 论文全局信息 (Thesis Info)
 %======================================================================
-\title{\heiti \zihao{2} \bfseries 关于农作物种植策略的优化模型}
+\title{\heiti \zihao{2} \bfseries 农作物种植策略的优化决策模型——基于鲁棒优化与动态调整的综合方法}
 \author{}
 \date{}

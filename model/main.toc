@@ -56,7 +56,7 @@
 \contentsline {paragraph}{盒式不确定集的特例}{23}{paragraph*.34}%
 \contentsline {subsection}{\numberline {4.2}鲁棒目标与等价重构}{23}{subsection.4.2}%
 \contentsline {paragraph}{销量上限的鲁棒化（示例）}{24}{paragraph*.35}%
-\contentsline {paragraph}{代表性鲁棒重构示例（预算不确定集，Bertsimas–Sim \blx@tocontentsinit {0}\cite {bertsimas2022online}\,体例）}{24}{paragraph*.36}%
+\contentsline {paragraph}{代表性鲁棒重构示例（预算不确定集，Bertsimas–Sim \blx@tocontentsinit {0}\cite {bertsimas2004price}\,体例）}{24}{paragraph*.36}%
 \contentsline {paragraph}{推导要点（对偶化模板）}{25}{paragraph*.37}%
 \contentsline {paragraph}{一般化鲁棒模板小结（Bertsimas–Sim）}{25}{paragraph*.38}%
 \contentsline {paragraph}{右端不确定与“$\ge $”型约束的处理}{26}{paragraph*.39}%
@@ -73,68 +73,75 @@
 \contentsline {subsection}{\numberline {4.5}参数标定与 Gamma 选择}{30}{subsection.4.5}%
 \contentsline {paragraph}{选点流程（工程化指引）}{30}{paragraph*.44}%
 \contentsline {paragraph}{算法伪代码：$\Gamma $ 网格—帕累托过滤}{31}{figure.caption.46}%
-\contentsline {paragraph}{$\Gamma $ 的边际分析与停增准则}{32}{paragraph*.47}%
+\contentsline {paragraph}{$\Gamma $ 的边际分析与停增准则}{31}{paragraph*.47}%
 \contentsline {paragraph}{分层 $\Gamma $ 设定（按季/品种）}{32}{paragraph*.48}%
 \contentsline {paragraph}{与机会约束的关系（保守外逼近）}{32}{paragraph*.49}%
-\contentsline {paragraph}{鲁棒化模板总表（汇总）}{33}{paragraph*.50}%
+\contentsline {paragraph}{鲁棒化模板总表（汇总）}{32}{paragraph*.50}%
 \contentsline {paragraph}{规模与复杂度估计}{33}{paragraph*.51}%
-\contentsline {paragraph}{等价命题要点补充（Bertsimas–Sim）}{34}{paragraph*.52}%
+\contentsline {paragraph}{等价命题要点补充（Bertsimas–Sim）}{33}{paragraph*.52}%
 \contentsline {subsection}{\numberline {4.6}数值结果与业务解读}{34}{subsection.4.6}%
 \contentsline {subsubsection}{\numberline {4.6.1}业务解读与管理启示}{34}{subsubsection.4.6.1}%
 \contentsline {subsubsection}{\numberline {4.6.2}数值实验与结果解读}{34}{subsubsection.4.6.2}%
-\contentsline {subsubsection}{\numberline {4.6.3}复现实验指引}{35}{subsubsection.4.6.3}%
-\contentsline {paragraph}{统计显著性与稳健性检验}{35}{paragraph*.53}%
-\contentsline {paragraph}{多重比较校正（避免第一类错误膨胀）}{35}{paragraph*.54}%
-\contentsline {paragraph}{收益差异的要素分解}{36}{paragraph*.55}%
-\contentsline {paragraph}{消融一：盒式 vs. 预算不确定集}{37}{paragraph*.56}%
-\contentsline {paragraph}{消融二：无切换成本 vs. 有切换成本}{37}{paragraph*.57}%
-\contentsline {paragraph}{图~\ref {fig:model2-revenue-curve} 解读}{37}{paragraph*.59}%
-\contentsline {paragraph}{鲁棒预算 $\Gamma $ 的定量权衡}{38}{paragraph*.61}%
-\contentsline {paragraph}{结构变化的机制}{39}{paragraph*.63}%
-\contentsline {paragraph}{违约风险的度量}{40}{paragraph*.65}%
-\contentsline {paragraph}{后悔值与 ECDF}{41}{paragraph*.67}%
-\contentsline {paragraph}{资源瓶颈的缓解}{41}{paragraph*.69}%
-\contentsline {paragraph}{切换频次的形式化定义}{42}{paragraph*.71}%
-\contentsline {paragraph}{敏感性口径}{43}{paragraph*.73}%
-\contentsline {subsection}{\numberline {4.7}实施建议与复核}{43}{subsection.4.7}%
-\contentsline {subsubsection}{\numberline {4.7.1}答案与输出（落地口径）}{43}{subsubsection.4.7.1}%
-\contentsline {subsubsection}{\numberline {4.7.2}符号与参数对照表}{44}{subsubsection.4.7.2}%
-\contentsline {subsubsection}{\numberline {4.7.3}Gamma 选点操作化指引}{44}{subsubsection.4.7.3}%
-\contentsline {subsubsection}{\numberline {4.7.4}实施与运维建议}{44}{subsubsection.4.7.4}%
-\contentsline {paragraph}{$\Gamma $ 自适应运维（控制图思路）}{45}{paragraph*.76}%
-\contentsline {subsubsection}{\numberline {4.7.5}数值稳定性与尺度化建议}{45}{subsubsection.4.7.5}%
-\contentsline {subsubsection}{\numberline {4.7.6}影子价（对偶）与业务含义}{45}{subsubsection.4.7.6}%
-\contentsline {subsubsection}{\numberline {4.7.7}本章小结与展望}{46}{subsubsection.4.7.7}%
-\contentsline {paragraph}{局限}{46}{paragraph*.77}%
-\contentsline {paragraph}{展望}{46}{paragraph*.78}%
-\contentsline {section}{\numberline {五}价格反馈与动态滚动优化策略}{47}{section.5}%
-\contentsline {subsection}{\numberline {5.1}模型动机与设定}{48}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1}变量与约束总览}{49}{subsubsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.2}价格—供给—销量反馈与识别}{50}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}数据清洗与稳健性}{51}{subsubsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.3}情景生成与参数更新}{51}{subsection.5.3}%
-\contentsline {subsubsection}{\numberline {5.3.1}相关结构与采样}{52}{subsubsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.4}含 CVaR 的两阶段滚动优化模型}{53}{subsection.5.4}%
-\contentsline {subsubsection}{\numberline {5.4.1}价格分段线性化与 MIP}{53}{subsubsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.5}求解策略与算法流程}{54}{subsection.5.5}%
-\contentsline {subsubsection}{\numberline {5.5.1}复杂度与收敛性讨论}{55}{subsubsection.5.5.1}%
-\contentsline {subsection}{\numberline {5.6}数值实验与对比分析}{55}{subsection.5.6}%
-\contentsline {subsubsection}{\numberline {5.6.1}实验设置}{56}{subsubsection.5.6.1}%
-\contentsline {subsubsection}{\numberline {5.6.2}结果解读}{56}{subsubsection.5.6.2}%
-\contentsline {subsection}{\numberline {5.7}敏感性与稳健性讨论}{57}{subsection.5.7}%
-\contentsline {subsubsection}{\numberline {5.7.1}管理启示与实施建议}{58}{subsubsection.5.7.1}%
-\contentsline {subsection}{\numberline {5.8}本章小结}{59}{subsection.5.8}%
-\contentsline {section}{参考文献}{61}{section*.87}%
-\contentsline {section}{\numberline {A}算法与实现说明}{62}{appendix.A}%
-\contentsline {subsection}{\numberline {1.1}切换成本的邻接线性化与增量割生成}{62}{subsection.A.1}%
-\contentsline {paragraph}{Python实现阐释}{62}{paragraph*.88}%
-\contentsline {subsection}{\numberline {1.2}轮作约束的窗口化线性近似与冲突窗口检测}{64}{subsection.A.2}%
-\contentsline {paragraph}{Python实现阐释}{64}{paragraph*.89}%
-\contentsline {subsection}{\numberline {1.3}Bertsimas--Sim 预算不确定集的鲁棒等价}{65}{subsection.A.3}%
-\contentsline {paragraph}{Python实现阐释}{65}{paragraph*.90}%
-\contentsline {subsection}{\numberline {1.4}$\Gamma $ 网格与帕累托过滤}{66}{subsection.A.4}%
-\contentsline {paragraph}{Python实现阐释}{67}{paragraph*.91}%
-\contentsline {subsection}{\numberline {1.5}相关一致化的情景生成与尾部加密}{68}{subsection.A.5}%
-\contentsline {paragraph}{Python实现阐释}{69}{paragraph*.92}%
-\contentsline {subsection}{\numberline {1.6}含 CVaR 的年度滚动优化（简化演示）}{72}{subsection.A.6}%
-\contentsline {paragraph}{Python实现阐释}{73}{paragraph*.93}%
+\contentsline {subsubsection}{\numberline {4.6.3}复现实验指引}{34}{subsubsection.4.6.3}%
+\contentsline {paragraph}{图表—脚本映射（可复现）}{35}{paragraph*.53}%
+\contentsline {paragraph}{统计显著性与稳健性检验}{35}{paragraph*.55}%
+\contentsline {paragraph}{多重比较校正（避免第一类错误膨胀）}{35}{paragraph*.56}%
+\contentsline {paragraph}{收益差异的要素分解}{36}{paragraph*.57}%
+\contentsline {paragraph}{消融一：盒式 vs. 预算不确定集}{36}{paragraph*.58}%
+\contentsline {paragraph}{消融二：无切换成本 vs. 有切换成本}{37}{paragraph*.59}%
+\contentsline {paragraph}{图~\ref {fig:model2-revenue-curve} 解读}{37}{paragraph*.61}%
+\contentsline {paragraph}{鲁棒预算 $\Gamma $ 的定量权衡}{38}{paragraph*.63}%
+\contentsline {paragraph}{结构变化的机制}{38}{paragraph*.64}%
+\contentsline {paragraph}{违约风险的度量}{39}{paragraph*.66}%
+\contentsline {paragraph}{后悔值与 ECDF}{39}{paragraph*.67}%
+\contentsline {paragraph}{资源瓶颈的缓解}{39}{paragraph*.68}%
+\contentsline {paragraph}{切换频次的形式化定义}{40}{paragraph*.70}%
+\contentsline {paragraph}{敏感性口径}{41}{paragraph*.72}%
+\contentsline {subsection}{\numberline {4.7}实施建议与复核}{41}{subsection.4.7}%
+\contentsline {subsubsection}{\numberline {4.7.1}答案与输出（落地口径）}{41}{subsubsection.4.7.1}%
+\contentsline {subsubsection}{\numberline {4.7.2}符号与参数对照表}{42}{subsubsection.4.7.2}%
+\contentsline {subsubsection}{\numberline {4.7.3}Gamma 选点操作化指引}{42}{subsubsection.4.7.3}%
+\contentsline {subsubsection}{\numberline {4.7.4}实施与运维建议}{42}{subsubsection.4.7.4}%
+\contentsline {paragraph}{$\Gamma $ 自适应运维（控制图思路）}{43}{paragraph*.75}%
+\contentsline {subsubsection}{\numberline {4.7.5}数值稳定性与尺度化建议}{43}{subsubsection.4.7.5}%
+\contentsline {subsubsection}{\numberline {4.7.6}影子价（对偶）与业务含义}{43}{subsubsection.4.7.6}%
+\contentsline {subsubsection}{\numberline {4.7.7}本章小结与展望}{44}{subsubsection.4.7.7}%
+\contentsline {paragraph}{局限}{44}{paragraph*.76}%
+\contentsline {paragraph}{展望}{44}{paragraph*.77}%
+\contentsline {section}{\numberline {五}价格反馈与动态滚动优化策略}{44}{section.5}%
+\contentsline {subsection}{\numberline {5.1}模型动机与设定}{45}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}变量与约束总览}{46}{subsubsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.2}价格—供给—销量反馈与识别}{48}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}数据清洗与稳健性}{49}{subsubsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.3}情景生成与参数更新}{49}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}相关结构与采样}{50}{subsubsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.4}含 CVaR 的两阶段滚动优化模型}{51}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}价格分段线性化与 MIP}{51}{subsubsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.5}求解策略与算法流程}{52}{subsection.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.1}复杂度与收敛性讨论}{53}{subsubsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.6}数值实验与对比分析}{53}{subsection.5.6}%
+\contentsline {subsubsection}{\numberline {5.6.1}实验设置}{54}{subsubsection.5.6.1}%
+\contentsline {subsubsection}{\numberline {5.6.2}结果解读}{54}{subsubsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.7}敏感性与稳健性讨论}{55}{subsection.5.7}%
+\contentsline {subsubsection}{\numberline {5.7.1}管理启示与实施建议}{56}{subsubsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.8}本章小结}{57}{subsection.5.8}%
+\contentsline {section}{\numberline {六}模型综合评价与对比分析}{58}{section.6}%
+\contentsline {subsection}{\numberline {6.1}实验设置}{58}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}评价指标}{58}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}结果呈现与对比}{59}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}讨论与管理启示}{63}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}本章小结}{63}{subsection.6.5}%
+\contentsline {section}{参考文献}{64}{section*.92}%
+\contentsline {section}{\numberline {A}算法与实现说明}{66}{appendix.A}%
+\contentsline {subsection}{\numberline {1.1}切换成本的邻接线性化与增量割生成}{66}{subsection.A.1}%
+\contentsline {paragraph}{Python实现阐释}{66}{paragraph*.93}%
+\contentsline {subsection}{\numberline {1.2}轮作约束的窗口化线性近似与冲突窗口检测}{68}{subsection.A.2}%
+\contentsline {paragraph}{Python实现阐释}{68}{paragraph*.94}%
+\contentsline {subsection}{\numberline {1.3}Bertsimas--Sim 预算不确定集的鲁棒等价}{70}{subsection.A.3}%
+\contentsline {paragraph}{Python实现阐释}{70}{paragraph*.95}%
+\contentsline {subsection}{\numberline {1.4}$\Gamma $ 网格与帕累托过滤}{72}{subsection.A.4}%
+\contentsline {paragraph}{Python实现阐释}{72}{paragraph*.96}%
+\contentsline {subsection}{\numberline {1.5}相关一致化的情景生成与尾部加密}{74}{subsection.A.5}%
+\contentsline {paragraph}{Python实现阐释}{74}{paragraph*.97}%
+\contentsline {subsection}{\numberline {1.6}含 CVaR 的年度滚动优化（简化演示）}{76}{subsection.A.6}%
+\contentsline {paragraph}{Python实现阐释}{76}{paragraph*.98}%
