@@ -10,9 +10,8 @@
 *.toc
 *.bcf
 *.xdv
+78
 
-# PDF output file
-*.pdf
 
 # Editor configuration
 .vscode/

@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.4.11)  13 AUG 2025 16:56
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.4.11)  18 SEP 2025 10:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**thuthesis-example
-(./thuthesis-example.tex
+**e:/HuaweiMoveData/Users/xuzq0/Desktop/Latex/技术方案/thuthesis-example.tex
+(e:/HuaweiMoveData/Users/xuzq0/Desktop/Latex/技术方案/thuthesis-example.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (./thuthesis.cls
@@ -1511,12 +1511,12 @@ Package rerunfilecheck Info: File `thuthesis-example.out' has not changed.
 (rerunfilecheck)             Checksum: 2094D4D1BD83E177BF0C0DE1FA1D6A32;13675.
  ) 
 Here is how much of TeX's memory you used:
- 32470 strings out of 475796
- 712265 string characters out of 5774033
+ 32471 strings out of 475796
+ 712410 string characters out of 5774033
  1176721 words of memory out of 5000000
  54869 multiletter control sequences out of 15000+600000
  566197 words of font info for 173 fonts, out of 8000000 for 9000
  37 hyphenation exceptions out of 8191
- 106i,12n,138p,1415b,2826s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 106i,12n,138p,1468b,2826s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on thuthesis-example.xdv (55 pages, 1094512 bytes).
