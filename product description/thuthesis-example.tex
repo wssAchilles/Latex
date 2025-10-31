@@ -1,0 +1,91 @@
+% !TeX encoding = UTF-8
+% !TeX program = xelatex
+% !TeX spellcheck = en_US
+
+\documentclass[fontset=windows]{thuthesis}
+ 
+\input{thusetup}
+\begin{document}
+\begin{titlepage}
+\begin{flushleft}
+\textbf{作品编码：} \underline{\makebox[3cm][c]{509403}}
+\end{flushleft}
+\vspace{2cm}
+\centering
+
+% 主标题
+{\fontsize{18bp}{22bp}\selectfont\bfseries
+方圆知音：基于多智能体协同与声学知识图谱的\\[0.5cm]
+方言自适应学习系统\\[1cm]
+产品说明书
+}
+
+\vspace{4cm}
+
+% 表格内容
+\begin{tabular}{@{}p{4cm}p{10cm}@{}}
+\textbf{学校名称：} & \underline{\makebox[10cm][c]{常州工学院}} \\[1cm]
+\textbf{揭榜榜题名称：} & \underline{\makebox[10cm][c]{CQ-02 基于深度推理大模型的自适应学习路径规划研究}} \\[0.5cm]
+
+\textbf{榜题发榜单位：} & \underline{\makebox[10cm][c]{科大讯飞股份有限公司}} \\[1cm]
+
+\textbf{成员姓名：} & {\makebox[10cm][c]{王凌宇乐，曹磊，许子祺，范晓雨，费扬，杨熙承}} \\[0.05cm]
+& {\underline{\makebox[10cm][c]{王雨欣，陈俊豪，夏思彤，刘岩}}}
+\\[1cm]
+\textbf{指导老师：} & \underline{\makebox[10cm][c]{蒋巍，胡智喜，孟祥莲}}
+\end{tabular}
+\vfill
+\end{titlepage}
+
+\frontmatter
+\input{data/abstract}	
+
+\begin{table}[H]
+\centering
+\caption{产品说明书版本迭代表}
+\begin{tabularx}{\textwidth}{|c|c|c|X|}
+\hline
+日期 & 作者 & 更新内容 & 主要变更说明 \\
+\hline
+2025-07-20 & 曹磊 / 许子祺 & 草案创建 & 明确文档目标与读者画像，重构目录：多模态方言知识图谱、文脉多智能体、检索生成、自进化训练、实验与测试 \\
+\hline
+2025-07-21 & 曹磊 & 知识图谱章节完善 & 补全 Schema、实体与关系示例；新增强制对齐、特征提取流程与示意图占位 \\
+\hline
+2025-07-22 & 许子祺 & 多智能体框架初稿 & 写明角色分工（音韵学/词汇学/管理智能体）、奖励函数与链式通信 CU 结构 \\
+\hline
+2025-07-23 & 曹磊 & 自适应检索生成补充 & 增加学习者状态向量 $S_u$ 定义与三类损失（子查询/子答案/最终答案） \\
+\hline
+2025-07-24 & 许子祺 & 自进化模型编写 & 整合混合检索 + 跨模态重排器；新增教师模型过滤与 LoRA 微调流程图描述 \\
+\hline
+2025-07-25 & 曹磊 / 许子祺 & 内测文稿走查 & 通篇一次技术走查：统一术语与符号；把实验设置与指标对齐到当前实现 \\
+\hline
+2025-07-27 & 曹磊 & 数据与接口附录 & 增加 API/数据字典：资产 URI 规范、检索请求与返回结构、错误码 \\
+\hline
+2025-07-28 & 许子祺 & 图表与示例完善 & 更新知识图谱与智能体流程图；补充 2 个 Dialect-QA 与 1 个诊断案例 \\
+\hline
+2025-07-29 & 曹磊 / 许子祺 & 候选版定稿检查 & 全文润色与交叉引用检查；加入测试方案概览与版本管理说明 \\
+\hline
+2025-07-30 & 曹磊 / 许子祺 & 正式定稿 & 固化目录与编号；完善摘要、关键词（含“多智能体”）；定稿 PDF \\
+\hline
+\end{tabularx}
+\end{table}% 目录
+\tableofcontents
+
+% 正文部分
+\mainmatter
+\input{data/chap01}
+\input{data/chap02}
+\input{data/chap03}
+\input{data/chap04}
+\input{data/chap05}
+\input{data/chap06}
+% 参考文献
+%\bibliography{ref/refs}  % 参考文献使用 BibTeX 编译
+% \printbibliography       % 参考文献使用 BibLaTeX 编译
+
+% 附录
+\appendix
+\input{data/appendix}
+
+
+\end{document}

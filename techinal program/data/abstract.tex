@@ -1,0 +1,33 @@
+% !TeX root = ../thuthesis-example.tex
+
+% 中英文摘要和关键字
+
+\begin{abstract}
+针对中文方言语音处理中普遍存在的AI幻觉、数据稀缺及个性化学习体验缺失等挑战，提出并实现了一个面向多方言智能学习的声学多模态认知校准框架。该框架以构建的多模态方言声学知识图谱为认知锚点，融合声学、音系与语义特征，通过跨通道一致性评估对声学模型输出进行实时验证与校准，在有效抑制幻觉的同时显著提升方言识别的准确率与鲁棒性。
+
+在此核心框架下，\textbf{文脉智能体协作框架}面向跨时空、跨模态的复杂方言知识检索与推理需求，将链式智能体模型扩展到多源知识场景，构建基于角色分工的分治检索智能体与多模态通信单元，并引入结合关联度、信息新颖度与知识价值的复合奖励函数，引导智能体在方言声学知识图谱与现代汉语方言音档之间进行高价值信息的协同挖掘。推理聚合智能体利用多模态思维链推理生成可交互的富媒体响应，实现从声学证据到语言学结论的跨模态验证。
+
+\textbf{自适应多步检索生成模型}以检索增强生成框架为基础，引入刻画知识掌握度与认知偏好的学习者状态向量，并构建结合信息完备性与适应性匹配度的复合优化目标，通过多任务学习同时优化子查询预测、子答案生成与最终教学包生成的能力。推理阶段使用贪心、Best-of-N采样与树搜索等策略，在教学正确性、适应性与效率之间动态平衡，生成涵盖规则讲解、多模态示范和互动练习的个性化教学包，并通过交互事件驱动学习者状态的闭环更新。
+
+\textbf{音系自进化生成与校准模型}构建了跨模态检索、个性化生成、质量过滤与增量微调的闭环机制，采用BM25与Wav2Vec2+Faiss相结合的混合检索召回标准示范，经跨编码器重排提升精度；生成器在融合用户音频、转写文本与标准示范的多模态输入后输出个性化诊断反馈。交互数据经逻辑教师与声学教师双评分过滤后进入微调数据集，并利用LoRA低秩适配技术进行高效SFT，使模型在实际使用中不断提升发音诊断的准确度与反馈质量。
+
+三大算法在统一的声学多模态认知校准框架下协同运行，最终集成为一个集方言保护、传承与学习于一体的智能化平台，具备高准确性、强鲁棒性、可自适应与可持续进化等特性，为复杂方言场景下的智能语音处理提供了可推广的技术路径。
+  \thusetup{
+    keywords = {方言声学知识图谱, 多智能体, 思维链, 自适应学习, 自进化},
+  }
+\end{abstract}
+
+\begin{abstract*}
+To address the prevalent challenges in Chinese dialect speech processing, including AI hallucinations, data scarcity, and the lack of personalized learning experiences, this work proposes and implements an Acoustic Multimodal Cognitive Calibration Framework for intelligent multi-dialect learning. Anchored by a Multimodal Dialect Acoustic Knowledge Graph, the framework integrates acoustic, phonological, and semantic features, and performs real-time verification and calibration of model outputs through cross-channel consistency evaluation. This approach effectively suppresses hallucinations while significantly improving the accuracy and robustness of dialect recognition.
+
+Within this core framework, \textbf{the Context-Aware Multi-Agent Collaboration Framework (Dialectus)} targets the retrieval and reasoning of complex cross-temporal and cross-modal dialect knowledge. It extends the chain-of-agents paradigm to multi-source knowledge scenarios by introducing role-specialized retrieval agents and multimodal communication units, together with a composite reward function combining relevance, novelty, and knowledge value. This guides the agents to collaboratively mine high-value information from both the dialect Acoustic knowledge graph and modern dialect audio archives. The reasoning aggregator agent employs multimodal chain-of-thought (MCoT) reasoning to generate interactive, media-rich responses, enabling cross-modal validation from acoustic evidence to linguistic conclusions.
+
+\textbf{The Adaptive Multi-Step Retrieval-Generation Model} builds upon a retrieval-augmented generation framework by incorporating a learner state vector that encodes knowledge mastery and cognitive preferences, and by optimizing a composite objective balancing information completeness and adaptability. Multi-task learning jointly improves sub-query prediction, sub-answer generation, and final learning package construction. Inference employs a combination of greedy decoding, best-of-N sampling, and tree search to dynamically balance correctness, adaptability, and efficiency, producing personalized learning packages that include rule explanations, multimodal demonstrations, and interactive exercises, while updating the learner state in a closed-loop manner through user interactions.
+
+\textbf{The Phonological Self-Evolution Generation and Calibration Model} implements a closed loop of cross-modal retrieval, personalized generation, quality filtering, and incremental fine-tuning. It uses hybrid retrieval combining BM25 and Wav2Vec2+Faiss to recall standard exemplars, followed by cross-encoder re-ranking to enhance precision. The generator fuses user audio, transcriptions, and standard exemplars to produce personalized diagnostic feedback. Interaction data is filtered through both a logical teacher and an acoustic teacher before being added to the fine-tuning dataset, and efficient SFT is performed via LoRA-based low-rank adaptation, enabling the model to continually improve pronunciation diagnosis accuracy and feedback quality during deployment.
+
+These three algorithms operate synergistically under the unified Acoustic Multimodal Cognitive Calibration Framework, culminating in an intelligent platform that integrates dialect preservation, inheritance, and learning. The system delivers high accuracy, strong robustness, adaptive personalization, and sustainable evolution, providing a transferable technical pathway for intelligent speech processing in complex dialect scenarios.
+  \thusetup{
+    keywords* = {dialect Acoustic knowledge graph, multi-agent, thought chain, adaptive learning, self-evolution},
+  }
+\end{abstract*}

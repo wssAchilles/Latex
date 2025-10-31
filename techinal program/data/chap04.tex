@@ -1,0 +1,140 @@
+% !TeX root = ../thuthesis-example.tex
+\chapter{文脉智能体框架}
+为精准应对复杂方言知识探索中，深度融合声学、音系学、词汇学，并贯穿古今的分析需求，本项目设计并实现了“文脉智能体”（Dialectus）协作框架，具体框架如图\ref{fig:文脉}所示。本框架的核心创新在于，它并非一个通用的问答系统，而是专为处理和利用上一章所述的“\textbf{多模态方言声学知识图谱}” ($D_{\text{kg}}$) 与“\textbf{现代汉语方言音档}” ($D_{\text{archive}}$) 这两种异构数据源而构建。
+
+框架的核心思想源于链式智能体 (Chain-of-Agents, CoA)，该通用框架通过将长上下文分解为由“工作智能体”序列化处理的小块，最后由“管理智能体”整合，从而高效处理超长上下文任务。其通用算法流程如算法 \ref{alg:coa_general} 所示。本项目的工作则是将此框架从纯文本领域，创新性地扩展到多模态、多源知识库的语言学研究场景中。
+
+\begin{algorithm}[h!]
+  \caption{通用链式智能体 (CoA) 框架算法}
+  \label{alg:coa_general}
+  \begin{algorithmic}[1]
+    \State \textbf{Input:} 源输入 $x$, 查询 $q$, 智能体窗口大小 $k$, 大语言模型 LLM($\cdot$)
+    \State \textbf{Output:} 对查询的回答
+    \State 将 $x$ 分割为 $l$ 个块 $\{c_1, c_2, \dots, c_l\}$, 其中每个 $c_i$ 的长度小于 $k$
+    \State 初始化通信单元 $CU_0 \leftarrow \text{empty string}$
+    \State \textbf{for} $i$ in $1, 2, \dots, l$ \textbf{do}
+    \State \quad $CU_i \leftarrow \text{LLM}_{W_i} (I_W, CU_{i-1}, c_i, q)$ \Comment{工作智能体链式处理}
+    \State \textbf{end for}
+    \State \textbf{return} $\text{LLM}_{M} (I_M, CU_l, q)$ \Comment{管理智能体生成最终答案}
+  \end{algorithmic}
+\end{algorithm}
+
+\begin{figure}[H]
+    \centering
+    % 此处应放置您下载的多模态知识图谱嵌入模型流程图
+    \includegraphics[scale=0.23]{文脉智能体框架.pdf}
+    \caption{文脉智能体框架示意图}
+    \label{fig:文脉}
+\end{figure}
+
+\section{基于角色的多模态分治检索与链式通信}
+
+此阶段是框架的数据处理核心，负责将用户的复杂查询，解构为针对两大知识库的具体检索与分析任务，并通过一组各司其职的“\textbf{分治检索智能体}” (Worker Agents)进行处理，最终形成一个包含多模态证据的知识链。
+
+\subsection{任务解构与智能体分治}
+当系统接收到一个复杂查询 $q$ 时，一个上层的“\textbf{调度智能体}” (Dispatcher Agent) 会首先介入，对查询意图进行分析，并生成一个结构化的“执行计划”。该计划为每个待激活的智能体（如语音学智能体$A_p$、词汇学智能体$A_l$）设定其独有的“\textbf{行为指导点}” (behavior-guide-point) \cite{jiao2022multi}，即其需要专注的知识库（$D_{\text{kg}}$ 或 $D_{\text{archive}}$）和任务重点。
+
+\subsection{智能体决策的奖励函数}
+在本项目的框架中，每个智能体的检索行为并非盲目的。其每一步决策——即从知识库中选择哪个知识节点或数据片段进行检索和处理——都可以被建模为一个旨在最大化一个“信息价值”奖励函数 $R(a)$ 的过程。这个思想改编自多智能体路径规划领域，其中智能体的物理移动由一个复合奖励函数引导 
+
+对于一个潜在的检索动作 $a$（例如，从知识图谱中检索节点 $n_j$），其总奖励 $R(a)$ 由以下三部分加权构成：
+\begin{equation}
+R(a) = w_{\text{rel}} \cdot R_{\text{rel}}(a, q) + w_{\text{nov}} \cdot R_{\text{nov}}(a, CU_{\text{hist}}) + w_{\text{asset}} \cdot R_{\text{asset}}(a)
+\end{equation}
+其中，$w$为各部分的权重超参数，$CU_{\text{hist}}$为历史通信单元中已包含的信息。
+
+\begin{enumerate}
+    \item \textbf{关联度奖励 ($R_{\text{rel}}$)}: 该奖励衡量动作 $a$ 检索到的信息与原始用户查询 $q$ 的相关性，类似于MACPP-MPC中的“方向覆盖奖励”。本项目通过计算查询与候选知识节点的向量嵌入（embedding）之间的余弦相似度来量化：
+    \begin{equation}
+    R_{\text{rel}}(a, q) = \text{cosine\_similarity}(\text{Emb}(a), \text{Emb}(q))
+    \end{equation}
+    高关联度奖励确保了智能体的每一步行动都紧扣用户的核心需求。
+
+    \item \textbf{新颖度奖励 ($R_{\text{nov}}$)}: 该奖励旨在避免信息冗余，鼓励智能体探索新的知识维度，类似于MACPP-MPC中的“平滑度奖励”旨在避免无效拐点。如果动作 $a$ 检索到的信息与历史通信单元 $CU_{\text{hist}}$ 中的内容高度重合，则该奖励为负，反之为正。
+    \begin{equation}
+    R_{\text{nov}}(a, CU_{\text{hist}}) = 1 - \max_{c \in CU_{\text{hist}}} \text{similarity}(\text{Emb}(a), \text{Emb}(c))
+    \end{equation}
+
+    \item \textbf{资产价值奖励 ($R_{\text{asset}}$)}: 在方言教学中，多模态资产（如音频、视频、谱图）具有极高的教学价值。该奖励为检索到这些高价值“边界”信息的动作提供额外激励，类似于MACPP-MPC中的“边界奖励”。
+    \begin{equation}
+    R_{\text{asset}}(a) = 
+    \begin{cases} 
+    1, & \text{if } a \text{ retrieves a multimodal asset} \\
+    0, & \text{otherwise}
+    \end{cases}
+    \end{equation}
+\end{enumerate}
+在决策时，智能体会评估所有潜在的检索动作，并优先选择那个能够使其总奖励 $R(a)$ 最大化的动作。这一机制保证了信息检索链的构建过程既高效、相关，又富有洞见。
+
+\subsection{包含多模态资产的链式通信}
+Dialectus框架对CoA模型进行了关键性扩展。智能体之间的信息传递载体——“\textbf{通信单元}”（Communication Unit, CU），不再是纯文本，而是一个结构化的数据对象，能够封装文本摘要和指向多模态资产的统一资源标识符（URI）。
+
+语音学智能体 $A_p$ 率先启动，根据查询 $q$ 在 $D_{\text{kg}}$ 中检索，生成初始通信单元 $CU_p$。此过程可形式化为：
+\begin{equation}
+    CU_p = \text{LLM}_{A_p} (I_p, \text{Retrieve}(D_{\text{kg}}, q), q)
+    \label{eq:cu_p}
+\end{equation}
+
+随后，词汇学智能体 $A_l$ 接收 $CU_p$，并整合从 $D_{\text{archive}}$ 中检索到的信息，形成更丰富的 $CU_l$：
+\begin{equation}
+    CU_l = \text{LLM}_{A_l} (I_l, \text{Retrieve}(D_{\text{archive}}, q), CU_p, q)
+    \label{eq:cu_l}
+\end{equation}
+
+这种链式传递多模态证据的方式，是对原生CoA模型处理长文本能力的创新性应用，使得知识的积累不再局限于文本层面，而是构建了一个包含声学和视觉证据的、可供后续深度推理的完整信息链。
+
+\section{多模态推理聚合与富媒体响应生成}
+此阶段由一个核心的“\textbf{推理聚合智能体}”（Reasoning and Aggregation Agent）主导，其角色完全对应于CoA框架中的“\textbf{管理智能体}” (Manager Agent)。
+
+\subsection{管理智能体的核心作用}
+根据CoA框架的设计，采用一个独立的管理智能体具有核心优势：它实现了“\textbf{职责分解}” (decomposition of duty)。工作智能体（在本项目的框架中是语音学和词汇学智能体）专注于从各自的数据源中分析和提取相关信息，而管理智能体则专职于综合由。
+
+推理聚合智能体 $A_r$ 接收最终的、高度浓缩的通信单元 $CU_l$，并被赋予了执行“\textbf{多模态思维链}”（Multimodal Chain-of-Thought, MCoT）推理的能力。
+
+\subsection{多模态思维链推理与富媒体响应}
+MCoT的实现借鉴了检索增强微调（RAFT）中让模型学习如何依据提供的材料进行思考和推理的思想 。在本项目的框架中，推理过程不仅是文本的组织，而是将文本结论与多模态证据进行交叉验证和互为补充，如算法 \ref{alg:mcot} 所示。
+
+\begin{algorithm}[h!]
+    \caption{多模态思维链（MCoT）推理提示模板}
+    \label{alg:mcot}
+    \small
+    \begin{algorithmic}[1]
+        \State \textbf{Instruction}: "根据通信单元中的信息，分步推理并回答问题。在推理中，使用 `[ref:asset\_uri]` 格式引用多模态证据。"
+        \State \textbf{Input}:
+        \State \quad \texttt{query}: "分析词汇'X'的音系特征与用法。"
+        \State \quad \texttt{CU}: (包含来自 $CU_l$ 的文本摘要和多模态资产URI)
+        \State \textbf{Expected Reasoning Output}:
+        \State \quad "1. 音系分析: 'X'的标准读音为[...], 其声调为高平调。这一点可以从声谱图 \texttt{[ref:uri2]} 中清晰的、平直的基频曲线得到证实。请听标准发音: \texttt{[ref:uri1]}。"
+        \State \quad "2. ..."
+    \end{algorithmic}
+\end{algorithm}
+
+最终，管理智能体 $A_r$ 生成富媒体响应。该过程遵循CoA框架中管理智能体的最终生成步骤：
+\begin{equation}
+    Response_{\text{raw}} = \text{LLM}_{A_r} (I_r, CU_l, q)
+    \label{eq:response_raw}
+\end{equation}
+
+随后，这个包含文本和引用标记的原始响应 $Response_{\text{raw}}$ 被一个渲染引擎处理，生成最终呈现给用户的、包含可交互多媒体元素的富媒体界面 $Response_{\text{rich}}$。
+
+\subsection{框架效率与可扩展性分析}
+CoA框架的有效性已在多个公开的长文本问答和摘要数据集上得到验证，如HotpotQA, MuSiQue, NarrativeQA等，这些任务的平均输入长度从数千到数十万词不等。这证明了其作为一种通用架构的鲁棒性。本项目的工作则是将这种经过验证的架构，首次应用于处理高度专业化、结构化的多模态方言知识。
+
+更重要的是，CoA框架在计算效率上具有显著优势。如表 \ref{tab:time_complexity} 所示，在处理长度为 $n$ 的输入时，标准的、将全部上下文一次性输入的方法，其编码时间复杂度为 $O(n^2)$。而CoA通过将输入分解为小块（上下文窗口限制为 $k$，其中 $k \ll n$），将编码时间复杂度显著降低到 $O(nk)$。
+
+\begin{table}[H]
+    \centering
+    \caption{不同方法的时间复杂度对比}
+    \label{tab:time_complexity}
+    \begin{tabular}{@{}lcc@{}}
+        \toprule
+        \textbf{方法 (Method)} & \textbf{编码 (Encode)} & \textbf{解码 (Decode)} \\
+        \midrule
+        Full-Context        & $O(n^2)$              & $O(nr)$               \\
+        CoA                 & $O(nk)$               & $O(nr)$               \\
+        RAG                 & $O(nk') + O(k^2)$      & $O(n/k') + O(kr)$     \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+在本项目的Dialectus框架中，虽然处理的不是单一的长文档，但这一效率优势同样存在。本项目的“链”是由对不同知识库的检索结果序列构成的。通过链式通信，每个智能体仅处理当前检索到的新信息和前一阶段传递来的、经过浓缩的通信单元 $CU$。这避免了将所有检索到的历史信息（包括文本、音频、图像数据）在每一步都重复载入LLM的上下文，从而保持了计算开销的线性可控性，确保了系统在处理复杂、多源关联查询时的可扩展性和响应速度。

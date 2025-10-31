@@ -1,0 +1,61 @@
+% !TeX encoding = UTF-8
+% !TeX program = xelatex
+% !TeX spellcheck = en_US
+
+\documentclass[fontset=windows]{thuthesis}
+ 
+\input{thusetup}
+\begin{document}
+\begin{titlepage}
+\begin{flushleft}
+\textbf{作品编码：} \underline{\makebox[3cm][c]{509403}}
+\end{flushleft}
+\vspace{2cm}
+\centering
+
+% 主标题
+{\fontsize{18bp}{22bp}\selectfont\bfseries
+方圆知音：基于多智能体协同与声学知识图谱的\\[0.5cm]
+方言自适应学习系统\\[1cm]
+测试方案
+}
+
+\vspace{4cm}
+
+% 表格内容
+\begin{tabular}{@{}p{4cm}p{10cm}@{}}
+\textbf{学校名称：} & \underline{\makebox[10cm][c]{常州工学院}} \\[1cm]
+\textbf{揭榜榜题名称：} & \underline{\makebox[10cm][c]{CQ-02 基于深度推理大模型的自适应学习路径规划研究}} \\[0.5cm]
+
+\textbf{榜题发榜单位：} & \underline{\makebox[10cm][c]{科大讯飞股份有限公司}} \\[1cm]
+
+\textbf{成员姓名：} & {\makebox[10cm][c]{王凌宇乐，曹磊，许子祺，范晓雨，费扬，杨熙承}} \\[0.05cm]
+& {\underline{\makebox[10cm][c]{王雨欣，陈俊豪，夏思彤，刘岩}}}
+\\[1cm]
+\textbf{指导老师：} & \underline{\makebox[10cm][c]{蒋巍，胡智喜，孟祥莲}}
+\end{tabular}
+\vfill
+\end{titlepage}
+
+\frontmatter
+\input{data/abstract}
+% 目录
+\tableofcontents
+
+% 插图和附表清单
+% \listoffiguresandtables  % 插图和附表清单
+
+
+% 正文部分
+\mainmatter
+\input{data/chap01}
+% 参考文献
+%\bibliography{ref/refs}  % 参考文献使用 BibTeX 编译
+% \printbibliography       % 参考文献使用 BibLaTeX 编译
+
+% 附录
+%\appendix
+%\input{data/appendix}
+
+
+\end{document}

@@ -1,0 +1,26 @@
+% !TeX root = ../thuthesis-example.tex
+
+% 中英文摘要和关键字
+
+\begin{abstract}
+本测试方案旨在对多模态方言声学智能教学平台的核心算法进行系统化、全面化的研究评估，以验证其在复杂方言处理与智能教学场景中的性能与稳定性。平台包含四个关键模块：多模态方言声学知识图谱、文脉智能体推理系统、自适应多步检索生成模型以及音系自进化生成与校准模型。测试方法设计遵循“功能覆盖+性能量化+场景模拟”的原则，确保从算法功能正确性到实际任务表现均得到验证。
+
+本测试实施采用自动化批量测试与人工专家评审相结合的混合评估方法。自动化测试利用脚本批量处理多模态输入（文本、语音、音系规则），计算准确率、召回率、F1 值、响应延迟等指标；人工评审则由方言学与语言学专家对输出进行质量评分与误差分析。实验包含基线对比（去除知识图谱）与消融测试（去除声学或文本特征），并在多轮迭代中跟踪模型的自适应与自进化性能变化。
+
+测试数据覆盖多地域方言样本、标准/非标准口音、低频词、多音字及噪声语音输入，均附带结构化元数据描述。结果分析部分以数据表格和可视化图表呈现，为算法优化提供依据
+
+  \thusetup{
+    keywords = {多模态测试方法, 基线对比实验, 消融分析, 自动化批量测试与人工专家评审, 性能可视化分析},
+  }
+\end{abstract}
+
+\begin{abstract*}
+This testing scheme aims to conduct a systematic and comprehensive research evaluation of the core algorithms of the multimodal dialect Acoustic intelligent teaching platform, verifying their performance and stability in complex dialect processing and intelligent teaching scenarios. The platform comprises four key modules: the multimodal dialect Acoustic knowledge graph, the contextual intelligent agent reasoning system, the adaptive multi-step retrieval generation model, and the phonology self-evolution generation and calibration model. The testing methodology follows the principle of “function coverage + performance quantification + scenario simulation,” ensuring validation from functional correctness to real-task performance.
+
+The testing process adopts a hybrid evaluation approach that combines automated batch testing with expert human review. Automated testing uses scripts to batch process multimodal inputs (text, speech, and phonological rules), calculating metrics such as accuracy, recall, F1 score, and response latency; human review involves inviting dialectology and linguistics experts to score output quality and analyze errors. The experiments include baseline comparisons (e.g., removing the knowledge graph) and ablation tests (e.g., removing acoustic or textual features), while tracking changes in the model’s adaptability and self-evolution performance across multiple iterations.
+
+The test data covers dialect samples from multiple regions, audio with standard and non-standard accents, low-frequency words, polyphonic characters, and noisy speech inputs, all accompanied by structured metadata descriptions. The results are presented through data tables and visualizations to provide a basis for algorithm optimization.
+  \thusetup{
+    keywords* = {Multimodal Testing Method, Baseline Comparison Experiment, Ablation Analysis, Automated Batch Testing and Expert Review, Performance Visualization Analysis},
+  }
+\end{abstract*}
