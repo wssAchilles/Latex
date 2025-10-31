@@ -1,0 +1,31 @@
+\documentclass[fontset=windows]{thuthesis}
+\input{thusetup}
+
+\begin{document}
+
+\begin{titlepage}
+
+\end{titlepage}
+
+\frontmatter
+\input{frontmatter/abstract}
+
+\tableofcontents
+
+\listoffigures           % 插图清单
+\listoftables            % 表格清单
+
+\mainmatter
+\input{mainmatter/chapter1}
+\input{mainmatter/chapter2}
+\input{mainmatter/chapter3}
+\input{mainmatter/chapter4}
+\input{mainmatter/chapter5}
+\input{mainmatter/chapter6}
+\input{mainmatter/chapter7}
+
+% 参考文献
+\nocite{*}  % 显示所有未引用的文献
+\bibliography{ref/refs}  % 参考文献使用BibTeX 编译
+
+\end{document}
